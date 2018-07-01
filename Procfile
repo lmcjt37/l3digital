@@ -1,1 +1,1 @@
-web: node index.js
+web: npm start --port ${PORT:3000}
