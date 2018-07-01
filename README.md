@@ -1,13 +1,18 @@
-# gatsby-starter-forty
-Gatsby starter based on the Forty site template, designed by [HTML5 UP](https://html5up.net/forty). Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+# L3 Digital
+Website for L3 Digital
 
-## Preview
+## Dependencies
 
-http://gatsby-forty.surge.sh/
+* Gatsby-cli - `npm install -g gatsby-cli`
 
-## Installation
+## Getting Started
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-forty https://github.com/ChangoMan/gatsby-starter-forty`
+- Install dependencies - `npm install`
+- Start local development server - `npm run dev`
+- This will serve up a dev server with hot reload locally at [http://localhost:8000/](http://localhost:8000/)
 
-Run `gatsby develop` in the terminal to start.
+#### production
+
+`npm run build`
+
+This will build the static site and assets for hosting wherever.
