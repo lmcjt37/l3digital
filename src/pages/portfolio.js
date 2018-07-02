@@ -7,11 +7,11 @@ import pic08 from '../assets/images/pic08.jpg'
 import pic09 from '../assets/images/pic09.jpg'
 import pic10 from '../assets/images/pic10.jpg'
 
-const Landing = props => (
+const Portfolio = props => (
   <div>
     <Helmet>
-      <title>Landing - Forty by HTML5 UP</title>
-      <meta name="description" content="Landing Page" />
+      <title>Portfolio</title>
+      <meta name="description" content="Portfolio Page" />
     </Helmet>
 
     <BannerContent />
@@ -117,4 +117,4 @@ const Landing = props => (
   </div>
 )
 
-export default Landing
+export default Portfolio
