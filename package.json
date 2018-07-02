@@ -2,6 +2,9 @@
   "name": "l3-digital",
   "description": "Website for l3 digital - initial",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.x"
+  },
   "contributors": [
     {
       "name": "Luke Taylor",
