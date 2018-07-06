@@ -4,7 +4,52 @@ const Banner = props => (
   <section id="banner" className="major">
     <div className="inner">
       <header className="major">
-        <h1>We are L3 Digital</h1>
+        <svg className="intro" viewBox="0 0 300 60">
+          <rect
+            x="0"
+            y="26"
+            width="100%"
+            height="1"
+            className="text-stroke"
+            clipPath="url(#rect1)"
+          />
+          <rect
+            x="0"
+            y="26"
+            width="100%"
+            height="1"
+            className="text-stroke rect-stroke-2"
+            clipPath="url(#rect1)"
+          />
+          <text
+            textAnchor="start"
+            x="0"
+            y="15"
+            className="text text-stroke"
+            clipPath="url(#text1)"
+          >
+            We Are L3 Digital
+          </text>
+          <text
+            textAnchor="start"
+            x="0"
+            y="15"
+            className="text text-stroke text-stroke-2"
+            clipPath="url(#text1)"
+          >
+            We Are L3 Digital
+          </text>
+          <defs>
+            <clipPath id="rect1">
+              <rect x="0" y="26" width="100%" height="1" />
+            </clipPath>
+            <clipPath id="text1">
+              <text textAnchor="start" x="0" y="15" className="text">
+                We Are L3 Digital
+              </text>
+            </clipPath>
+          </defs>
+        </svg>
       </header>
       <div className="content">
         <p>

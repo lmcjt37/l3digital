@@ -1,0 +1,46 @@
+///
+/// Banner-text by Luke Taylor
+/// original work: https://codepen.io/supah/
+/// Ported to React with additional work to add better timing and shapes
+///
+
+svg.intro {
+  position: absolute;
+  transform: translate(0%, -40%);
+
+  .text {
+    display: none;
+  }
+  &.go {
+    .text {
+      font-family: _font(family);
+      text-transform: uppercase;
+      display: block;
+			letter-spacing: 0;
+    }
+    .text-stroke {
+      fill: none;
+      stroke: _palette(accent2);
+      stroke-width: 2.8px;
+      stroke-dashoffset: -900;
+      stroke-dasharray: 900;
+      stroke-linecap: butt;
+      stroke-linejoin: round;
+      animation: dash 2.5s ease-in-out forwards;
+    }
+		.text-stroke-2 {
+			stroke: _palette(fg-bold);
+			animation-delay: 1.2s;
+		}
+		.rect-stroke-2 {
+			stroke: _palette(fg-bold);
+			animation-delay: 1.6s;
+		}
+  }
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
