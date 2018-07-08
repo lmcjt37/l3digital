@@ -1,14 +1,21 @@
 import React from 'react'
 
-const Banner = props => (
-  <section id="banner" className="major">
-    <div className="inner">
-      <header className="major">
+import UtilsHelper from '../helpers/utils'
+
+export default class Banner extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  getInnerHtml() {
+    if (UtilsHelper.isMobileDevice()) {
+      return <h1>We Are L3 Digital</h1>
+    } else {
+      return (
         <svg
           className="intro"
           viewBox="0 0 300 60"
           xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
         >
           <rect
             x="0"
@@ -55,22 +62,30 @@ const Banner = props => (
             </clipPath>
           </defs>
         </svg>
-      </header>
-      <div className="content">
-        <p>
-          A team of great collaborators, providing solutions to all your
-          development needs.
-        </p>
-        <ul className="actions">
-          <li>
-            <a href="#one" className="button next">
-              Learn more
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-)
+      )
+    }
+  }
 
-export default Banner
+  render() {
+    return (
+      <section id="banner" className="major">
+        <div className="inner">
+          <header className="major">{this.getInnerHtml()}</header>
+          <div className="content">
+            <p>
+              A team of great collaborators, providing solutions to all your
+              development needs.
+            </p>
+            <ul className="actions">
+              <li>
+                <a href="#one" className="button next">
+                  Learn more
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    )
+  }
+}
