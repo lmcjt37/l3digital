@@ -17,9 +17,8 @@ export default class Banner extends React.Component {
   }
 
   getInnerHtml() {
-    alert(this.state.isMobile)
     if (this.state.isMobile) {
-      return `<h1>We Are L3 Digital</h1>`
+      return <h1>We Are L3 Digital</h1>
     } else {
       return (
         <svg
