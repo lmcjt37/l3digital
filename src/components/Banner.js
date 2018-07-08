@@ -4,7 +4,12 @@ const Banner = props => (
   <section id="banner" className="major">
     <div className="inner">
       <header className="major">
-        <svg className="intro" viewBox="0 0 300 60">
+        <svg
+          className="intro"
+          viewBox="0 0 300 60"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+        >
           <rect
             x="0"
             y="26"
