@@ -5,10 +5,19 @@ import UtilsHelper from '../helpers/utils'
 export default class Banner extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      isMobile: false,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      isMobile: UtilsHelper.isMobileDevice(),
+    })
   }
 
   getInnerHtml() {
-    if (UtilsHelper.isMobileDevice()) {
+    if (this.state.isMobile) {
       return <h1>We Are L3 Digital</h1>
     } else {
       return (

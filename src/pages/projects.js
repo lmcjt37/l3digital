@@ -7,11 +7,11 @@ import pic08 from '../assets/images/pic08.jpg'
 import pic09 from '../assets/images/pic09.jpg'
 import pic10 from '../assets/images/pic10.jpg'
 
-const Portfolio = props => (
+const Projects = props => (
   <div>
     <Helmet>
-      <title>Portfolio</title>
-      <meta name="description" content="Portfolio Page" />
+      <title>Projects</title>
+      <meta name="description" content="Projects Page" />
     </Helmet>
 
     <BannerContent />
@@ -117,4 +117,4 @@ const Portfolio = props => (
   </div>
 )
 
-export default Portfolio
+export default Projects
