@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import BannerDesktop from '../components/Banner'
 import BannerMobile from '../components/BannerMobile'
 
-import { isMobile } from 'react-device-detect'
+import { isBrowser } from 'react-device-detect'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -22,10 +22,8 @@ class HomeIndex extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
 
-    let Banner
-    if (isMobile) {
-      Banner = <BannerMobile />
-    } else {
+    let Banner = <BannerMobile />
+    if (isBrowser) {
       Banner = <BannerDesktop />
     }
 
