@@ -3,7 +3,8 @@
   "description": "Website for l3 digital - initial",
   "version": "1.0.0",
   "engines": {
-    "node": "8.9.x"
+    "node": "8.9.x",
+    "npm": "5.6.x"
   },
   "contributors": [
     {
