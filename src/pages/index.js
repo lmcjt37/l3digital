@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import BannerDesktop from '../components/Banner'
 import BannerMobile from '../components/BannerMobile'
 
-import UtilsHelper from '../helpers/utils'
+import { isMobile } from 'react-device-detect'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -16,15 +16,6 @@ import pic06 from '../assets/images/pic06.jpg'
 class HomeIndex extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      isMobile: true,
-    }
-  }
-
-  componentDidMount() {
-    this.setState({
-      isMobile: UtilsHelper.isMobileDevice(),
-    })
   }
 
   render() {
@@ -32,7 +23,7 @@ class HomeIndex extends React.Component {
     const siteDescription = this.props.data.site.siteMetadata.description
 
     let Banner
-    if (this.state.isMobile) {
+    if (isMobile) {
       Banner = <BannerMobile />
     } else {
       Banner = <BannerDesktop />
