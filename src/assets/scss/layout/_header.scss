@@ -49,15 +49,31 @@
 				padding: 0 0.125em 0 (_font(letter-spacing-alt) + 0.125em);
 			}
 
+			svg {
+				@include vendor('transition', 'fill #{_duration(transition)} ease-in-out');
+				fill: #fff;
+				height: inherit;
+			}
+
+			span {
+				vertical-align: text-bottom;
+			}
+
 			&:hover {
 				strong {
 					background-color: _palette(highlight);
+				}
+				svg {
+					fill: _palette(highlight);
 				}
 			}
 
 			&:active {
 				strong {
 					background-color: desaturate(darken(_palette(highlight), 15), 5);
+				}
+				svg {
+					fill: desaturate(darken(_palette(highlight), 15), 5);
 				}
 			}
 		}

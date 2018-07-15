@@ -31,7 +31,7 @@ class Template extends React.Component {
         }
 
         document
-          .querySelector('a[href*=' + e.id + ']:not([href="#"]')
+          .querySelector(`a[href*='${e.id}']:not([href='#']`)
           .addEventListener('click', evt => {
             window.scroll({
               top: sections[e.id].start,

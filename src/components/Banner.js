@@ -8,6 +8,7 @@ const Banner = props => (
           className="intro"
           viewBox="0 0 300 60"
           xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
         >
           <rect
             x="0"
