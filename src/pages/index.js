@@ -40,9 +40,9 @@ class HomeIndex extends React.Component {
 
     let getBanner = () => {
       // if (this.state.isHandheld) {
-      //   return <BannerMobile />
+      return <BannerMobile />
       // } else {
-      return <BannerDesktop />
+      // return <BannerDesktop />
       // }
     }
 
