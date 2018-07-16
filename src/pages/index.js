@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import BannerDesktop from '../components/Banner'
 import BannerMobile from '../components/BannerMobile'
 
-import { isBrowser } from 'react-device-detect'
+import UtilsHelper from '../helpers/utils'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -16,15 +16,37 @@ import pic06 from '../assets/images/pic06.jpg'
 class HomeIndex extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      isHandheld: false,
+    }
+  }
+
+  handleResizeChange = () => {
+    this.setState({ ...UtilsHelper.getScreenSize() })
+  }
+
+  componentDidMount() {
+    this.handleResizeChange()
+  }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleResizeChange)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResizeChange)
   }
 
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
 
-    let Banner = <BannerMobile />
-    if (isBrowser) {
-      Banner = <BannerDesktop />
+    let getBanner = () => {
+      if (this.state.isHandheld) {
+        return <BannerMobile />
+      } else {
+        return <BannerDesktop />
+      }
     }
 
     return (
@@ -34,7 +56,7 @@ class HomeIndex extends React.Component {
           <meta name="description" content={siteDescription} />
         </Helmet>
 
-        {Banner}
+        {getBanner()}
 
         <div id="main">
           <section id="one" className="tiles smooth-scroll-section">
