@@ -39,11 +39,7 @@ class HomeIndex extends React.Component {
     const siteDescription = this.props.data.site.siteMetadata.description
 
     let getBanner = () => {
-      // if (this.state.isHandheld) {
-      return <BannerMobile />
-      // } else {
-      // return <BannerDesktop />
-      // }
+      return this.state.isHandheld ? <BannerMobile /> : <BannerDesktop />
     }
 
     return (
