@@ -41,11 +41,6 @@ class Template extends React.Component {
             evt.preventDefault()
           })
       })
-
-      // Starts the drawing of the banner text
-      if (document.querySelector('.intro')) {
-        document.querySelector('.intro').classList.add('go')
-      }
     }, 100)
   }
 

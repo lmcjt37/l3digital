@@ -21,6 +21,23 @@ const Menu = props => (
           </Link>
         </li>
       </ul>
+      <ul className="icons">
+        <li>
+          <a href="#" className="icon alt fa-twitter">
+            <span className="label">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" className="icon alt fa-github">
+            <span className="label">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" className="icon alt fa-linkedin">
+            <span className="label">LinkedIn</span>
+          </a>
+        </li>
+      </ul>
     </div>
     <a className="close" onClick={props.onToggleMenu} href="javascript:;">
       Close
