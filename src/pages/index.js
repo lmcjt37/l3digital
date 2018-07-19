@@ -39,6 +39,10 @@ class HomeIndex extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
 
+    let getBanner = () => {
+      return this.state.isHandheld ? <BannerMobile /> : <BannerDesktop />
+    }
+
     return (
       <div>
         <Helmet>
@@ -46,7 +50,7 @@ class HomeIndex extends React.Component {
           <meta name="description" content={siteDescription} />
         </Helmet>
 
-        {this.state.isHandheld ? <BannerMobile /> : <BannerDesktop />}
+        {getBanner()}
 
         <div id="main">
           <section id="one" className="tiles smooth-scroll-section">
