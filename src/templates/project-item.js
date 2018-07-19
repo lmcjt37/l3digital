@@ -35,7 +35,7 @@ class ProjectItem extends Component {
               />
               <ul className="actions">
                 <li>
-                  <a href={url} className="button special">
+                  <a href={url} target="_blank" className="button special">
                     Visit
                   </a>
                 </li>
