@@ -22,26 +22,10 @@ class IndexArticle extends Component {
 }
 
 IndexArticle.propTypes = {
-  data: PropTypes.object.isRequired,
+  slug: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  featuredImage: PropTypes.string,
 }
 
 export default IndexArticle
-
-export const indexArticleQuery = graphql`
-  query indexArticleQuery($slug: String!) {
-    contentfulProject(slug: { eq: $slug }) {
-      slug
-      title
-      description {
-        childMarkdownRemark {
-          excerpt
-        }
-      }
-      featuredImage {
-        responsiveResolution {
-          src
-        }
-      }
-    }
-  }
-`

@@ -9,11 +9,6 @@ import Article from '../templates/index-article'
 
 import UtilsHelper from '../helpers/utils'
 
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
-import pic05 from '../assets/images/pic05.jpg'
-import pic06 from '../assets/images/pic06.jpg'
-
 class HomeIndex extends React.Component {
   constructor(props) {
     super(props)
