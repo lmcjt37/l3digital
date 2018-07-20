@@ -1,5 +1,7 @@
 # L3 Digital
 
+[![CircleCI](https://circleci.com/gh/lmcjt37/l3digital/tree/master.svg?style=svg)](https://circleci.com/gh/lmcjt37/l3digital/tree/master)
+
 Website for L3 Digital, built using GatsbyJS, React, GraphQL, and supplied with content from Contentful CMS.
 
 ## Dependencies
