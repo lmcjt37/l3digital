@@ -1,6 +1,8 @@
 # L3 Digital
 
-Website for L3 Digital
+[![Build Status](https://travis-ci.com/lmcjt37/l3digital.svg?token=QcsEGh8xBvsnkTrFGLpM&branch=master)](https://travis-ci.com/lmcjt37/l3digital)
+
+Website for L3 Digital, built using GatsbyJS, React, GraphQL, and supplied with content from Contentful CMS.
 
 ## Dependencies
 
