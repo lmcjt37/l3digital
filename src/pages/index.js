@@ -17,7 +17,7 @@ class HomeIndex extends React.Component {
     }
   }
 
-  handleResizeChange = () => {
+  handleResizeChange() {
     this.setState({ ...UtilsHelper.getScreenSize() })
   }
 
@@ -49,8 +49,8 @@ class HomeIndex extends React.Component {
 
         <div id="main">
           <section id="one" className="tiles smooth-scroll-section">
-            {this.props.data.allContentfulProject.edges.map(edge => (
-              <Article {...edge.node} />
+            {this.props.data.allContentfulProject.edges.map((edge, id) => (
+              <Article {...edge.node} key={id} />
             ))}
           </section>
           <section id="two">
@@ -78,6 +78,10 @@ class HomeIndex extends React.Component {
       </div>
     )
   }
+}
+
+HomeIndex.propTypes = {
+  data: React.PropTypes.object.required,
 }
 
 export default HomeIndex

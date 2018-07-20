@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 class errorPage extends React.Component {
@@ -60,10 +59,10 @@ class errorPage extends React.Component {
               		c-7.399,14.06-13.319,24.42-19.979,35.52l-58.829,81.769v0.74H503.297z
               		"
                   stroke="#fff"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="none"
-                  stroke-dasharray="988.01 988.01"
-                  stroke-dashoffset="0"
+                  strokeDasharray="988.01 988.01"
+                  strokeDashoffset="0"
                 />
               </svg>
             </div>

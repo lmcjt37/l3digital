@@ -15,16 +15,17 @@
     },
     {
       "name": "Luke Steadman",
-      "email": "",
-      "url": ""
+      "email": "luke@steadweb.co.uk",
+      "url": "http://www.steadweb.co.uk/"
     },
     {
       "name": "Leigh Mills",
-      "email": "",
+      "email": "leighmills33@hotmail.com",
       "url": ""
     }
   ],
   "dependencies": {
+    "eslint-plugin-graphql": "^2.1.1",
     "gatsby": "^1.9.235",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
@@ -38,8 +39,7 @@
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
     "gatsby-transformer-sharp": "^1.6.22",
-    "lodash": "^4.17.4",
-    "react-device-detect": "^1.5.8"
+    "lodash": "^4.17.4"
   },
   "homepage": "n/a",
   "keywords": [
@@ -59,7 +59,7 @@
     "develop": "gatsby develop -H 127.0.0.1",
     "build": "gatsby build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
     "clearcache": "rm -rf .cache/ public",
     "heroku-postbuild": "gatsby build",
     "start": "gatsby serve",

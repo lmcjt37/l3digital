@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link, withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby-link'
 import '../assets/scss/main.scss'
 import Header from '../components/Header'
 import Menu from '../components/Menu'

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BannerMobile = props => (
+const BannerMobile = () => (
   <section id="banner" className="major">
     <div className="inner">
       <header className="major">

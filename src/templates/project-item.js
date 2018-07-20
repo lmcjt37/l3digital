@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 class ProjectItem extends Component {
   render() {
     const {
-      slug,
       title,
       description,
       shortDescription,
@@ -35,7 +34,12 @@ class ProjectItem extends Component {
               />
               <ul className="actions">
                 <li>
-                  <a href={url} target="_blank" className="button special">
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button special"
+                  >
                     Visit
                   </a>
                 </li>
