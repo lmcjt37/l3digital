@@ -25,7 +25,10 @@ class ProjectItem extends Component {
                 <h1>{title}</h1>
               </header>
               <span className="image main">
-                <img src={featuredImage.responsiveResolution.src} alt="" />
+                <img
+                  src={featuredImage.responsiveResolution.src}
+                  alt={featuredImage.description}
+                />
               </span>
               <div
                 dangerouslySetInnerHTML={{
@@ -73,6 +76,7 @@ export const projectItemQuery = graphql`
         responsiveResolution {
           src
         }
+        description
       }
       url
     }
