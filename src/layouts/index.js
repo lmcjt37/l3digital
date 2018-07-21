@@ -1,7 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby-link'
+import PropTypes from 'prop-types'
+
 import '../assets/scss/main.scss'
+
 import Header from '../components/Header'
 import Menu from '../components/Menu'
 import Contact from '../components/Contact'
@@ -82,7 +85,7 @@ class Template extends React.Component {
 }
 
 Template.propTypes = {
-  children: React.PropTypes.func,
+  children: PropTypes.func,
 }
 
 export default Template
