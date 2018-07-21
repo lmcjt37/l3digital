@@ -1,6 +1,6 @@
 # L3 Digital
 
-[![CircleCI](https://circleci.com/gh/lmcjt37/l3digital/tree/master.svg?style=svg)](https://circleci.com/gh/lmcjt37/l3digital/tree/master)
+[![CircleCI](https://circleci.com/gh/lmcjt37/l3digital.svg?style=svg&circle-token=54c2a8c5dec98d4935c045492a4344bea2e5974a)](https://circleci.com/gh/lmcjt37/l3digital)
 
 Website for L3 Digital, built using GatsbyJS, React, GraphQL, and supplied with content from Contentful CMS.
 
