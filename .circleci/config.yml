@@ -1,26 +1,56 @@
-# Javascript Node CircleCI 2.0 configuration file
+# # Javascript Node CircleCI 2.0 configuration file
+# #
+# # Check https://circleci.com/docs/2.0/language-javascript/ for more details
+# #
+# version: 2
+# jobs:
+#   build:
+#     docker:
+#       # Specify service dependencies here if necessary
+#       # CircleCI maintains a library of pre-built images
+#       # documented at https://circleci.com/docs/2.0/circleci-images/
+#       # - image: circleci/mongo:3.4.4
+#       - image: circleci/node:8.11
 #
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#     steps:
+#       - checkout
 #
-version: 2
-jobs:
-  build:
-    docker:
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-      - image: circleci/node:8.11
+#       # Download and cache dependencies
+#       - restore_cache:
+#           keys:
+#           - v1-dependencies-{{ checksum "package.json" }}
+#           # fallback to using the latest cache if no exact match is found
+#           - v1-dependencies-
+#
+#       - run:
+#           name: Install dependencies
+#           command: npm install
+#
+#       - save_cache:
+#           paths:
+#             - node_modules
+#           key: v1-dependencies-{{ checksum "package.json" }}
+#
+#       - run:
+#           name: Lint
+#           command: npm run lint
+#
+#       - run:
+#           name: Test
+#           command: npm run test
 
+version: 2.0
+
+jobs:
+  checkout_code:
+    docker:
+      - image: circleci/node:8.11
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
 
       - run:
           name: Install dependencies
@@ -31,6 +61,15 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+  run_tests:
+    docker:
+      - image: circleci/node:8.11
+    steps:
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
       - run:
           name: Lint
           command: npm run lint
@@ -38,3 +77,31 @@ jobs:
       - run:
           name: Test
           command: npm run test
+
+  deploy:
+    machine:
+        enabled: true
+    environment:
+      - HEROKU_APP: $HEROKU_APP
+    steps:
+    - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/l3digital.git master
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - checkout_code
+      - run_tests:
+          requires:
+            - checkout_code
+      - deploy:
+          requires:
+            - run_tests
