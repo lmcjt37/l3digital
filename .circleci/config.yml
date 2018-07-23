@@ -18,7 +18,7 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
-            - ~/l3digital
+            - node_modules
 
   run_tests:
     docker:
@@ -30,6 +30,10 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
 
+      - run:
+          name: echo test
+          command: ls
+          
       - run:
           name: Lint
           command: npm run lint
