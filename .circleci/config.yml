@@ -6,9 +6,10 @@ jobs:
     working_directory: ~/l3digital
     steps:
       - checkout
+
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
             - v1-dependencies-
 
       - run:
@@ -16,9 +17,9 @@ jobs:
           command: npm install
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
-            - node_modules
+            - ./node_modules
 
   run_tests:
     docker:
@@ -27,13 +28,9 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
             - v1-dependencies-
 
-      - run:
-          name: echo test
-          command: ls
-          
       - run:
           name: Lint
           command: npm run lint
@@ -51,7 +48,7 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
             - v1-dependencies-
       - checkout
       - run:

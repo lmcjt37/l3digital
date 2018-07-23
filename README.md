@@ -17,7 +17,7 @@ Website for L3 Digital, built using GatsbyJS, React, GraphQL, and supplied with 
 ### For Mobile development
 
 - Install ngrok - `npm install ngrok -g`
-- After starting a local development server with `npm run dev` you can then open another terminal and run `npm run dev:mobile`
+- After starting a local development server with `npm run dev` you can then open another terminal and run `npm run dev::mobile`
 - You will then be able to use the randomly generated domain to access the localhost.
 
 #### production

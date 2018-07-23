@@ -55,11 +55,12 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "dev:mobile": "ngrok http 8000",
+    "dev::mobile": "ngrok http 8000",
     "develop": "gatsby develop -H 127.0.0.1",
     "build": "gatsby build",
     "test": "echo \"Error: no test specified\"",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint::circleci": "circleci config validate -c .circleci/config.yml",
     "clearcache": "rm -rf .cache/ public",
     "heroku-postbuild": "gatsby build",
     "start": "gatsby serve",
