@@ -10,6 +10,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v1-dependencies-{{ .Branch }}-
             - v1-dependencies-
 
       - run:
@@ -19,7 +20,7 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - ./node_modules
+            - ~/l3digital/node_modules
 
   run_tests:
     docker:
@@ -29,6 +30,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v1-dependencies-{{ .Branch }}-
             - v1-dependencies-
 
       - run:
@@ -49,6 +51,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v1-dependencies-{{ .Branch }}-
             - v1-dependencies-
       - checkout
       - run:
