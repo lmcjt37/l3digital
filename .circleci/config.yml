@@ -32,6 +32,10 @@ jobs:
             - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
             - v1-dependencies-{{ .Branch }}-
             - v1-dependencies-
+      - run:
+          name: check lists
+          command: |
+            cd ~/l3digital && ls
 
       - run:
           name: Lint
