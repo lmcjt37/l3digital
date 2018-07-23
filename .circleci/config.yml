@@ -27,15 +27,13 @@ jobs:
       - image: circleci/node:8.11
     working_directory: ~/l3digital
     steps:
+      - checkout
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
             - v1-dependencies-{{ .Branch }}-
             - v1-dependencies-
-      - run:
-          name: check lists
-          command: |
-            cd ~/l3digital && ls
 
       - run:
           name: Lint
