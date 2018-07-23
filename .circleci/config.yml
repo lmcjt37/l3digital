@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
-            - ./node_modules
+            - ~/l3digital/node_modules
 
   run_tests:
     docker:
