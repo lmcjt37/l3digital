@@ -39,22 +39,22 @@ jobs:
           name: Lint
           command: npm run lint
 
-    run_tests:
-      docker:
-        - image: circleci/node:8.11
-      working_directory: ~/l3digital
-      steps:
-        - checkout
+  run_tests:
+    docker:
+      - image: circleci/node:8.11
+    working_directory: ~/l3digital
+    steps:
+      - checkout
 
-        - restore_cache:
-            keys:
-              - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
-              - v1-dependencies-{{ .Branch }}-
-              - v1-dependencies-
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v1-dependencies-{{ .Branch }}-
+            - v1-dependencies-
 
-        - run:
-            name: Test
-            command: npm run test
+      - run:
+          name: Test
+          command: npm run test
 
 workflows:
   version: 2
