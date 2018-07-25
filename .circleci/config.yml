@@ -22,7 +22,7 @@ jobs:
           paths:
             - ~/l3digital/node_modules
 
-  run_tests:
+  run_linting:
     docker:
       - image: circleci/node:8.11
     working_directory: ~/l3digital
@@ -39,39 +39,31 @@ jobs:
           name: Lint
           command: npm run lint
 
-      - run:
-          name: Test
-          command: npm run test
+    run_tests:
+      docker:
+        - image: circleci/node:8.11
+      working_directory: ~/l3digital
+      steps:
+        - checkout
 
-  deploy:
-    machine:
-        enabled: true
-    working_directory: ~/l3digital
-    environment:
-      - HEROKU_APP: $HEROKU_APP
-    steps:
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - v1-dependencies-{{ .Branch }}-
-            - v1-dependencies-
-      - checkout
-      - run:
-          name: Deploy Master to Heroku
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/l3digital.git master
+        - restore_cache:
+            keys:
+              - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
+              - v1-dependencies-{{ .Branch }}-
+              - v1-dependencies-
+
+        - run:
+            name: Test
+            command: npm run test
 
 workflows:
   version: 2
   build-and-deploy:
     jobs:
       - checkout_code
-      - run_tests:
+      - run_linting:
           requires:
             - checkout_code
-      - deploy:
+      - run_tests:
           requires:
-            - run_tests
-          filters:
-            branches:
-              only: master
+            - run_linting
