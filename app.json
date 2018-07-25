@@ -1,9 +1,11 @@
 {
   "env": {
-    "INHERIT_THIS_CONFIG_VAR": {
+    "CONTENTFUL_SPACE_ID": {
       "required": true
     },
-    "DONT_INHERIT_THIS_CONFIG_VAR": "production"
+    "CONTENTFUL_API_KEY": {
+      "required": true
+    }
   },
   "buildpacks": [
     {
