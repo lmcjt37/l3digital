@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
 import BannerDesktop from '../components/Banner'
 import BannerMobile from '../components/BannerMobile'
@@ -81,7 +82,7 @@ class HomeIndex extends React.Component {
 }
 
 HomeIndex.propTypes = {
-  data: React.PropTypes.object.required,
+  data: PropTypes.object.required,
 }
 
 export default HomeIndex

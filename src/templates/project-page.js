@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-class ProjectItem extends Component {
+class ProjectPage extends Component {
   render() {
     const {
       title,
@@ -55,14 +55,14 @@ class ProjectItem extends Component {
   }
 }
 
-ProjectItem.propTypes = {
+ProjectPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default ProjectItem
+export default ProjectPage
 
-export const projectItemQuery = graphql`
-  query projectItemQuery($slug: String!) {
+export const projectPageQuery = graphql`
+  query projectPageQuery($slug: String!) {
     contentfulProject(slug: { eq: $slug }) {
       slug
       title
