@@ -1,4 +1,12 @@
 {
+  "env": {
+    "CONTENTFUL_SPACE_ID": {
+      "required": true
+    },
+    "CONTENTFUL_API_KEY": {
+      "required": true
+    }
+  },
   "buildpacks": [
     {
       "url": "heroku/nodejs"
