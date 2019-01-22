@@ -1,0 +1,35 @@
+///
+/// Luke Taylor | @lmcjt | @lmcjt37(Github)
+///
+
+/* Project pages styling */
+
+.text {
+  border: 0;
+  display: inline-block;
+  position: relative;
+
+  &.right {
+    float: right;
+    width: calc(65% - 1.5em);
+
+    @include breakpoint(small) {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+.image {
+  &.left,
+  &.right {
+    @include breakpoint(small) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+}
