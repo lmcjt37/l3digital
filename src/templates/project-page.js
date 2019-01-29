@@ -24,18 +24,19 @@ class ProjectPage extends Component {
               <header className="major">
                 <h1>{title}</h1>
               </header>
-              <span className="image main">
+              <span className="image left">
                 <img
                   src={featuredImage.responsiveResolution.src}
                   alt={featuredImage.description}
                 />
               </span>
               <div
+                className="text right"
                 dangerouslySetInnerHTML={{
                   __html: description.childMarkdownRemark.html,
                 }}
               />
-              <ul className="actions">
+              <ul className="actions clearfix">
                 <li>
                   <a
                     href={url}
