@@ -26,15 +26,21 @@
   (
     reset: 'full',
     boxModel: 'border',
-    // grid: ( gutters: 2em ),
-      // breakpoints: (
-      // 	large: (
-      // 		grid: ( gutters: 1.5em )
-      // 	),
-      // 	small: (
-      // 		grid: ( gutters: 1.25em )
-      // 	)
-      // ),
+    grid: (
+      gutters: 2em,
+    ),
+    breakpoints: (
+      large: (
+        grid: (
+          gutters: 1.5em,
+        ),
+      ),
+      small: (
+        grid: (
+          gutters: 1.25em,
+        ),
+      ),
+    ),
   )
 );
 
