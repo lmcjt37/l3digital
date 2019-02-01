@@ -6,21 +6,19 @@ Static website for L3 Digital, built using GatsbyJS, React, GraphQL, and supplie
 
 #### Dependencies
 
-- Gatsby-cli - `npm install -g gatsby-cli`
+-   Gatsby-cli - `npm install -g gatsby-cli`
 
 ## Getting Started
 
-- Install dependencies - `npm install`
-- Start local development server - `npm run dev`
-- This will serve up a dev server with hot reload locally at [http://localhost:8000/](http://localhost:8000/)
+-   Install dependencies - `npm install`
+-   Start local development server - `npm run dev`
+-   This will serve up a dev server with hot reload locally at [http://localhost:8000/](http://localhost:8000/)
 
 ### For Mobile development
 
-#### Dependencies
+Simply run `npm run dev::mobile`. You can then access the development server via http://{HOSTNAME}:8000 on any mobile device. This URL will also be printed in the terminal for reference.
 
-- ngrok - `npm install ngrok -g`
-
-After starting a local development server with `npm run dev` you can then open another terminal and run `npm run dev::mobile`. You will then be able to use the randomly generated domain to access the localhost.
+_Note: You need to be on the same network. Also, if your device is connected to a proxy, you will need to disable it to access the dev server_
 
 ## production
 
@@ -28,9 +26,9 @@ Running `npm run build` will build the static site and assets found in `/public`
 
 ## Testing
 
-- TODO
-- [ ] Agree testing framework(s)
-- [ ] Agree structure and workflow
+-   TODO
+-   [ ] Agree testing framework(s)
+-   [ ] Agree structure and workflow
 
 ## Linting
 
@@ -42,8 +40,8 @@ Can be run locally by `npm run lint`
 
 #### Dependencies
 
-- [Docker](https://docs.docker.com/install/)
-- CircleCI CLI
-  `$ curl -o /usr/local/bin/circleci https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circleci && chmod +x /usr/local/bin/circleci`
+-   [Docker](https://docs.docker.com/install/)
+-   CircleCI CLI
+    `$ curl -o /usr/local/bin/circleci https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circleci && chmod +x /usr/local/bin/circleci`
 
 You can then make changes, when needed, to the Circle CI config.yml file and test it locally by `npm run lint::circleci`
