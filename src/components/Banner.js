@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 class Banner extends React.Component {
     constructor(props) {
@@ -102,6 +103,10 @@ class Banner extends React.Component {
             </section>
         )
     }
+}
+
+Banner.propTypes = {
+    scrollToElement: PropTypes.func,
 }
 
 export default Banner

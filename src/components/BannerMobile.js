@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const BannerMobile = (props) => (
   <section id="banner" className="major">
@@ -24,4 +25,9 @@ const BannerMobile = (props) => (
     </div>
   </section>
 )
+
+BannerMobile.propTypes = {
+  scrollToElement: PropTypes.func,
+}
+
 export default BannerMobile
