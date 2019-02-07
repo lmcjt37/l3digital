@@ -24,8 +24,8 @@ class IndexArticle extends Component {
 IndexArticle.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string,
-    description: PropTypes.string,
-    featuredImage: PropTypes.string,
+    description: PropTypes.object,
+    featuredImage: PropTypes.object,
 }
 
 export default IndexArticle

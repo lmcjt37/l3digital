@@ -85,7 +85,7 @@ class HomeIndex extends React.Component {
 }
 
 HomeIndex.propTypes = {
-    data: PropTypes.object.required,
+    data: PropTypes.object,
 }
 
 export default HomeIndex
