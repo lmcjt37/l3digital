@@ -24,9 +24,8 @@ class Template extends React.Component {
         this.timeoutId = setTimeout(() => {
             this.setState({ loading: '' })
 
-            let section = document.querySelectorAll('.smooth-scroll-section'),
-                sections = {}
-            Array.prototype.forEach.call(section, e => {
+            let sections = {}
+            document.querySelectorAll('.smooth-scroll-section').forEach(e => {
                 sections[e.id] = {
                     start: e.offsetTop,
                     end: e.offsetTop + e.offsetHeight,
