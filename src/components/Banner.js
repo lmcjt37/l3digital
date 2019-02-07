@@ -90,8 +90,10 @@ class Banner extends React.Component {
                         </p>
                         <ul className="actions">
                             <li>
-                                <a href="#who-are-we" className="button next">
-                                    Learn more
+                                <a href="javascript:;" 
+                                    className="button next" 
+                                    onClick={this.props.scrollToElement}>
+                                        Learn more
                                 </a>
                             </li>
                         </ul>

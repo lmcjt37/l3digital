@@ -16,6 +16,9 @@ class HomeIndex extends React.Component {
         this.state = {
             isHandheld: false,
         }
+        this.setScrollRef = element => {
+            this.elementRef = element;
+        }
     }
 
     handleResizeChange() {
@@ -31,12 +34,16 @@ class HomeIndex extends React.Component {
         window.removeEventListener('resize', this.handleResizeChange)
     }
 
+    scrollToRefElement() {
+        this.elementRef.scrollIntoView({block: 'start', behavior: 'smooth'});
+    }
+
     render() {
         const siteTitle = this.props.data.site.siteMetadata.title
         const siteDescription = this.props.data.site.siteMetadata.description
 
         let getBanner = () => {
-            return this.state.isHandheld ? <BannerMobile /> : <BannerDesktop />
+            return this.state.isHandheld ? <BannerMobile scrollToElement={this.scrollToRefElement.bind(this)} /> : <BannerDesktop scrollToElement={this.scrollToRefElement.bind(this)} />
         }
 
         return (
@@ -54,7 +61,7 @@ class HomeIndex extends React.Component {
                             (edge, id) => <Article {...edge.node} key={id} />
                         )}
                     </section>
-                    <section id="who-are-we" className="smooth-scroll-section">
+                    <section id="who-are-we" ref={this.setScrollRef}>
                         <div className="inner">
                             <header className="major">
                                 <h2>Who are we</h2>

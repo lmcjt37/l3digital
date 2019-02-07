@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BannerMobile = () => (
+const BannerMobile = (props) => (
   <section id="banner" className="major">
     <div className="inner">
       <header className="major">
@@ -13,8 +13,10 @@ const BannerMobile = () => (
         </p>
         <ul className="actions">
           <li>
-            <a href="#one" className="button next">
-              Learn more
+            <a href="javascript:;" 
+              className="button next"
+              onClick={props.scrollToElement}>
+                Learn more
             </a>
           </li>
         </ul>

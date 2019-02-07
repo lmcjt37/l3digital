@@ -23,26 +23,6 @@ class Template extends React.Component {
     componentDidMount() {
         this.timeoutId = setTimeout(() => {
             this.setState({ loading: '' })
-
-            let sections = {}
-            document.querySelectorAll('.smooth-scroll-section').forEach(e => {
-                sections[e.id] = {
-                    start: e.offsetTop,
-                    end: e.offsetTop + e.offsetHeight,
-                }
-                document
-                    .querySelector(
-                        `a[href*='${e.id}']:not([href='#']):not([href='#0'])`
-                    )
-                    .addEventListener('click', evt => {
-                        window.scroll({
-                            top: sections[e.id].start,
-                            left: 0,
-                            behavior: 'smooth',
-                        })
-                        evt.preventDefault()
-                    })
-            })
         }, 100)
     }
 
