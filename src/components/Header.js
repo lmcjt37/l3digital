@@ -1,13 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 const Header = props => (
-  <header id="header" className="alt">
-    <Link to="/" className="logo">
-      <svg version="1.1" viewBox="15 5 70 90">
-        <path
-          d="M42.487,89.021c0.259,0,0.519-0.067,0.751-0.201l16.223-9.376l16.238-9.365c0.464-0.269,0.75-0.764,0.75-1.3
+    <header id="header" className="alt">
+        <Link to="/" className="logo">
+            <svg version="1.1" viewBox="15 5 70 90">
+                <path
+                    d="M42.487,89.021c0.259,0,0.519-0.067,0.751-0.201l16.223-9.376l16.238-9.365c0.464-0.269,0.75-0.764,0.75-1.3
                 V50.043c0-0.536-0.286-1.031-0.75-1.299l-15.489-8.94V21.94c0-0.536-0.286-1.031-0.749-1.299l-16.223-9.376
                 c-0.232-0.134-0.492-0.201-0.751-0.201s-0.519,0.067-0.751,0.201l-16.222,9.376c-0.464,0.268-0.749,0.763-0.749,1.299v18.73v18.739
                 v18.736c0,0.535,0.285,1.03,0.749,1.299l16.222,9.376C41.969,88.954,42.229,89.021,42.487,89.021z M74.449,68.49L59.21,77.279
@@ -31,20 +31,24 @@ const Header = props => (
                 a 2,4 20 0,0 8,0
                 a 2,4 20 0,0 -8,0
                 "
-        />
-      </svg>{' '}
-      <span>L3 Digital</span>
-    </Link>
-    <nav>
-      <a className="menu-link" onClick={props.onToggleMenu} href="javascript:;">
-        Menu
-      </a>
-    </nav>
-  </header>
+                />
+            </svg>{' '}
+            <span>L3 Digital</span>
+        </Link>
+        <nav>
+            <a
+                className="menu-link"
+                onClick={props.onToggleMenu}
+                href="javascript:;"
+            >
+                Menu
+            </a>
+        </nav>
+    </header>
 )
 
 Header.propTypes = {
-  onToggleMenu: PropTypes.func,
+    onToggleMenu: PropTypes.func,
 }
 
 export default Header
