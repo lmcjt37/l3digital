@@ -37,6 +37,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sass`,
             options: {
+                includePaths: [`${__dirname}/src/assets/scss`],
                 cssLoaderOptions: {
                     camelCase: false,
                 },
