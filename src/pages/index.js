@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
+import Layout from '../components/layout'
 import BannerDesktop from '../components/Banner'
 import BannerMobile from '../components/BannerMobile'
 
@@ -55,7 +56,7 @@ class HomeIndex extends React.Component {
         }
 
         return (
-            <div>
+            <Layout>
                 <Helmet>
                     <title>{siteTitle}</title>
                     <meta name="description" content={siteDescription} />
@@ -94,7 +95,7 @@ class HomeIndex extends React.Component {
                         </div>
                     </section>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }

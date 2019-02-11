@@ -34,15 +34,7 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_API_KEY,
             },
         },
-        {
-            resolve: `gatsby-plugin-sass`,
-            options: {
-                includePaths: [`${__dirname}/src/assets/scss`],
-                cssLoaderOptions: {
-                    camelCase: false,
-                },
-            },
-        },
+        `gatsby-plugin-sass`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,

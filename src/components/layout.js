@@ -10,7 +10,7 @@ import Menu from '../components/Menu'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
-class Template extends React.Component {
+class Layout extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -62,8 +62,8 @@ class Template extends React.Component {
     }
 }
 
-Template.propTypes = {
-    children: PropTypes.func,
+Layout.propTypes = {
+    children: PropTypes.array,
 }
 
-export default Template
+export default Layout
