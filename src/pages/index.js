@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import BannerDesktop from '../components/Banner'
+import BannerDesktop from '../components/BannerDesktop'
 import BannerMobile from '../components/BannerMobile'
 
 import Article from '../templates/index-article'
@@ -17,7 +17,7 @@ class HomeIndex extends React.Component {
             isHandheld: false,
         }
         this.setScrollRef = element => {
-            this.elementRef = element;
+            this.elementRef = element
         }
     }
 
@@ -35,7 +35,7 @@ class HomeIndex extends React.Component {
     }
 
     scrollToRefElement() {
-        this.elementRef.scrollIntoView({block: 'start', behavior: 'smooth'});
+        this.elementRef.scrollIntoView({ block: 'start', behavior: 'smooth' })
     }
 
     render() {
@@ -43,7 +43,15 @@ class HomeIndex extends React.Component {
         const siteDescription = this.props.data.site.siteMetadata.description
 
         let getBanner = () => {
-            return this.state.isHandheld ? <BannerMobile scrollToElement={this.scrollToRefElement.bind(this)} /> : <BannerDesktop scrollToElement={this.scrollToRefElement.bind(this)} />
+            return this.state.isHandheld ? (
+                <BannerMobile
+                    scrollToElement={this.scrollToRefElement.bind(this)}
+                />
+            ) : (
+                <BannerDesktop
+                    scrollToElement={this.scrollToRefElement.bind(this)}
+                />
+            )
         }
 
         return (
@@ -58,7 +66,9 @@ class HomeIndex extends React.Component {
                 <div id="main">
                     <section id="projects" className="tiles">
                         {this.props.data.allContentfulProject.edges.map(
-                            (edge, id) => <Article {...edge.node} key={id} />
+                            (edge, id) => (
+                                <Article {...edge.node} key={id} />
+                            )
                         )}
                     </section>
                     <section id="who-are-we" ref={this.setScrollRef}>
