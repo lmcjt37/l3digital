@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
@@ -71,7 +72,11 @@ Projects.propTypes = {
 export default Projects
 
 export const projectsPageQuery = graphql`
+<<<<<<< HEAD
     query ProjectsPageQuery {
+=======
+    {
+>>>>>>> master
         allContentfulProject(filter: { node_locale: { eq: "en-US" } }) {
             edges {
                 node {
@@ -83,7 +88,11 @@ export const projectsPageQuery = graphql`
                         }
                     }
                     featuredImage {
+<<<<<<< HEAD
                         responsiveResolution {
+=======
+                        resize {
+>>>>>>> master
                             src
                         }
                     }

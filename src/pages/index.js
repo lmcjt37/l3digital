@@ -1,8 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
+import Layout from '../components/layout'
 import BannerDesktop from '../components/BannerDesktop'
 import BannerMobile from '../components/BannerMobile'
 
@@ -55,7 +56,7 @@ class HomeIndex extends React.Component {
         }
 
         return (
-            <div>
+            <Layout>
                 <Helmet>
                     <title>{siteTitle}</title>
                     <meta name="description" content={siteDescription} />
@@ -94,19 +95,19 @@ class HomeIndex extends React.Component {
                         </div>
                     </section>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }
 
 HomeIndex.propTypes = {
-    data: PropTypes.object.required,
+    data: PropTypes.object,
 }
 
 export default HomeIndex
 
 export const pageQuery = graphql`
-    query PageQuery {
+    {
         site {
             siteMetadata {
                 title
@@ -124,7 +125,7 @@ export const pageQuery = graphql`
                         }
                     }
                     featuredImage {
-                        responsiveResolution {
+                        resize {
                             src
                         }
                     }

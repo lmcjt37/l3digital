@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import '../assets/scss/main.scss'
@@ -10,7 +10,7 @@ import Menu from '../components/Menu'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
-class Template extends React.Component {
+class Layout extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -52,7 +52,7 @@ class Template extends React.Component {
                 </Helmet>
                 <div id="wrapper">
                     <Header onToggleMenu={this.handleToggleMenu} />
-                    {children()}
+                    {children}
                     <Contact />
                     <Footer />
                 </div>
@@ -62,8 +62,8 @@ class Template extends React.Component {
     }
 }
 
-Template.propTypes = {
-    children: PropTypes.func,
+Layout.propTypes = {
+    children: PropTypes.array,
 }
 
-export default Template
+export default Layout
