@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
-import BannerDesktop from '../components/Banner'
+import BannerDesktop from '../components/BannerDesktop'
 import BannerMobile from '../components/BannerMobile'
 
 import Article from '../templates/index-article'
