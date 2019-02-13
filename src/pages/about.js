@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
+import Layout from '../components/layout'
+
 import ProfileSection from '../templates/profile-section'
 
 class About extends React.Component {
@@ -11,7 +13,7 @@ class About extends React.Component {
     }
     render() {
         return (
-            <div>
+            <Layout>
                 <Helmet>
                     <title>About</title>
                     <meta name="description" content="About Us Page" />
@@ -57,7 +59,7 @@ class About extends React.Component {
                         )}
                     </section>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }

@@ -1,51 +1,55 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import Layout from '../components/layout'
+
 class errorPage extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  componentDidMount() {
-    window.onload = function() {
-      lineDraw()
+    constructor(props) {
+        super(props)
     }
-    function lineDraw() {
-      //0 is the image fully animated, 988.01 is the starting point.
-      var path = document.querySelector('.line-animated path')
-      var length = path.getTotalLength()
-      path.style.transition = path.style.WebkitTransition = 'none'
-      path.style.strokeDasharray = length + ' ' + length
-      path.style.strokeDashoffset = length
-      path.getBoundingClientRect()
-      path.style.transition = path.style.WebkitTransition =
-        'stroke-dashoffset 7s ease-in-out'
-      path.style.strokeDashoffset = '0'
+
+    componentDidMount() {
+        window.onload = function() {
+            lineDraw()
+        }
+        function lineDraw() {
+            //0 is the image fully animated, 988.01 is the starting point.
+            var path = document.querySelector('.line-animated path')
+            var length = path.getTotalLength()
+            path.style.transition = path.style.WebkitTransition = 'none'
+            path.style.strokeDasharray = length + ' ' + length
+            path.style.strokeDashoffset = length
+            path.getBoundingClientRect()
+            path.style.transition = path.style.WebkitTransition =
+                'stroke-dashoffset 7s ease-in-out'
+            path.style.strokeDashoffset = '0'
+        }
     }
-  }
 
-  render() {
-    return (
-      <div>
-        <Helmet>
-          <title>404 - Something Went Wrong</title>
-          <meta name="description" content="404 Page" />
-        </Helmet>
+    render() {
+        return (
+            <Layout>
+                <Helmet>
+                    <title>404 - Something Went Wrong</title>
+                    <meta name="description" content="404 Page" />
+                </Helmet>
 
-        <div id="main">
-          <section id="one">
-            <div className="inner">
-              <h3 className="align-center">Oops! Something went wrong.</h3>
-              <p className="align-center">
-                Try searching again or for a different page.
-              </p>
-              <svg
-                version="1.1"
-                viewBox="0 0 590 266.4"
-                className="line-animated"
-              >
-                <path
-                  d="M123.689,254.399V188.54H11.95v-21.089L119.249,13.903h35.149
+                <div id="main">
+                    <section id="one">
+                        <div className="inner">
+                            <h3 className="align-center">
+                                Oops! Something went wrong.
+                            </h3>
+                            <p className="align-center">
+                                Try searching again or for a different page.
+                            </p>
+                            <svg
+                                version="1.1"
+                                viewBox="0 0 590 266.4"
+                                className="line-animated"
+                            >
+                                <path
+                                    d="M123.689,254.399V188.54H11.95v-21.089L119.249,13.903h35.149
               		v149.478h33.67v25.159h-33.67v65.859H123.689z M123.689,163.381V83.092c0-12.58,0.37-25.16,1.11-37.74h-1.11
               		c-7.4,14.06-13.32,24.42-19.98,35.52L44.88,162.641v0.74H123.689z
 
@@ -58,19 +62,19 @@ class errorPage extends React.Component {
               		v149.478h33.67v25.159h-33.67v65.859H503.297z M503.297,163.381V83.092c0-12.58,0.37-25.16,1.11-37.74h-1.11
               		c-7.399,14.06-13.319,24.42-19.979,35.52l-58.829,81.769v0.74H503.297z
               		"
-                  stroke="#fff"
-                  strokeWidth="1"
-                  fill="none"
-                  strokeDasharray="988.01 988.01"
-                  strokeDashoffset="0"
-                />
-              </svg>
-            </div>
-          </section>
-        </div>
-      </div>
-    )
-  }
+                                    stroke="#fff"
+                                    strokeWidth="1"
+                                    fill="none"
+                                    strokeDasharray="988.01 988.01"
+                                    strokeDashoffset="0"
+                                />
+                            </svg>
+                        </div>
+                    </section>
+                </div>
+            </Layout>
+        )
+    }
 }
 
 export default errorPage

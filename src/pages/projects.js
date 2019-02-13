@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
+import Layout from '../components/layout'
 import ProjectSection from '../templates/project-section'
 
 class Projects extends React.Component {
@@ -11,7 +12,7 @@ class Projects extends React.Component {
     }
     render() {
         return (
-            <div>
+            <Layout>
                 <Helmet>
                     <title>Projects</title>
                     <meta name="description" content="Projects Page" />
@@ -59,7 +60,7 @@ class Projects extends React.Component {
                         )}
                     </section>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }
