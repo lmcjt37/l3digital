@@ -1,0 +1,50 @@
+///
+/// _divider.scss
+/// Author: Luke Taylor
+/// Date: 2019-02-12
+///
+
+.divider-container {
+    min-height: 700px;
+    position: relative;
+    left: -39.5px;
+    box-sizing: border-box;
+    width: 1279px;
+    padding-left: 39.5px;
+    padding-right: 39.5px;
+}
+.divider-shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+    direction: ltr;
+
+    svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+.divider-shape-top {
+    top: -1px;
+}
+
+.divider-shape-flip {
+}
+
+.divider-shape-fill {
+    fill: #fff;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}

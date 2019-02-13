@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import BannerDesktop from '../components/Banner'
 import BannerMobile from '../components/BannerMobile'
+import Divider from '../components/Divider'
 
 import Article from '../templates/index-article'
 
@@ -72,6 +73,7 @@ class HomeIndex extends React.Component {
                             )
                         )}
                     </section>
+                    <Divider />
                     <section id="who-are-we" ref={this.setScrollRef}>
                         <div className="inner">
                             <header className="major">
