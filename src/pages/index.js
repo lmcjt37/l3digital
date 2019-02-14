@@ -7,10 +7,8 @@ import Layout from '../components/layout'
 import BannerDesktop from '../components/BannerDesktop'
 import BannerMobile from '../components/BannerMobile'
 import {
-    DividerOne,
-    DividerTwo,
-    DividerThree,
-    DividerFour,
+    Mountains as DividerOne,
+    Pyramids as DividerTwo,
 } from '../components/Divider'
 
 import Article from '../templates/index-article'
@@ -101,7 +99,7 @@ class HomeIndex extends React.Component {
                             </ul>
                         </div>
                     </section>
-                    <DividerFour bottom flip color="bg" />
+                    <DividerTwo bottom flipX color="bg" />
                 </div>
             </Layout>
         )
