@@ -5,13 +5,9 @@
 ///
 
 .divider-container {
-    min-height: 700px;
+    min-height: 150px;
     position: relative;
-    left: -39.5px;
-    box-sizing: border-box;
-    width: 1279px;
-    padding-left: 39.5px;
-    padding-right: 39.5px;
+    width: 100%;
 }
 .divider-shape {
     overflow: hidden;
@@ -34,10 +30,17 @@
 }
 
 .divider-shape-top {
-    top: -1px;
+    top: 0;
+}
+
+.divider-shape-bottom {
+    bottom: 0;
 }
 
 .divider-shape-flip {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
 
 .divider-shape-fill {
@@ -47,4 +50,36 @@
     transform-origin: center;
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
+
+    &.divider-bg {
+        fill: _palette(bg);
+    }
+
+    &.divider-bg-alt {
+        fill: _palette(bg-alt);
+    }
+
+    &.divider-accent1 {
+        fill: _palette(accent1);
+    }
+
+    &.divider-accent2 {
+        fill: _palette(accent2);
+    }
+
+    &.divider-accent3 {
+        fill: _palette(accent3);
+    }
+
+    &.divider-accent4 {
+        fill: _palette(accent4);
+    }
+
+    &.divider-accent5 {
+        fill: _palette(accent5);
+    }
+
+    &.divider-accent6 {
+        fill: _palette(accent6);
+    }
 }
