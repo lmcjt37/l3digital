@@ -70,7 +70,8 @@
         "lint::circleci": "circleci config validate -c .circleci/config.yml",
         "clearcache": "rm -rf .cache/ public",
         "heroku-postbuild": "gatsby build",
-        "start": "gatsby serve"
+        "start": "gatsby serve",
+        "now-build": "gatsby build"
     },
     "lint-staged": {
         "*.{js,json,css,scss,md}": [

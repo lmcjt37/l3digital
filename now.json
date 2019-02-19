@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "name": "l3-digital",
+    "alias": "l3digital.co.uk",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build",
+            "config": { "distDir": "public" }
+        }
+    ],
+    "build": {
+        "env": {
+            "CONTENTFUL_SPACE_ID": "@contentful_space_id",
+            "CONTENTFUL_API_KEY": "@contentful_accesstoken"
+        }
+    }
+}
