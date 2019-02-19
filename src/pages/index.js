@@ -6,6 +6,10 @@ import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import BannerDesktop from '../components/BannerDesktop'
 import BannerMobile from '../components/BannerMobile'
+import {
+    Mountains as DividerOne,
+    Pyramids as DividerTwo,
+} from '../components/Divider'
 
 import Article from '../templates/index-article'
 
@@ -72,6 +76,7 @@ class HomeIndex extends React.Component {
                             )
                         )}
                     </section>
+                    <DividerOne top color="accent2" />
                     <section id="who-are-we" ref={this.setScrollRef}>
                         <div className="inner">
                             <header className="major">
@@ -94,6 +99,7 @@ class HomeIndex extends React.Component {
                             </ul>
                         </div>
                     </section>
+                    <DividerTwo bottom flipX color="bg" />
                 </div>
             </Layout>
         )

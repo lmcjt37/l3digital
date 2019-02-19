@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import { Drops as Divider } from '../components/Divider'
 
 class errorPage extends React.Component {
     constructor(props) {
@@ -35,6 +36,7 @@ class errorPage extends React.Component {
                 </Helmet>
 
                 <div id="main">
+                    <Divider top flipY color="accent2" />
                     <section id="one">
                         <div className="inner">
                             <h3 className="align-center">

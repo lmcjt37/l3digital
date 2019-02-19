@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import ProjectSection from '../templates/project-section'
+import { Asymmetric as Divider } from '../components/Divider'
 
 class Projects extends React.Component {
     constructor(props) {
@@ -34,6 +35,7 @@ class Projects extends React.Component {
                 </section>
 
                 <div id="main">
+                    <Divider top flipY color="bg" />
                     <section id="one">
                         <div className="inner">
                             <header className="major">
@@ -52,6 +54,7 @@ class Projects extends React.Component {
                             </p>
                         </div>
                     </section>
+                    <Divider bottom flipX color="bg" />
                     <section id="two" className="spotlights">
                         {this.props.data.allContentfulProject.edges.map(
                             (edge, id) => (

@@ -1,0 +1,91 @@
+///
+/// _divider.scss
+/// Author: Luke Taylor
+/// Date: 2019-02-12
+///
+
+.divider-container {
+    min-height: 150px;
+    position: relative;
+    width: 100%;
+}
+.divider-shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+    direction: ltr;
+
+    svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+.divider-shape-top {
+    top: 0;
+}
+
+.divider-shape-bottom {
+    bottom: 0;
+}
+
+.divider-shape-flip-x {
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.divider-shape-flip-y {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.divider-shape-fill {
+    fill: #fff;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+
+    &.divider-bg {
+        fill: _palette(bg);
+    }
+
+    &.divider-bg-alt {
+        fill: _palette(bg-alt);
+    }
+
+    &.divider-accent1 {
+        fill: _palette(accent1);
+    }
+
+    &.divider-accent2 {
+        fill: _palette(accent2);
+    }
+
+    &.divider-accent3 {
+        fill: _palette(accent3);
+    }
+
+    &.divider-accent4 {
+        fill: _palette(accent4);
+    }
+
+    &.divider-accent5 {
+        fill: _palette(accent5);
+    }
+
+    &.divider-accent6 {
+        fill: _palette(accent6);
+    }
+}

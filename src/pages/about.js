@@ -4,8 +4,8 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
-
 import ProfileSection from '../templates/profile-section'
+import { Pyramids as Divider } from '../components/Divider'
 
 class About extends React.Component {
     constructor(props) {
@@ -35,6 +35,7 @@ class About extends React.Component {
                 </section>
 
                 <div id="main">
+                    <Divider top flipY color="bg" />
                     <section id="one">
                         <div className="inner">
                             {this.props.data.allContentfulCompany.edges.map(
@@ -51,6 +52,7 @@ class About extends React.Component {
                             )}
                         </div>
                     </section>
+                    <Divider bottom flipX color="bg" />
                     <section id="two" className="spotlights">
                         {this.props.data.allContentfulProfile.edges.map(
                             (edge, id) => (
