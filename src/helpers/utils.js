@@ -1,10 +1,10 @@
 const helper = {
-  getScreenSize: () => {
-    if (window.innerWidth < 768) {
-      return { isHandheld: true }
-    } else {
-      return { isHandheld: false }
-    }
-  },
+    getScreenSize: () => {
+        if (window.innerWidth < 768) {
+            return { isHandheld: true }
+        } else {
+            return { isHandheld: false }
+        }
+    },
 }
-module.exports = helper
+export default helper

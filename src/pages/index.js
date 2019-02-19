@@ -31,12 +31,12 @@ class HomeIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.handleResizeChange()
-        window.addEventListener('resize', this.handleResizeChange)
+        this.handleResizeChange.bind(this)
+        window.addEventListener('resize', this.handleResizeChange.bind(this))
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResizeChange)
+        window.removeEventListener('resize', this.handleResizeChange.bind(this))
     }
 
     scrollToRefElement() {
