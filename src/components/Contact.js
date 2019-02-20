@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-const Contact = ({ data }) => {
+const Container = ({ data }) => {
     const companyData = data.allContentfulCompany.edges[0].node
     return (
         <section id="contact">
@@ -77,7 +77,7 @@ const Contact = ({ data }) => {
     )
 }
 
-export default props => (
+const Contact = props => (
     <StaticQuery
         query={graphql`
             {
@@ -98,11 +98,13 @@ export default props => (
                 }
             }
         `}
-        render={data => <Contact data={data} {...props} />}
+        render={data => <Container data={data} {...props} />}
     />
 )
 
-Contact.propTypes = {
+export default Contact
+
+Container.propTypes = {
     data: PropTypes.shape({
         line1: PropTypes.string,
         line2: PropTypes.string,
