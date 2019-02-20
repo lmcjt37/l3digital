@@ -29,7 +29,9 @@
     "no-mixed-spaces-and-tabs": 0,
     "react/no-deprecated": "warn"
   },
-  "react": {
-    "version": "detect"
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
