@@ -27,6 +27,9 @@
   "rules": {
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "no-mixed-spaces-and-tabs": 0,
-    "react/no-deprecated": 'warn'
+    "react/no-deprecated": "warn"
+  },
+  "react": {
+    "version": "detect"
   }
 }
