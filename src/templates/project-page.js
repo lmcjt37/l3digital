@@ -60,7 +60,7 @@ class ProjectPage extends Component {
 
 ProjectPage.propTypes = {
     data: PropTypes.shape({
-        allContentfulProject: PropTypes.object,
+        contentfulProject: PropTypes.object,
     }),
 }
 
