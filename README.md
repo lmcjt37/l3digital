@@ -1,4 +1,4 @@
-![l3digital_logo](./src/assets/imagesl3_logo.png)
+![l3digital_logo](./src/assets/images/l3_logo.png)
 
 # L3 Digital
 
