@@ -47,6 +47,20 @@ class HomeIndex extends React.Component {
         const siteTitle = this.props.data.site.siteMetadata.title
         const siteDescription = this.props.data.site.siteMetadata.description
 
+        let getPlaceholder = () => {
+            if (this.props.data.allContentfulProject.edges % 2 !== 0) {
+                return (
+                    <article
+                        style={{
+                            backgroundImage: `url(${
+                                this.props.data.contentfulAsset.fluid.src
+                            })`,
+                        }}
+                    />
+                )
+            }
+        }
+
         let getBanner = () => {
             return this.state.isHandheld ? (
                 <BannerMobile
@@ -75,6 +89,7 @@ class HomeIndex extends React.Component {
                                 <Article {...edge.node} key={id} />
                             )
                         )}
+                        {getPlaceholder()}
                     </section>
                     <DividerOne top color="accent2" />
                     <section id="who-are-we" ref={this.setScrollRef}>
@@ -82,14 +97,12 @@ class HomeIndex extends React.Component {
                             <header className="major">
                                 <h2>Who are we</h2>
                             </header>
-                            <p>
-                                Initially started by 3 guys trying to bring
-                                together a wealth of knowledge from all
-                                different areas in development. They have a
-                                combined experience of nearly 30 years, spanning
-                                front and back end development, devops, mobile
-                                applications, and everything in between.
-                            </p>
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: this.props.data.contentfulCompany
+                                        .whoWeAre.childMarkdownRemark.html,
+                                }}
+                            />
                             <ul className="actions">
                                 <li>
                                     <Link to="/about" className="button next">
@@ -107,7 +120,15 @@ class HomeIndex extends React.Component {
 }
 
 HomeIndex.propTypes = {
-    data: PropTypes.object,
+    data: PropTypes.shape({
+        site: PropTypes.shape({
+            title: PropTypes.string,
+            description: PropTypes.string,
+        }),
+        allContentfulProject: PropTypes.object,
+        contentfulAsset: PropTypes.object,
+        contentfulCompany: PropTypes.object,
+    }).isRequired,
 }
 
 export default HomeIndex
@@ -135,6 +156,18 @@ export const pageQuery = graphql`
                             src
                         }
                     }
+                }
+            }
+        }
+        contentfulAsset(contentful_id: { eq: "2wi9qlZZiXi47zk3UVkALL" }) {
+            fluid(maxWidth: 600) {
+                src
+            }
+        }
+        contentfulCompany(contentful_id: { eq: "27CTUp0dfpHdukUkA75P4j" }) {
+            whoWeAre {
+                childMarkdownRemark {
+                    html
                 }
             }
         }
