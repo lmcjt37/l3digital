@@ -68,7 +68,7 @@ Projects.propTypes = {
     data: PropTypes.shape({
         allContentfulProject: PropTypes.object,
         contentfulCompany: PropTypes.object,
-    }).isRequired,
+    }),
 }
 
 export default Projects

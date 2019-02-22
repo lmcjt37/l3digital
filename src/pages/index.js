@@ -122,13 +122,15 @@ class HomeIndex extends React.Component {
 HomeIndex.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
-            title: PropTypes.string,
-            description: PropTypes.string,
+            siteMetadata: PropTypes.shape({
+                title: PropTypes.string,
+                description: PropTypes.string,
+            }),
         }),
         allContentfulProject: PropTypes.object,
         contentfulAsset: PropTypes.object,
         contentfulCompany: PropTypes.object,
-    }).isRequired,
+    }),
 }
 
 export default HomeIndex

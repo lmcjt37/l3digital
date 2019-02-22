@@ -111,5 +111,5 @@ Container.propTypes = {
         county: PropTypes.string,
         country: PropTypes.string,
         postcode: PropTypes.object,
-    }).isRequired,
+    }),
 }

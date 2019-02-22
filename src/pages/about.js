@@ -68,7 +68,7 @@ About.propTypes = {
     data: PropTypes.shape({
         contentfulCompany: PropTypes.object,
         allContentfulProfile: PropTypes.object,
-    }).isRequired,
+    }),
 }
 
 export default About
