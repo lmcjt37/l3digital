@@ -1,4 +1,6 @@
-![l3digital_logo](./src/assets/images/l3_logo.png)
+<p align="center">
+    <img src="./src/assets/images/l3_logo.png?raw=true" width="100" alt="l3 Digital logo"/>
+</p>
 
 # L3 Digital
 
