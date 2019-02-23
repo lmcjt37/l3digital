@@ -41,7 +41,7 @@ const Menu = props => (
                 </li>
                 <li>
                     <a
-                        href="https://www.linkedin.com/in/l3-digital-8a369b180/"
+                        href="https://www.linkedin.com/in/l3-digital-uk/"
                         className="icon alt fa-linkedin"
                     >
                         <span className="label">LinkedIn</span>
