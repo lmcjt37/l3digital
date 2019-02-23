@@ -40,7 +40,7 @@ Once you have your development server up and running, this will also spin up a G
 
 The left panel is your query panel, a default query should auto-populate. Failing this, use one of the working examples from the site.
 
-The right panel shows the response back from the server. This will allow you to identifies the correct nodes needed for development.
+The right panel shows the response back from the server. This will allow you to identify the correct nodes needed for development.
 
 "Docs" on the far right side will allow you to search for available data, such as the content models available from Contentful CMS.
 
@@ -67,4 +67,4 @@ The CI is more strict when it comes to checking prop-types during the linting st
 #### Troubleshooting
 
 -   Static asset issue - Use `npm run clearcache` which will remove all stale data and fix the issue.
--   GraphQl issues - New content and assets can take time to propogate out. If it's an issue in local development then try restarting your development server.
+-   GraphQL issues - New content and assets can take time to propogate out. If it's an issue in local development then try restarting your development server.
