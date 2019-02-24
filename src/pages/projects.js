@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import ProjectSection from '../templates/project-section'
 import { Asymmetric as Divider } from '../components/Divider'
+import UtilsHelper from '../helpers/utils'
 
 class Projects extends React.Component {
     constructor(props) {
@@ -19,16 +20,19 @@ class Projects extends React.Component {
                     <meta name="description" content="Projects Page" />
                 </Helmet>
 
-                <section id="banner" className="style2">
+                <section
+                    id="banner"
+                    className={`style2 ${UtilsHelper.getBannerClass()}`}
+                >
                     <div className="inner">
                         <header className="major">
-                            <h1>Banner Content</h1>
+                            <h1>Projects</h1>
                         </header>
                         <div className="content">
                             <p>
-                                Lorem ipsum dolor sit amet nullam consequat
+                                A showcase of what our
                                 <br />
-                                sed veroeros. tempus adipiscing nulla.
+                                team can do.
                             </p>
                         </div>
                     </div>
@@ -38,20 +42,12 @@ class Projects extends React.Component {
                     <Divider top flipY color="bg" />
                     <section id="one">
                         <div className="inner">
-                            <header className="major">
-                                <h2>Sed amet aliquam</h2>
-                            </header>
-                            <p>
-                                Nullam et orci eu lorem consequat tincidunt
-                                vivamus et sagittis magna sed nunc rhoncus
-                                condimentum sem. In efficitur ligula tate urna.
-                                Maecenas massa vel lacinia pellentesque lorem
-                                ipsum dolor. Nullam et orci eu lorem consequat
-                                tincidunt. Vivamus et sagittis libero. Nullam et
-                                orci eu lorem consequat tincidunt vivamus et
-                                sagittis magna sed nunc rhoncus condimentum sem.
-                                In efficitur ligula tate urna.
-                            </p>
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: this.props.data.contentfulCompany
+                                        .whatWeDo.childMarkdownRemark.html,
+                                }}
+                            />
                         </div>
                     </section>
                     <Divider bottom flipX color="bg" />
@@ -69,7 +65,10 @@ class Projects extends React.Component {
 }
 
 Projects.propTypes = {
-    data: PropTypes.object.required,
+    data: PropTypes.shape({
+        allContentfulProject: PropTypes.object,
+        contentfulCompany: PropTypes.object,
+    }),
 }
 
 export default Projects
@@ -91,6 +90,13 @@ export const projectsPageQuery = graphql`
                             src
                         }
                     }
+                }
+            }
+        }
+        contentfulCompany(contentful_id: { eq: "27CTUp0dfpHdukUkA75P4j" }) {
+            whatWeDo {
+                childMarkdownRemark {
+                    html
                 }
             }
         }

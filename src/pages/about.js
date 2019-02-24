@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import ProfileSection from '../templates/profile-section'
 import { Pyramids as Divider } from '../components/Divider'
+import UtilsHelper from '../helpers/utils'
 
 class About extends React.Component {
     constructor(props) {
@@ -19,7 +20,10 @@ class About extends React.Component {
                     <meta name="description" content="About Us Page" />
                 </Helmet>
 
-                <section id="banner" className="style2">
+                <section
+                    id="banner"
+                    className={`style2 ${UtilsHelper.getBannerClass()}`}
+                >
                     <div className="inner">
                         <header className="major">
                             <h1>Meet the team</h1>
@@ -38,18 +42,12 @@ class About extends React.Component {
                     <Divider top flipY color="bg" />
                     <section id="one">
                         <div className="inner">
-                            {this.props.data.allContentfulCompany.edges.map(
-                                (edge, id) => (
-                                    <div
-                                        key={id}
-                                        dangerouslySetInnerHTML={{
-                                            __html:
-                                                edge.node.description
-                                                    .childMarkdownRemark.html,
-                                        }}
-                                    />
-                                )
-                            )}
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: this.props.data.contentfulCompany
+                                        .description.childMarkdownRemark.html,
+                                }}
+                            />
                         </div>
                     </section>
                     <Divider bottom flipX color="bg" />
@@ -67,22 +65,21 @@ class About extends React.Component {
 }
 
 About.propTypes = {
-    data: PropTypes.object.required,
+    data: PropTypes.shape({
+        contentfulCompany: PropTypes.object,
+        allContentfulProfile: PropTypes.object,
+    }),
 }
 
 export default About
 
 export const aboutPageQuery = graphql`
     {
-        allContentfulCompany {
-            edges {
-                node {
-                    title
-                    description {
-                        childMarkdownRemark {
-                            html
-                        }
-                    }
+        contentfulCompany(contentful_id: { eq: "27CTUp0dfpHdukUkA75P4j" }) {
+            title
+            description {
+                childMarkdownRemark {
+                    html
                 }
             }
         }

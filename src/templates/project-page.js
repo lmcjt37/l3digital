@@ -59,7 +59,9 @@ class ProjectPage extends Component {
 }
 
 ProjectPage.propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.shape({
+        contentfulProject: PropTypes.object,
+    }),
 }
 
 export default ProjectPage

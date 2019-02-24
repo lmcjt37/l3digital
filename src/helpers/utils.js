@@ -6,5 +6,6 @@ const helper = {
             return { isHandheld: false }
         }
     },
+    getBannerClass: () => 'banner' + Math.floor(Math.random() * 6 + 1),
 }
 export default helper

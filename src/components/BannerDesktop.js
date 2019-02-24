@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import UtilsHelper from '../helpers/utils'
+
 class Banner extends React.Component {
     constructor(props) {
         super(props)
@@ -19,7 +21,10 @@ class Banner extends React.Component {
 
     render() {
         return (
-            <section id="banner" className="major">
+            <section
+                id="banner"
+                className={`major ${UtilsHelper.getBannerClass()}`}
+            >
                 <div className="inner">
                     <header className="major">
                         <svg
