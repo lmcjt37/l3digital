@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
@@ -22,6 +22,9 @@ class ProjectPage extends Component {
                 </Helmet>
 
                 <div id="main" className="alt">
+                    <Link to="/projects" className="button previous">
+                        Projects
+                    </Link>
                     <section id="one">
                         <div className="inner">
                             <header className="major">
