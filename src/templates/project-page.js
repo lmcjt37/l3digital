@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
+import Layout from '../components/layout'
+
 class ProjectPage extends Component {
     render() {
         const {
@@ -13,7 +15,7 @@ class ProjectPage extends Component {
             url,
         } = this.props.data.contentfulProject
         return (
-            <div>
+            <Layout>
                 <Helmet>
                     <title>{title}</title>
                     <meta name="description" content={shortDescription} />
@@ -53,7 +55,7 @@ class ProjectPage extends Component {
                         </div>
                     </section>
                 </div>
-            </div>
+            </Layout>
         )
     }
 }
