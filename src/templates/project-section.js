@@ -40,8 +40,12 @@ class ProjectSection extends Component {
 ProjectSection.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string,
-    description: PropTypes.string,
-    featuredImage: PropTypes.string,
+    description: PropTypes.shape({
+        childMarkdownRemark: PropTypes.shape({
+            html: PropTypes.string,
+        }),
+    }),
+    featuredImage: PropTypes.object,
 }
 
 export default ProjectSection
