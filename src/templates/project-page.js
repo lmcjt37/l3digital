@@ -32,7 +32,7 @@ class ProjectPage extends Component {
                             </header>
                             <span className="image left">
                                 <img
-                                    src={featuredImage.resize.src}
+                                    src={featuredImage.fluid.src}
                                     alt={featuredImage.description}
                                 />
                             </span>
@@ -83,7 +83,7 @@ export const projectPageQuery = graphql`
             }
             shortDescription
             featuredImage {
-                resize {
+                fluid(maxWidth: 600) {
                     src
                 }
                 description

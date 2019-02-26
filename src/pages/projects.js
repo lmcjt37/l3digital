@@ -86,7 +86,7 @@ export const projectsPageQuery = graphql`
                         }
                     }
                     featuredImage {
-                        resize {
+                        fluid(maxWidth: 600) {
                             src
                         }
                     }

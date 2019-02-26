@@ -95,7 +95,7 @@ export const aboutPageQuery = graphql`
                         }
                     }
                     profile {
-                        resize {
+                        fluid(maxWidth: 600) {
                             src
                         }
                     }

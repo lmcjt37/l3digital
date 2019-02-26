@@ -9,7 +9,7 @@ class ProjectSection extends Component {
             <section>
                 <Link to={slug} className="image">
                     <img
-                        src={featuredImage.resize.src}
+                        src={featuredImage.fluid.src}
                         alt={featuredImage.description}
                     />
                 </Link>

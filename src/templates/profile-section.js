@@ -7,7 +7,7 @@ class ProfileSection extends Component {
         return (
             <section>
                 <span className="image">
-                    <img src={profile.resize.src} alt={profile.description} />
+                    <img src={profile.fluid.src} alt={profile.description} />
                 </span>
                 <div className="content">
                     <div className="inner">

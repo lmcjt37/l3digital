@@ -8,7 +8,7 @@ class IndexArticle extends Component {
         return (
             <article
                 style={{
-                    backgroundImage: `url(${featuredImage.resize.src})`,
+                    backgroundImage: `url(${featuredImage.fluid.src})`,
                 }}
             >
                 <header className="major">
