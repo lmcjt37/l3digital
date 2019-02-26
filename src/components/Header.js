@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Link from '../components/Link'
 
 const Header = props => (
     <header id="header" className="alt">
@@ -36,13 +36,13 @@ const Header = props => (
             <span>L3 Digital</span>
         </Link>
         <nav>
-            <a
+            <Link
                 className="menu-link"
                 onClick={props.onToggleMenu}
                 href="javascript:;"
             >
                 Menu
-            </a>
+            </Link>
         </nav>
     </header>
 )

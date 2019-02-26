@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Link from '../components/Link'
+import Social from '../components/Social'
 
 const Menu = props => (
     <nav id="menu">
@@ -22,32 +23,7 @@ const Menu = props => (
                     </Link>
                 </li>
             </ul>
-            <ul className="icons">
-                <li>
-                    <a
-                        href="https://twitter.com/l3digital_uk"
-                        className="icon alt fa-twitter"
-                    >
-                        <span className="label">Twitter</span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://github.com/l3digitaluk"
-                        className="icon alt fa-github"
-                    >
-                        <span className="label">GitHub</span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.linkedin.com/in/l3-digital-uk/"
-                        className="icon alt fa-linkedin"
-                    >
-                        <span className="label">LinkedIn</span>
-                    </a>
-                </li>
-            </ul>
+            <Social />
         </div>
         <a className="close" onClick={props.onToggleMenu} href="javascript:;">
             Close

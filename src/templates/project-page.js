@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
+import Link from '../components/Link'
 
 class ProjectPage extends Component {
     render() {
@@ -45,14 +46,14 @@ class ProjectPage extends Component {
                             />
                             <ul className="actions clearfix">
                                 <li>
-                                    <a
+                                    <Link
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="button special"
                                     >
                                         Visit
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
