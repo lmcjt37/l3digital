@@ -18,20 +18,23 @@ import UtilsHelper from '../helpers/utils'
 class HomeIndex extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            isHandheld: false,
-        }
+        // Sets initial state for screen size only, state currently
+        // only used for screen size. May need to be updated as
+        // requirements change.
+        this.state = UtilsHelper.getScreenSize()
         this.setScrollRef = element => {
             this.elementRef = element
         }
     }
 
     handleResizeChange() {
-        this.setState({ ...UtilsHelper.getScreenSize() })
+        let newState = UtilsHelper.getScreenSize()
+        if (newState.isHandheld !== this.state.isHandheld) {
+            this.setState({ ...newState })
+        }
     }
 
     componentDidMount() {
-        this.handleResizeChange.bind(this)
         window.addEventListener('resize', this.handleResizeChange.bind(this))
     }
 
