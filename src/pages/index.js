@@ -154,7 +154,7 @@ export const pageQuery = graphql`
                         }
                     }
                     featuredImage {
-                        resize {
+                        fluid(maxWidth: 600) {
                             src
                         }
                     }
