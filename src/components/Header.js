@@ -39,7 +39,7 @@ const Header = props => (
             <Link
                 className="menu-link"
                 onClick={props.onToggleMenu}
-                href="javascript:;"
+                to="javascript:;"
             >
                 Menu
             </Link>

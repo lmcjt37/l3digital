@@ -9,7 +9,7 @@ const Footer = () => (
             <ul className="copyright">
                 <li>&copy; {new Date().getFullYear()} L3 Digital</li>
                 <li>
-                    Design: <Link href="https://html5up.net">HTML5 UP</Link>
+                    Design: <Link to="https://html5up.net">HTML5 UP</Link>
                 </li>
             </ul>
         </div>

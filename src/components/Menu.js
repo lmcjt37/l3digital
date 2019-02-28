@@ -25,9 +25,9 @@ const Menu = props => (
             </ul>
             <Social />
         </div>
-        <a className="close" onClick={props.onToggleMenu} href="javascript:;">
+        <Link className="close" onClick={props.onToggleMenu} to="javascript:;">
             Close
-        </a>
+        </Link>
     </nav>
 )
 

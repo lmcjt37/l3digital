@@ -21,16 +21,15 @@ jobs:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - ~/l3digital/node_modules
+      - persist_to_workspace:
+          root: .
+          paths: .
 
   run_linting:
     <<: *defaults
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - v1-dependencies-{{ .Branch }}-
-            - v1-dependencies-
+      - attach_workspace:
+          at: ~/l3digital
       - run:
           name: Lint
           command: npm run lint
@@ -38,12 +37,8 @@ jobs:
   unit_tests:
     <<: *defaults
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - v1-dependencies-{{ .Branch }}-
-            - v1-dependencies-
+      - attach_workspace:
+          at: ~/l3digital
       - run:
           name: Test
           command: npm test

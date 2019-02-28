@@ -1,9 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 
-// Since DOM elements <a> cannot receive activeClassName,
-// destructure the prop here and pass it only to GatsbyLink
-const Link = ({ children, to, activeClassName, ...other }) => {
+// destructure the props here and pass it only to GatsbyLink
+const Link = ({ children, to, ...other }) => {
     // This assumes that any internal link (intended for Gatsby)
     // will start with exactly one slash, and that anything else is external.
     const internal = /^\/(?!\/)/.test(to)
@@ -11,7 +11,7 @@ const Link = ({ children, to, activeClassName, ...other }) => {
     // Use Gatsby Link for internal links, and <a> for others
     if (internal) {
         return (
-            <GatsbyLink to={to} activeClassName={activeClassName} {...other}>
+            <GatsbyLink to={to} {...other}>
                 {children}
             </GatsbyLink>
         )
@@ -24,3 +24,8 @@ const Link = ({ children, to, activeClassName, ...other }) => {
 }
 
 export default Link
+
+Link.propTypes = {
+    children: PropTypes.any,
+    to: PropTypes.string,
+}
