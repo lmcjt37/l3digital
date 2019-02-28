@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import ProfileSection from '../templates/profile-section'
 import { Pyramids as Divider } from '../components/Divider'
 import UtilsHelper from '../helpers/utils'

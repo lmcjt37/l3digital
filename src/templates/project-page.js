@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Link from '../components/Link'
 
 class ProjectPage extends Component {
