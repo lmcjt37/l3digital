@@ -22,11 +22,14 @@ class ProjectPage extends Component {
                 </Helmet>
 
                 <div id="main" className="alt">
-                    <Link to="/projects" className="button previous">
-                        Projects
-                    </Link>
                     <section id="one">
                         <div className="inner">
+                            <Link
+                                to="/projects"
+                                className="button previous bottom-margin"
+                            >
+                                Projects
+                            </Link>
                             <header className="major">
                                 <h1>{title}</h1>
                             </header>

@@ -31,8 +31,12 @@ ProfileSection.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     role: PropTypes.string,
-    description: PropTypes.string,
-    profile: PropTypes.string,
+    description: PropTypes.shape({
+        childMarkdownRemark: PropTypes.shape({
+            html: PropTypes.string,
+        }),
+    }),
+    profile: PropTypes.object,
 }
 
 export default ProfileSection

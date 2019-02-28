@@ -195,4 +195,8 @@ button,
         cursor: default;
         opacity: 0.25;
     }
+
+    &.bottom-margin {
+        margin-bottom: _size(element-margin);
+    }
 }
