@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Link from '../components/Link'
 
 class IndexArticle extends Component {
     render() {
