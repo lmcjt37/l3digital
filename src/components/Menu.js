@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from '../components/Link'
-import Social from '../components/Social'
+
+import Link from './Link'
+import Social from './Social'
 
 const Menu = props => (
     <nav id="menu">

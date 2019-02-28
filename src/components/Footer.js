@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from '../components/Link'
-import Social from '../components/Social'
+
+import Link from './Link'
+import Social from './Social'
 
 const Footer = () => (
     <footer id="footer">
