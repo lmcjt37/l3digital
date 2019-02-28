@@ -1,5 +1,3 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
 import { StaticQuery } from 'gatsby'
 
 import Contact from '../../src/components/Contact'
@@ -11,7 +9,7 @@ beforeEach(() => {
 
 describe('Contact tests', () => {
     it('check it renders correctly with snapshot', () => {
-        const tree = renderer.create(<Contact />).toJSON()
+        const tree = render(<Contact />)
         expect(tree).toMatchSnapshot()
     })
 })

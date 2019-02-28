@@ -13,4 +13,5 @@ module.exports = {
         __PATH_PREFIX__: ``,
     },
     setupFiles: [`<rootDir>/__tests__/__mocks__/loadershim.js`],
+    setupFilesAfterEnv: ['<rootDir>/__tests__/setup-test-env.js'],
 }
