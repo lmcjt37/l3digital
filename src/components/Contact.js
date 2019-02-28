@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Container = ({ data }) => {
-    const companyData = data.allContentfulCompany.edges[0].node
+    const companyData = data.contentfulCompany
     return (
         <section id="contact">
             <div className="inner">
@@ -81,19 +81,17 @@ const Contact = props => (
     <StaticQuery
         query={graphql`
             {
-                allContentfulCompany(limit: 1) {
-                    edges {
-                        node {
-                            email
-                            telephone1
-                            address {
-                                line1
-                                line2
-                                county
-                                country
-                                postcode
-                            }
-                        }
+                contentfulCompany(
+                    contentful_id: { eq: "27CTUp0dfpHdukUkA75P4j" }
+                ) {
+                    email
+                    telephone1
+                    address {
+                        line1
+                        line2
+                        county
+                        country
+                        postcode
                     }
                 }
             }

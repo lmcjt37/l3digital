@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 
 // Since DOM elements <a> cannot receive activeClassName,
@@ -26,9 +25,3 @@ const Link = ({ children, to, activeClassName, ...other }) => {
 }
 
 export default Link
-
-Link.propTypes = {
-    children: PropTypes.object,
-    to: PropTypes.object,
-    activeClassName: PropTypes.object,
-}

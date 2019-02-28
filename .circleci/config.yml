@@ -43,7 +43,7 @@ jobs:
           at: ~/l3digital
       - run:
           name: Test
-          command: npm run test
+          command: npm test
 
 workflows:
   version: 2
