@@ -7,7 +7,7 @@ class ProfileSection extends Component {
         return (
             <section>
                 <span className="image">
-                    <img src={profile.resize.src} alt={profile.description} />
+                    <img src={profile.fluid.src} alt={profile.description} />
                 </span>
                 <div className="content">
                     <div className="inner">
@@ -31,8 +31,12 @@ ProfileSection.propTypes = {
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     role: PropTypes.string,
-    description: PropTypes.string,
-    profile: PropTypes.string,
+    description: PropTypes.shape({
+        childMarkdownRemark: PropTypes.shape({
+            html: PropTypes.string,
+        }),
+    }),
+    profile: PropTypes.object,
 }
 
 export default ProfileSection

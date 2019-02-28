@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
+import Link from '../components/Link'
 
 class ProjectPage extends Component {
     render() {
@@ -22,17 +23,20 @@ class ProjectPage extends Component {
                 </Helmet>
 
                 <div id="main" className="alt">
-                    <Link to="/projects" className="button previous">
-                        Projects
-                    </Link>
                     <section id="one">
                         <div className="inner">
+                            <Link
+                                to="/projects"
+                                className="button previous bottom-margin"
+                            >
+                                Projects
+                            </Link>
                             <header className="major">
                                 <h1>{title}</h1>
                             </header>
                             <span className="image left">
                                 <img
-                                    src={featuredImage.resize.src}
+                                    src={featuredImage.fluid.src}
                                     alt={featuredImage.description}
                                 />
                             </span>
@@ -45,14 +49,14 @@ class ProjectPage extends Component {
                             />
                             <ul className="actions clearfix">
                                 <li>
-                                    <a
+                                    <Link
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="button special"
                                     >
                                         Visit
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -83,7 +87,7 @@ export const projectPageQuery = graphql`
             }
             shortDescription
             featuredImage {
-                resize {
+                fluid(maxWidth: 600) {
                     src
                 }
                 description

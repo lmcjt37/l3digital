@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Link from '../components/Link'
 
 class ProjectSection extends Component {
     render() {
@@ -9,7 +9,7 @@ class ProjectSection extends Component {
             <section>
                 <Link to={slug} className="image">
                     <img
-                        src={featuredImage.resize.src}
+                        src={featuredImage.fluid.src}
                         alt={featuredImage.description}
                     />
                 </Link>
@@ -40,8 +40,12 @@ class ProjectSection extends Component {
 ProjectSection.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string,
-    description: PropTypes.string,
-    featuredImage: PropTypes.string,
+    description: PropTypes.shape({
+        childMarkdownRemark: PropTypes.shape({
+            html: PropTypes.string,
+        }),
+    }),
+    featuredImage: PropTypes.object,
 }
 
 export default ProjectSection

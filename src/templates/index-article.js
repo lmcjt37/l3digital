@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import Link from '../components/Link'
 
 class IndexArticle extends Component {
     render() {
         const { slug, title, description, featuredImage } = this.props
         return (
-            <article
-                style={{
-                    backgroundImage: `url(${featuredImage.resize.src})`,
-                }}
-            >
+            <article>
+                <span
+                    style={{
+                        backgroundImage: `url(${featuredImage.fluid.src})`,
+                    }}
+                    className="child"
+                />
                 <header className="major">
                     <h3>{title}</h3>
                     <p>{description.childMarkdownRemark.excerpt}</p>

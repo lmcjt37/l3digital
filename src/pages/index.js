@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import Link from '../components/Link'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
@@ -157,7 +158,7 @@ export const pageQuery = graphql`
                         }
                     }
                     featuredImage {
-                        resize {
+                        fluid(maxWidth: 600) {
                             src
                         }
                     }
