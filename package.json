@@ -9,7 +9,8 @@
         "gatsby",
         "heroku",
         "l3digital",
-        "now"
+        "now",
+        "circleci"
     ],
     "repository": {
         "type": "git",

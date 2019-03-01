@@ -14,13 +14,16 @@ describe('Utils helper tests', () => {
     })
 
     test('calls getScreenSize when window undefined', () => {
-        window = 'undefined'
+        // avoid messing with global.window object itself
+        var mockWindow = Object.create(global.window)
+        mockWindow = 'undefined'
+        global.window = mockWindow
 
         expect(helper.getScreenSize()).toEqual({ isHandheld: false })
     })
 
     test('calls getBannerClass correctly', () => {
-        // avoid messing with Math object itself
+        // avoid messing with global.Math object itself
         const mockMath = Object.create(global.Math)
         mockMath.random = () => 0.5
         global.Math = mockMath
