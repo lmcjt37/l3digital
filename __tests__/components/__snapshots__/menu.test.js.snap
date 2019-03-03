@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu tests check it renders correctly with snapshot 1`] = `
+<nav
+  id="menu"
+>
+  <div
+    className="inner"
+  >
+    <ul
+      className="links"
+    >
+      <li>
+        <a
+          href="/"
+          onClick={[MockFunction]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/projects"
+          onClick={[MockFunction]}
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+          onClick={[MockFunction]}
+        >
+          About Us
+        </a>
+      </li>
+    </ul>
+    <ul
+      className="icons"
+    >
+      <li>
+        <a
+          className="icon alt fa-twitter"
+          href="https://twitter.com/l3digital_uk"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="label"
+          >
+            Twitter
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          className="icon alt fa-github"
+          href="https://github.com/l3digitaluk"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="label"
+          >
+            GitHub
+          </span>
+        </a>
+      </li>
+      <li>
+        <a
+          className="icon alt fa-linkedin"
+          href="https://www.linkedin.com/in/l3-digital-uk/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="label"
+          >
+            LinkedIn
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <a
+    className="close"
+    href="javascript:;"
+    onClick={[MockFunction]}
+  >
+    Close
+  </a>
+</nav>
+`;

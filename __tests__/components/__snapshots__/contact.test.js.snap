@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact tests check it renders correctly with snapshot 1`] = `
+<section
+  id="contact"
+>
+  <div
+    className="inner"
+  >
+    <section>
+      <form
+        action="#"
+        method="post"
+      >
+        <div
+          className="field half first"
+        >
+          <label
+            htmlFor="name"
+          >
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+          />
+        </div>
+        <div
+          className="field half"
+        >
+          <label
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+          />
+        </div>
+        <div
+          className="field"
+        >
+          <label
+            htmlFor="message"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+          />
+        </div>
+        <ul
+          className="actions"
+        >
+          <li>
+            <input
+              className="special"
+              type="submit"
+              value="Send Message"
+            />
+          </li>
+          <li>
+            <input
+              type="reset"
+              value="Clear"
+            />
+          </li>
+        </ul>
+      </form>
+    </section>
+    <section
+      className="split"
+    >
+      <section>
+        <div
+          className="contact-method"
+        >
+          <span
+            className="icon alt fa-envelope"
+          />
+          <h3>
+            Email
+          </h3>
+          <a
+            href="mailto:hello@l3digital.co.uk"
+          >
+            hello@l3digital.co.uk
+          </a>
+        </div>
+      </section>
+      <section>
+        <div
+          className="contact-method"
+        >
+          <span
+            className="icon alt fa-phone"
+          />
+          <h3>
+            Phone
+          </h3>
+          <a
+            href="tel:0845 111 3333"
+          >
+            0845 111 3333
+          </a>
+        </div>
+      </section>
+      <section>
+        <div
+          className="contact-method"
+        >
+          <span
+            className="icon alt fa-home"
+          />
+          <h3>
+            Address
+          </h3>
+          <span>
+            L3 Digital Limited
+            <br />
+            Amazing House
+            <br />
+            Leicestershire
+            <br />
+            United Kingdom
+            <br />
+            LE3 T03
+          </span>
+        </div>
+      </section>
+    </section>
+  </div>
+</section>
+`;

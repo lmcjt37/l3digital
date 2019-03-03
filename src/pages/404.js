@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { Drops as Divider } from '../components/Divider'
 
 class errorPage extends React.Component {

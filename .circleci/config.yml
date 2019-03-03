@@ -9,8 +9,6 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/l3digital
       - restore_cache:
           keys:
             - v1-dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}
@@ -43,7 +41,7 @@ jobs:
           at: ~/l3digital
       - run:
           name: Test
-          command: npm run test
+          command: npm test
 
 workflows:
   version: 2

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BannerMobile tests check it renders correctly with snapshot 1`] = `
+<section
+  className="major banner1"
+  id="banner"
+>
+  <div
+    className="inner"
+  >
+    <header
+      className="major"
+    >
+      <h1>
+        We Are L3 Digital
+      </h1>
+    </header>
+    <div
+      className="content"
+    >
+      <p>
+        A team of great collaborators, providing solutions to all your development needs.
+      </p>
+      <ul
+        className="actions"
+      >
+        <li>
+          <a
+            className="button next"
+            href="javascript:;"
+          >
+            Learn more
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+`;

@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from '../components/Link'
-import Social from '../components/Social'
+
+import Link from './Link'
+import Social from './Social'
 
 const Menu = props => (
     <nav id="menu">
@@ -25,9 +26,9 @@ const Menu = props => (
             </ul>
             <Social />
         </div>
-        <a className="close" onClick={props.onToggleMenu} href="javascript:;">
+        <Link className="close" onClick={props.onToggleMenu} to="javascript:;">
             Close
-        </a>
+        </Link>
     </nav>
 )
 

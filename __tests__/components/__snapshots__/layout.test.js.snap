@@ -1,0 +1,338 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout tests check it renders correctly with snapshot 1`] = `
+<div
+  className="body is-loading "
+>
+  <div
+    id="wrapper"
+  >
+    <header
+      className="alt"
+      id="header"
+    >
+      <a
+        className="logo"
+        href="/"
+      >
+        <svg
+          version="1.1"
+          viewBox="15 5 70 90"
+        >
+          <path
+            d="M42.487,89.021c0.259,0,0.519-0.067,0.751-0.201l16.223-9.376l16.238-9.365c0.464-0.269,0.75-0.764,0.75-1.3 V50.043c0-0.536-0.286-1.031-0.75-1.299l-15.489-8.94V21.94c0-0.536-0.286-1.031-0.749-1.299l-16.223-9.376 c-0.232-0.134-0.492-0.201-0.751-0.201s-0.519,0.067-0.751,0.201l-16.222,9.376c-0.464,0.268-0.749,0.763-0.749,1.299v18.73v18.739 v18.736c0,0.535,0.285,1.03,0.749,1.299l16.222,9.376C41.969,88.954,42.229,89.021,42.487,89.021z M74.449,68.49L59.21,77.279 V59.698l15.239-8.789V68.49z M58.21,59.121l-15.223,8.792V50.331l15.223-8.795V59.121z M42.987,69.067l15.223-8.792v17.582 l-15.223,8.798V69.067z M58.21,40.382l-15.223,8.795V31.595l15.223-8.789V40.382z M41.987,31.595v17.582l-15.222-8.795V22.806 L41.987,31.595z M41.987,50.331v17.582l-15.222-8.792V41.536L41.987,50.331z M26.766,60.275l15.222,8.792v17.588l-15.222-8.798 V60.275z M 86.75, 73.5 m -40, 0 a 2,4 20 0,0 8,0 a 2,4 20 0,0 -8,0 M 86.75, 54.5 m -40, 0 a 2,4 20 0,0 8,0 a 2,4 20 0,0 -8,0 M 86.75, 35.5 m -40, 0 a 2,4 20 0,0 8,0 a 2,4 20 0,0 -8,0 "
+          />
+        </svg>
+         
+        <span>
+          L3 Digital
+        </span>
+      </a>
+      <nav>
+        <a
+          className="menu-link"
+          href="javascript:;"
+          onClick={[Function]}
+        >
+          Menu
+        </a>
+      </nav>
+    </header>
+    <section
+      id="contact"
+    >
+      <div
+        className="inner"
+      >
+        <section>
+          <form
+            action="#"
+            method="post"
+          >
+            <div
+              className="field half first"
+            >
+              <label
+                htmlFor="name"
+              >
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+              />
+            </div>
+            <div
+              className="field half"
+            >
+              <label
+                htmlFor="email"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="text"
+              />
+            </div>
+            <div
+              className="field"
+            >
+              <label
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+              />
+            </div>
+            <ul
+              className="actions"
+            >
+              <li>
+                <input
+                  className="special"
+                  type="submit"
+                  value="Send Message"
+                />
+              </li>
+              <li>
+                <input
+                  type="reset"
+                  value="Clear"
+                />
+              </li>
+            </ul>
+          </form>
+        </section>
+        <section
+          className="split"
+        >
+          <section>
+            <div
+              className="contact-method"
+            >
+              <span
+                className="icon alt fa-envelope"
+              />
+              <h3>
+                Email
+              </h3>
+              <a
+                href="mailto:hello@l3digital.co.uk"
+              >
+                hello@l3digital.co.uk
+              </a>
+            </div>
+          </section>
+          <section>
+            <div
+              className="contact-method"
+            >
+              <span
+                className="icon alt fa-phone"
+              />
+              <h3>
+                Phone
+              </h3>
+              <a
+                href="tel:0845 111 3333"
+              >
+                0845 111 3333
+              </a>
+            </div>
+          </section>
+          <section>
+            <div
+              className="contact-method"
+            >
+              <span
+                className="icon alt fa-home"
+              />
+              <h3>
+                Address
+              </h3>
+              <span>
+                L3 Digital Limited
+                <br />
+                Amazing House
+                <br />
+                Leicestershire
+                <br />
+                United Kingdom
+                <br />
+                LE3 T03
+              </span>
+            </div>
+          </section>
+        </section>
+      </div>
+    </section>
+    <footer
+      id="footer"
+    >
+      <div
+        className="inner"
+      >
+        <ul
+          className="icons"
+        >
+          <li>
+            <a
+              className="icon alt fa-twitter"
+              href="https://twitter.com/l3digital_uk"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                className="label"
+              >
+                Twitter
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="icon alt fa-github"
+              href="https://github.com/l3digitaluk"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                className="label"
+              >
+                GitHub
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="icon alt fa-linkedin"
+              href="https://www.linkedin.com/in/l3-digital-uk/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                className="label"
+              >
+                LinkedIn
+              </span>
+            </a>
+          </li>
+        </ul>
+        <ul
+          className="copyright"
+        >
+          <li>
+            © 
+            2019
+             L3 Digital
+          </li>
+          <li>
+            Design: 
+            <a
+              href="https://html5up.net"
+            >
+              HTML5 UP
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <nav
+    id="menu"
+  >
+    <div
+      className="inner"
+    >
+      <ul
+        className="links"
+      >
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+            onClick={[Function]}
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+            About Us
+          </a>
+        </li>
+      </ul>
+      <ul
+        className="icons"
+      >
+        <li>
+          <a
+            className="icon alt fa-twitter"
+            href="https://twitter.com/l3digital_uk"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              className="label"
+            >
+              Twitter
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            className="icon alt fa-github"
+            href="https://github.com/l3digitaluk"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              className="label"
+            >
+              GitHub
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            className="icon alt fa-linkedin"
+            href="https://www.linkedin.com/in/l3-digital-uk/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              className="label"
+            >
+              LinkedIn
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a
+      className="close"
+      href="javascript:;"
+      onClick={[Function]}
+    >
+      Close
+    </a>
+  </nav>
+</div>
+`;

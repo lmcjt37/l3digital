@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+
 import Link from '../components/Link'
 
-class IndexArticle extends Component {
+class IndexArticle extends React.Component {
     render() {
         const { slug, title, description, featuredImage } = this.props
         return (

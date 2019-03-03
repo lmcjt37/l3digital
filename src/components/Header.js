@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from '../components/Link'
+
+import Link from './Link'
 
 const Header = props => (
     <header id="header" className="alt">
@@ -39,7 +40,7 @@ const Header = props => (
             <Link
                 className="menu-link"
                 onClick={props.onToggleMenu}
-                href="javascript:;"
+                to="javascript:;"
             >
                 Menu
             </Link>

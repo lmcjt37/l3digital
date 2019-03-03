@@ -1,19 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Link from '../components/Link'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import Layout from '../components/layout'
+import Link from '../components/Link'
+import Layout from '../components/Layout'
 import BannerDesktop from '../components/BannerDesktop'
 import BannerMobile from '../components/BannerMobile'
 import {
     Mountains as DividerOne,
     Pyramids as DividerTwo,
 } from '../components/Divider'
-
 import Article from '../templates/index-article'
-
 import UtilsHelper from '../helpers/utils'
 
 class HomeIndex extends React.Component {

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BannerDesktop tests check it renders correctly with snapshot 1`] = `
+<section
+  className="major banner1"
+  id="banner"
+>
+  <div
+    className="inner"
+  >
+    <header
+      className="major"
+    >
+      <svg
+        className="intro go"
+        version="1.1"
+        viewBox="0 0 300 60"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          className="text-stroke"
+          clipPath="url(#rect1)"
+          height="1"
+          width="100%"
+          x="0"
+          y="26"
+        />
+        <rect
+          className="text-stroke rect-stroke-2"
+          clipPath="url(#rect1)"
+          height="1"
+          width="100%"
+          x="0"
+          y="26"
+        />
+        <text
+          className="text text-stroke"
+          clipPath="url(#text1)"
+          textAnchor="start"
+          x="0"
+          y="15"
+        >
+          We Are L3 Digital
+        </text>
+        <text
+          className="text text-stroke text-stroke-2"
+          clipPath="url(#text1)"
+          textAnchor="start"
+          x="0"
+          y="15"
+        >
+          We Are L3 Digital
+        </text>
+        <defs>
+          <clipPath
+            id="rect1"
+          >
+            <rect
+              height="1"
+              width="100%"
+              x="0"
+              y="26"
+            />
+          </clipPath>
+          <clipPath
+            id="text1"
+          >
+            <text
+              className="text"
+              textAnchor="start"
+              x="0"
+              y="15"
+            >
+              We Are L3 Digital
+            </text>
+          </clipPath>
+        </defs>
+      </svg>
+    </header>
+    <div
+      className="content"
+    >
+      <p>
+        A team of great collaborators, providing solutions to all your development needs.
+      </p>
+      <ul
+        className="actions"
+      >
+        <li>
+          <a
+            className="button next"
+            href="javascript:;"
+          >
+            Learn more
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+`;

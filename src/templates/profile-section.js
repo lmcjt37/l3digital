@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-class ProfileSection extends Component {
+class ProfileSection extends React.Component {
     render() {
         const { firstName, lastName, role, description, profile } = this.props
         return (
