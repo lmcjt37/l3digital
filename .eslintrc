@@ -15,7 +15,9 @@
     }
   },
   "globals": {
-    "graphql": true
+    "graphql": true,
+    "React": true,
+    "render": true
   },
   "plugins": [
     "react",

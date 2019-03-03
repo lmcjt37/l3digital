@@ -9,7 +9,8 @@
         "gatsby",
         "heroku",
         "l3digital",
-        "now"
+        "now",
+        "circleci"
     ],
     "repository": {
         "type": "git",
@@ -61,8 +62,9 @@
         "husky": "^1.3.1",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^24.1.0",
+        "jest-dom": "^3.1.2",
         "lint-staged": "^8.1.3",
-        "react-test-renderer": "^16.8.3"
+        "react-testing-library": "^6.0.0"
     },
     "scripts": {
         "dev": "gatsby develop -o",

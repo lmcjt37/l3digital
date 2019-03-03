@@ -1,75 +1,198 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer tests check it renders correctly with snapshot 1`] = `
-<footer
-  id="footer"
->
-  <div
-    className="inner"
-  >
-    <ul
-      className="icons"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <footer
+        id="footer"
+      >
+        <div
+          class="inner"
+        >
+          <ul
+            class="icons"
+          >
+            <li>
+              <a
+                class="icon alt fa-twitter"
+                href="https://twitter.com/l3digital_uk"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span
+                  class="label"
+                >
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="icon alt fa-github"
+                href="https://github.com/l3digitaluk"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span
+                  class="label"
+                >
+                  GitHub
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="icon alt fa-linkedin"
+                href="https://www.linkedin.com/in/l3-digital-uk/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span
+                  class="label"
+                >
+                  LinkedIn
+                </span>
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="copyright"
+          >
+            <li>
+              © 
+              2019
+               L3 Digital
+            </li>
+            <li>
+              Design: 
+              <a
+                href="https://html5up.net"
+              >
+                HTML5 UP
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>,
+  "container": <div>
+    <footer
+      id="footer"
     >
-      <li>
-        <a
-          className="icon alt fa-twitter"
-          href="https://twitter.com/l3digital_uk"
-          rel="noopener noreferrer"
-          target="_blank"
+      <div
+        class="inner"
+      >
+        <ul
+          class="icons"
         >
-          <span
-            className="label"
-          >
-            Twitter
-          </span>
-        </a>
-      </li>
-      <li>
-        <a
-          className="icon alt fa-github"
-          href="https://github.com/l3digitaluk"
-          rel="noopener noreferrer"
-          target="_blank"
+          <li>
+            <a
+              class="icon alt fa-twitter"
+              href="https://twitter.com/l3digital_uk"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="label"
+              >
+                Twitter
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="icon alt fa-github"
+              href="https://github.com/l3digitaluk"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="label"
+              >
+                GitHub
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="icon alt fa-linkedin"
+              href="https://www.linkedin.com/in/l3-digital-uk/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span
+                class="label"
+              >
+                LinkedIn
+              </span>
+            </a>
+          </li>
+        </ul>
+        <ul
+          class="copyright"
         >
-          <span
-            className="label"
-          >
-            GitHub
-          </span>
-        </a>
-      </li>
-      <li>
-        <a
-          className="icon alt fa-linkedin"
-          href="https://www.linkedin.com/in/l3-digital-uk/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <span
-            className="label"
-          >
-            LinkedIn
-          </span>
-        </a>
-      </li>
-    </ul>
-    <ul
-      className="copyright"
-    >
-      <li>
-        © 
-        2019
-         L3 Digital
-      </li>
-      <li>
-        Design: 
-        <a
-          href="https://html5up.net"
-        >
-          HTML5 UP
-        </a>
-      </li>
-    </ul>
-  </div>
-</footer>
+          <li>
+            © 
+            2019
+             L3 Digital
+          </li>
+          <li>
+            Design: 
+            <a
+              href="https://html5up.net"
+            >
+              HTML5 UP
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

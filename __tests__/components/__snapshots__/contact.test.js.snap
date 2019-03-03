@@ -1,139 +1,326 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Contact tests check it renders correctly with snapshot 1`] = `
-<section
-  id="contact"
->
-  <div
-    className="inner"
-  >
-    <section>
-      <form
-        action="#"
-        method="post"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        id="contact"
       >
         <div
-          className="field half first"
+          class="inner"
         >
-          <label
-            htmlFor="name"
+          <section>
+            <form
+              action="#"
+              method="post"
+            >
+              <div
+                class="field half first"
+              >
+                <label
+                  for="name"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                />
+              </div>
+              <div
+                class="field half"
+              >
+                <label
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="text"
+                />
+              </div>
+              <div
+                class="field"
+              >
+                <label
+                  for="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                />
+              </div>
+              <ul
+                class="actions"
+              >
+                <li>
+                  <input
+                    class="special"
+                    type="submit"
+                    value="Send Message"
+                  />
+                </li>
+                <li>
+                  <input
+                    type="reset"
+                    value="Clear"
+                  />
+                </li>
+              </ul>
+            </form>
+          </section>
+          <section
+            class="split"
           >
-            Name
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-          />
+            <section>
+              <div
+                class="contact-method"
+              >
+                <span
+                  class="icon alt fa-envelope"
+                />
+                <h3>
+                  Email
+                </h3>
+                <a
+                  href="mailto:hello@l3digital.co.uk"
+                >
+                  hello@l3digital.co.uk
+                </a>
+              </div>
+            </section>
+            <section>
+              <div
+                class="contact-method"
+              >
+                <span
+                  class="icon alt fa-phone"
+                />
+                <h3>
+                  Phone
+                </h3>
+                <a
+                  href="tel:0845 111 3333"
+                >
+                  0845 111 3333
+                </a>
+              </div>
+            </section>
+            <section>
+              <div
+                class="contact-method"
+              >
+                <span
+                  class="icon alt fa-home"
+                />
+                <h3>
+                  Address
+                </h3>
+                <span>
+                  L3 Digital Limited
+                  <br />
+                  Amazing House
+                  <br />
+                  Leicestershire
+                  <br />
+                  United Kingdom
+                  <br />
+                  LE3 T03
+                </span>
+              </div>
+            </section>
+          </section>
         </div>
-        <div
-          className="field half"
-        >
-          <label
-            htmlFor="email"
-          >
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="text"
-          />
-        </div>
-        <div
-          className="field"
-        >
-          <label
-            htmlFor="message"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="6"
-          />
-        </div>
-        <ul
-          className="actions"
-        >
-          <li>
-            <input
-              className="special"
-              type="submit"
-              value="Send Message"
-            />
-          </li>
-          <li>
-            <input
-              type="reset"
-              value="Clear"
-            />
-          </li>
-        </ul>
-      </form>
-    </section>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
     <section
-      className="split"
+      id="contact"
     >
-      <section>
-        <div
-          className="contact-method"
-        >
-          <span
-            className="icon alt fa-envelope"
-          />
-          <h3>
-            Email
-          </h3>
-          <a
-            href="mailto:hello@l3digital.co.uk"
+      <div
+        class="inner"
+      >
+        <section>
+          <form
+            action="#"
+            method="post"
           >
-            hello@l3digital.co.uk
-          </a>
-        </div>
-      </section>
-      <section>
-        <div
-          className="contact-method"
+            <div
+              class="field half first"
+            >
+              <label
+                for="name"
+              >
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+              />
+            </div>
+            <div
+              class="field half"
+            >
+              <label
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="text"
+              />
+            </div>
+            <div
+              class="field"
+            >
+              <label
+                for="message"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+              />
+            </div>
+            <ul
+              class="actions"
+            >
+              <li>
+                <input
+                  class="special"
+                  type="submit"
+                  value="Send Message"
+                />
+              </li>
+              <li>
+                <input
+                  type="reset"
+                  value="Clear"
+                />
+              </li>
+            </ul>
+          </form>
+        </section>
+        <section
+          class="split"
         >
-          <span
-            className="icon alt fa-phone"
-          />
-          <h3>
-            Phone
-          </h3>
-          <a
-            href="tel:0845 111 3333"
-          >
-            0845 111 3333
-          </a>
-        </div>
-      </section>
-      <section>
-        <div
-          className="contact-method"
-        >
-          <span
-            className="icon alt fa-home"
-          />
-          <h3>
-            Address
-          </h3>
-          <span>
-            L3 Digital Limited
-            <br />
-            Amazing House
-            <br />
-            Leicestershire
-            <br />
-            United Kingdom
-            <br />
-            LE3 T03
-          </span>
-        </div>
-      </section>
+          <section>
+            <div
+              class="contact-method"
+            >
+              <span
+                class="icon alt fa-envelope"
+              />
+              <h3>
+                Email
+              </h3>
+              <a
+                href="mailto:hello@l3digital.co.uk"
+              >
+                hello@l3digital.co.uk
+              </a>
+            </div>
+          </section>
+          <section>
+            <div
+              class="contact-method"
+            >
+              <span
+                class="icon alt fa-phone"
+              />
+              <h3>
+                Phone
+              </h3>
+              <a
+                href="tel:0845 111 3333"
+              >
+                0845 111 3333
+              </a>
+            </div>
+          </section>
+          <section>
+            <div
+              class="contact-method"
+            >
+              <span
+                class="icon alt fa-home"
+              />
+              <h3>
+                Address
+              </h3>
+              <span>
+                L3 Digital Limited
+                <br />
+                Amazing House
+                <br />
+                Leicestershire
+                <br />
+                United Kingdom
+                <br />
+                LE3 T03
+              </span>
+            </div>
+          </section>
+        </section>
+      </div>
     </section>
-  </div>
-</section>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

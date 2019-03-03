@@ -1,39 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BannerMobile tests check it renders correctly with snapshot 1`] = `
-<section
-  className="major banner1"
-  id="banner"
->
-  <div
-    className="inner"
-  >
-    <header
-      className="major"
-    >
-      <h1>
-        We Are L3 Digital
-      </h1>
-    </header>
-    <div
-      className="content"
-    >
-      <p>
-        A team of great collaborators, providing solutions to all your development needs.
-      </p>
-      <ul
-        className="actions"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="major banner1"
+        id="banner"
       >
-        <li>
-          <a
-            className="button next"
-            href="javascript:;"
+        <div
+          class="inner"
+        >
+          <header
+            class="major"
           >
-            Learn more
-          </a>
-        </li>
-      </ul>
+            <h1>
+              We Are L3 Digital
+            </h1>
+          </header>
+          <div
+            class="content"
+          >
+            <p>
+              A team of great collaborators, providing solutions to all your development needs.
+            </p>
+            <ul
+              class="actions"
+            >
+              <li>
+                <a
+                  class="button next"
+                  href="javascript:;"
+                >
+                  Learn more
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
+  </body>,
+  "container": <div>
+    <section
+      class="major banner1"
+      id="banner"
+    >
+      <div
+        class="inner"
+      >
+        <header
+          class="major"
+        >
+          <h1>
+            We Are L3 Digital
+          </h1>
+        </header>
+        <div
+          class="content"
+        >
+          <p>
+            A team of great collaborators, providing solutions to all your development needs.
+          </p>
+          <ul
+            class="actions"
+          >
+            <li>
+              <a
+                class="button next"
+                href="javascript:;"
+              >
+                Learn more
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
