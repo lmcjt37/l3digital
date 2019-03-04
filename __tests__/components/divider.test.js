@@ -4,7 +4,7 @@ import {
     Asymmetric,
     Pyramids,
     Drops,
-} from '../../src/components/Divider'
+} from 'components/Divider'
 
 describe('Divider tests', () => {
     test('check it renders <Mountains/> correctly with snapshot', () => {

@@ -1,6 +1,6 @@
-import BannerDesktop from '../../src/components/BannerDesktop'
+import BannerDesktop from 'components/BannerDesktop'
 
-jest.mock('../../src/helpers/utils')
+jest.mock('helpers/utils')
 
 describe('BannerDesktop tests', () => {
     test('check it renders correctly with snapshot', () => {

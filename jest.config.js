@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
     transform: {
         '^.+\\.jsx?$': `<rootDir>/__tests__/jest-preprocess.js`,
@@ -14,4 +16,9 @@ module.exports = {
     },
     setupFiles: [`<rootDir>/__tests__/__mocks__/loadershim.js`],
     setupFilesAfterEnv: ['<rootDir>/__tests__/setup-test-env.js'],
+    moduleDirectories: [
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, '__tests__'),
+        'node_modules',
+    ],
 }

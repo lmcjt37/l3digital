@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import '../assets/scss/main.scss'
+import 'assets/scss/main.scss'
 
 import Header from './Header'
 import Menu from './Menu'

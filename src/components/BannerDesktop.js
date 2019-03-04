@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import UtilsHelper from '../helpers/utils'
+import UtilsHelper from 'helpers/utils'
 
 class Banner extends React.Component {
     constructor(props) {

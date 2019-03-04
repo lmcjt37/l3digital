@@ -1,4 +1,4 @@
-import Menu from '../../src/components/Menu'
+import Menu from 'components/Menu'
 
 describe('Menu tests', () => {
     test('check it renders correctly with snapshot', () => {

@@ -1,6 +1,6 @@
-import BannerMobile from '../../src/components/BannerMobile'
+import BannerMobile from 'components/BannerMobile'
 
-jest.mock('../../src/helpers/utils')
+jest.mock('helpers/utils')
 
 describe('BannerMobile tests', () => {
     test('check it renders correctly with snapshot', () => {
