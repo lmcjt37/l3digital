@@ -1,4 +1,4 @@
-import helper from '../../src/helpers/utils'
+import helper from 'helpers/utils'
 
 describe('Utils helper tests', () => {
     test('calls getScreenSize when innerWidth < 768', () => {

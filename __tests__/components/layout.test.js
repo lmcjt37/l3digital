@@ -1,7 +1,7 @@
 import { StaticQuery } from 'gatsby'
 
-import Layout from '../../src/components/Layout'
-import contactMock from '../__mocks__/contact.mock'
+import Layout from 'components/Layout'
+import contactMock from '__mocks__/contact.mock'
 
 beforeEach(() => {
     StaticQuery.mockImplementationOnce(({ render }) => render(contactMock))

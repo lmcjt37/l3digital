@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import UtilsHelper from '../helpers/utils'
+import UtilsHelper from 'helpers/utils'
 
 const BannerMobile = props => (
     <section id="banner" className={`major ${UtilsHelper.getBannerClass()}`}>

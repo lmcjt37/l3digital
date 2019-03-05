@@ -1,4 +1,4 @@
-import Header from '../../src/components/Header'
+import Header from 'components/Header'
 
 describe('Header tests', () => {
     test('check it renders correctly with snapshot', () => {
