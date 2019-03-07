@@ -108,7 +108,10 @@ class Banner extends React.Component {
                     </div>
                 </div>
                 <div className="scroll">
-                    <a href="javascript:;" onClick={this.props.scrollToElement}>
+                    <a
+                        href="javascript:;"
+                        onClick={this.props.scrollByScreenHeight}
+                    >
                         <span />
                         Scroll
                     </a>

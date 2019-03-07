@@ -41,19 +41,19 @@ class HomeIndex extends React.Component {
         window.removeEventListener('resize', this.handleResizeChange.bind(this))
     }
 
-    scrollToRefElement(nonElement) {
-        if (nonElement) {
-            window.scrollBy({
-                top: window.innerHeight,
-                left: 0,
-                behavior: 'smooth',
-            })
-        } else {
-            this.elementRef.scrollIntoView({
-                block: 'start',
-                behavior: 'smooth',
-            })
-        }
+    scrollToRefElement() {
+        this.elementRef.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+        })
+    }
+
+    scrollByScreenHeight() {
+        window.scrollBy({
+            top: window.innerHeight,
+            left: 0,
+            behavior: 'smooth',
+        })
     }
 
     render() {
@@ -82,6 +82,7 @@ class HomeIndex extends React.Component {
             ) : (
                 <BannerDesktop
                     scrollToElement={this.scrollToRefElement.bind(this)}
+                    scrollByScreenHeight={this.scrollByScreenHeight.bind(this)}
                 />
             )
         }
