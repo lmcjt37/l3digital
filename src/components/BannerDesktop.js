@@ -123,6 +123,7 @@ class Banner extends React.Component {
 
 Banner.propTypes = {
     scrollToElement: PropTypes.func,
+    scrollByScreenHeight: PropTypes.func,
 }
 
 export default Banner
