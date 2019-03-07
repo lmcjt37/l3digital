@@ -41,8 +41,19 @@ class HomeIndex extends React.Component {
         window.removeEventListener('resize', this.handleResizeChange.bind(this))
     }
 
-    scrollToRefElement() {
-        this.elementRef.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    scrollToRefElement(nonElement) {
+        if (nonElement) {
+            window.scrollBy({
+                top: window.innerHeight,
+                left: 0,
+                behavior: 'smooth',
+            })
+        } else {
+            this.elementRef.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+            })
+        }
     }
 
     render() {

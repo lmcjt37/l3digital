@@ -23,7 +23,7 @@ class Banner extends React.Component {
         return (
             <section
                 id="banner"
-                className={`major ${UtilsHelper.getBannerClass()}`}
+                className={`major front-page ${UtilsHelper.getBannerClass()}`}
             >
                 <div className="inner">
                     <header className="major">
@@ -106,6 +106,12 @@ class Banner extends React.Component {
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div className="scroll">
+                    <a href="javascript:;" onClick={this.props.scrollToElement}>
+                        <span />
+                        Scroll
+                    </a>
                 </div>
             </section>
         )
