@@ -7,10 +7,7 @@ import Link from 'components/Link'
 import Layout from 'components/Layout'
 import BannerDesktop from 'components/BannerDesktop'
 import BannerMobile from 'components/BannerMobile'
-import {
-    Mountains as DividerOne,
-    Pyramids as DividerTwo,
-} from 'components/Divider'
+import { Pyramids as Divider } from 'components/Divider'
 import Article from 'templates/index-article'
 import InformationSection from 'templates/information-section'
 import UtilsHelper from 'helpers/utils'
@@ -93,7 +90,7 @@ class HomeIndex extends React.Component {
                             )
                         )}
                     </section>
-                    <DividerTwo top flipY color="bg" />
+                    <Divider top flipY color="bg" />
                     <section id="who-are-we" ref={this.setScrollRef}>
                         <div className="inner">
                             <header className="major">
@@ -114,7 +111,7 @@ class HomeIndex extends React.Component {
                             </ul>
                         </div>
                     </section>
-                    <DividerTwo bottom flipX color="bg" />
+                    <Divider bottom flipX color="bg" />
                     <section id="projects" className="tiles">
                         {this.props.data.allContentfulProject.edges.map(
                             (edge, id) => (
