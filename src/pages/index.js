@@ -12,6 +12,7 @@ import {
     Pyramids as DividerTwo,
 } from 'components/Divider'
 import Article from 'templates/index-article'
+import InformationSection from 'templates/information-section'
 import UtilsHelper from 'helpers/utils'
 
 class HomeIndex extends React.Component {
@@ -85,15 +86,14 @@ class HomeIndex extends React.Component {
                 {getBanner()}
 
                 <div id="main">
-                    <section id="projects" className="tiles">
-                        {this.props.data.allContentfulProject.edges.map(
+                    <section id="information" className="splits">
+                        {this.props.data.allContentfulInformation.edges.map(
                             (edge, id) => (
-                                <Article {...edge.node} key={id} />
+                                <InformationSection {...edge.node} key={id} />
                             )
                         )}
-                        {getPlaceholder()}
                     </section>
-                    <DividerOne top color="accent2" />
+                    <DividerTwo top flipY color="bg" />
                     <section id="who-are-we" ref={this.setScrollRef}>
                         <div className="inner">
                             <header className="major">
@@ -115,6 +115,14 @@ class HomeIndex extends React.Component {
                         </div>
                     </section>
                     <DividerTwo bottom flipX color="bg" />
+                    <section id="projects" className="tiles">
+                        {this.props.data.allContentfulProject.edges.map(
+                            (edge, id) => (
+                                <Article {...edge.node} key={id} />
+                            )
+                        )}
+                        {getPlaceholder()}
+                    </section>
                 </div>
             </Layout>
         )
@@ -132,6 +140,7 @@ HomeIndex.propTypes = {
         allContentfulProject: PropTypes.object,
         contentfulAsset: PropTypes.object,
         contentfulCompany: PropTypes.object,
+        allContentfulInformation: PropTypes.object,
     }),
 }
 
@@ -172,6 +181,22 @@ export const pageQuery = graphql`
             whoWeAre {
                 childMarkdownRemark {
                     html
+                }
+            }
+        }
+        allContentfulInformation(filter: { node_locale: { eq: "en-US" } }) {
+            edges {
+                node {
+                    description {
+                        childMarkdownRemark {
+                            html
+                        }
+                    }
+                    picture {
+                        file {
+                            url
+                        }
+                    }
                 }
             }
         }
