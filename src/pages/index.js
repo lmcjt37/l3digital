@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Link from 'components/Link'
-import Layout from 'components/Layout'
 import BannerDesktop from 'components/BannerDesktop'
 import BannerMobile from 'components/BannerMobile'
 import { Pyramids as Divider } from 'components/Divider'
@@ -74,7 +73,7 @@ class HomeIndex extends React.Component {
         }
 
         return (
-            <Layout>
+            <div id="main">
                 <Helmet>
                     <title>{siteTitle}</title>
                     <meta name="description" content={siteDescription} />
@@ -82,46 +81,44 @@ class HomeIndex extends React.Component {
 
                 {getBanner()}
 
-                <div id="main">
-                    <section id="information" className="splits">
-                        {this.props.data.allContentfulInformation.edges.map(
-                            (edge, id) => (
-                                <InformationSection {...edge.node} key={id} />
-                            )
-                        )}
-                    </section>
-                    <Divider top flipY color="bg" />
-                    <section id="who-are-we" ref={this.setScrollRef}>
-                        <div className="inner">
-                            <header className="major">
-                                <h2>Who are we</h2>
-                            </header>
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: this.props.data.contentfulCompany
-                                        .whoWeAre.childMarkdownRemark.html,
-                                }}
-                            />
-                            <ul className="actions">
-                                <li>
-                                    <Link to="/about" className="button next">
-                                        Find Out More
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <Divider bottom flipX color="bg" />
-                    <section id="projects" className="tiles">
-                        {this.props.data.allContentfulProject.edges.map(
-                            (edge, id) => (
-                                <Article {...edge.node} key={id} />
-                            )
-                        )}
-                        {getPlaceholder()}
-                    </section>
-                </div>
-            </Layout>
+                <section id="information" className="splits">
+                    {this.props.data.allContentfulInformation.edges.map(
+                        (edge, id) => (
+                            <InformationSection {...edge.node} key={id} />
+                        )
+                    )}
+                </section>
+                <Divider top flipY color="bg" />
+                <section id="who-are-we" ref={this.setScrollRef}>
+                    <div className="inner">
+                        <header className="major">
+                            <h2>Who are we</h2>
+                        </header>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: this.props.data.contentfulCompany
+                                    .whoWeAre.childMarkdownRemark.html,
+                            }}
+                        />
+                        <ul className="actions">
+                            <li>
+                                <Link to="/about" className="button next">
+                                    Find Out More
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <Divider bottom flipX color="bg" />
+                <section id="projects" className="tiles">
+                    {this.props.data.allContentfulProject.edges.map(
+                        (edge, id) => (
+                            <Article {...edge.node} key={id} />
+                        )
+                    )}
+                    {getPlaceholder()}
+                </section>
+            </div>
         )
     }
 }

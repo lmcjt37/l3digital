@@ -34,6 +34,14 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_API_KEY,
             },
         },
+        {
+            resolve: `gatsby-plugin-layout`,
+            options: {
+                component: require.resolve(
+                    `${__dirname}/src/components/Layout`
+                ),
+            },
+        },
         `gatsby-plugin-sass`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
