@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import Layout from 'components/Layout'
 import Link from 'components/Link'
 
 class ProjectPage extends React.Component {
@@ -15,14 +14,15 @@ class ProjectPage extends React.Component {
             featuredImage,
             url,
         } = this.props.data.contentfulProject
-        return (
-            <Layout>
-                <Helmet>
-                    <title>{title}</title>
-                    <meta name="description" content={shortDescription} />
-                </Helmet>
 
+        return (
+            <div>
                 <div id="main" className="alt">
+                    <Helmet>
+                        <title>{title}</title>
+                        <meta name="description" content={shortDescription} />
+                    </Helmet>
+
                     <section id="one">
                         <div className="inner">
                             <Link
@@ -62,7 +62,7 @@ class ProjectPage extends React.Component {
                         </div>
                     </section>
                 </div>
-            </Layout>
+            </div>
         )
     }
 }
@@ -71,6 +71,7 @@ ProjectPage.propTypes = {
     data: PropTypes.shape({
         contentfulProject: PropTypes.object,
     }),
+    location: PropTypes.object,
 }
 
 export default ProjectPage

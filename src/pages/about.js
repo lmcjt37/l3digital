@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Layout from 'components/Layout'
 import { Pyramids as Divider } from 'components/Divider'
 import ProfileSection from 'templates/profile-section'
 import UtilsHelper from 'helpers/utils'
@@ -14,7 +13,7 @@ class About extends React.Component {
     }
     render() {
         return (
-            <Layout>
+            <div id="main">
                 <Helmet>
                     <title>About</title>
                     <meta name="description" content="About Us Page" />
@@ -38,28 +37,26 @@ class About extends React.Component {
                     </div>
                 </section>
 
-                <div id="main">
-                    <Divider top flipY color="bg" />
-                    <section id="one">
-                        <div className="inner">
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: this.props.data.contentfulCompany
-                                        .description.childMarkdownRemark.html,
-                                }}
-                            />
-                        </div>
-                    </section>
-                    <Divider bottom flipX color="bg" />
-                    <section id="two" className="spotlights">
-                        {this.props.data.allContentfulProfile.edges.map(
-                            (edge, id) => (
-                                <ProfileSection {...edge.node} key={id} />
-                            )
-                        )}
-                    </section>
-                </div>
-            </Layout>
+                <Divider top flipY color="bg" />
+                <section id="one">
+                    <div className="inner">
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: this.props.data.contentfulCompany
+                                    .description.childMarkdownRemark.html,
+                            }}
+                        />
+                    </div>
+                </section>
+                <Divider bottom flipX color="bg" />
+                <section id="two" className="spotlights">
+                    {this.props.data.allContentfulProfile.edges.map(
+                        (edge, id) => (
+                            <ProfileSection {...edge.node} key={id} />
+                        )
+                    )}
+                </section>
+            </div>
         )
     }
 }

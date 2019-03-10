@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Layout from 'components/Layout'
 import { Asymmetric as Divider } from 'components/Divider'
 import ProjectSection from 'templates/project-section'
 import UtilsHelper from 'helpers/utils'
@@ -14,7 +13,7 @@ class Projects extends React.Component {
     }
     render() {
         return (
-            <Layout>
+            <div id="main">
                 <Helmet>
                     <title>Projects</title>
                     <meta name="description" content="Projects Page" />
@@ -38,28 +37,26 @@ class Projects extends React.Component {
                     </div>
                 </section>
 
-                <div id="main">
-                    <Divider top flipY color="bg" />
-                    <section id="one">
-                        <div className="inner">
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: this.props.data.contentfulCompany
-                                        .whatWeDo.childMarkdownRemark.html,
-                                }}
-                            />
-                        </div>
-                    </section>
-                    <Divider bottom flipX color="bg" />
-                    <section id="two" className="spotlights">
-                        {this.props.data.allContentfulProject.edges.map(
-                            (edge, id) => (
-                                <ProjectSection {...edge.node} key={id} />
-                            )
-                        )}
-                    </section>
-                </div>
-            </Layout>
+                <Divider top flipY color="bg" />
+                <section id="one">
+                    <div className="inner">
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: this.props.data.contentfulCompany
+                                    .whatWeDo.childMarkdownRemark.html,
+                            }}
+                        />
+                    </div>
+                </section>
+                <Divider bottom flipX color="bg" />
+                <section id="two" className="spotlights">
+                    {this.props.data.allContentfulProject.edges.map(
+                        (edge, id) => (
+                            <ProjectSection {...edge.node} key={id} />
+                        )
+                    )}
+                </section>
+            </div>
         )
     }
 }

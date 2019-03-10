@@ -1,14 +1,13 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { withPrefix } from 'gatsby'
 import PropTypes from 'prop-types'
-
-import 'assets/scss/main.scss'
 
 import Header from './Header'
 import Menu from './Menu'
 import Contact from './Contact'
 import Footer from './Footer'
+import Transitions from './Transitions'
+
+import 'assets/scss/main.scss'
 
 class Layout extends React.Component {
     constructor(props) {
@@ -39,7 +38,7 @@ class Layout extends React.Component {
     }
 
     render() {
-        const { children } = this.props
+        const { children, location } = this.props
 
         return (
             <div
@@ -47,12 +46,11 @@ class Layout extends React.Component {
                     this.state.isMenuVisible ? 'is-menu-visible' : ''
                 }`}
             >
-                <Helmet>
-                    <link rel="stylesheet" href={withPrefix('skel.css')} />
-                </Helmet>
                 <div id="wrapper">
                     <Header onToggleMenu={this.handleToggleMenu} />
-                    {children}
+
+                    <Transitions location={location}>{children}</Transitions>
+
                     <Contact />
                     <Footer />
                 </div>
@@ -63,7 +61,8 @@ class Layout extends React.Component {
 }
 
 Layout.propTypes = {
-    children: PropTypes.array,
+    children: PropTypes.object,
+    location: PropTypes.object,
 }
 
 export default Layout
