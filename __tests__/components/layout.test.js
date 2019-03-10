@@ -9,7 +9,7 @@ beforeEach(() => {
 
 describe('Layout tests', () => {
     test('check it renders correctly with snapshot', () => {
-        const tree = render(<Layout />)
+        const tree = render(<Layout location={{}} />)
         expect(tree).toMatchSnapshot()
     })
 })

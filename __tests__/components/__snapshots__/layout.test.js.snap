@@ -41,6 +41,11 @@ Object {
               </a>
             </nav>
           </header>
+          <div>
+            <div
+              style="transition: opacity 500ms ease-in-out; opacity: 1;"
+            />
+          </div>
           <section
             id="contact"
           >
@@ -373,6 +378,11 @@ Object {
             </a>
           </nav>
         </header>
+        <div>
+          <div
+            style="transition: opacity 500ms ease-in-out; opacity: 1;"
+          />
+        </div>
         <section
           id="contact"
         >
