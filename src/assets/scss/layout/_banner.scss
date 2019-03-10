@@ -104,6 +104,11 @@
         &.alt {
             opacity: 0.75;
         }
+
+        &.front-page {
+            height: 100vh;
+            min-height: 60vh;
+        }
     }
 
     &.style1 {

@@ -23,7 +23,7 @@ class Banner extends React.Component {
         return (
             <section
                 id="banner"
-                className={`major ${UtilsHelper.getBannerClass()}`}
+                className={`major front-page ${UtilsHelper.getBannerClass()}`}
             >
                 <div className="inner">
                     <header className="major">
@@ -107,6 +107,15 @@ class Banner extends React.Component {
                         </ul>
                     </div>
                 </div>
+                <div className="scroll">
+                    <a
+                        href="javascript:;"
+                        onClick={this.props.scrollByScreenHeight}
+                    >
+                        <span />
+                        Scroll
+                    </a>
+                </div>
             </section>
         )
     }
@@ -114,6 +123,7 @@ class Banner extends React.Component {
 
 Banner.propTypes = {
     scrollToElement: PropTypes.func,
+    scrollByScreenHeight: PropTypes.func,
 }
 
 export default Banner
