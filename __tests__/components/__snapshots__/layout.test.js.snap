@@ -18,6 +18,7 @@ Object {
             <a
               class="logo"
               href="/"
+              state="[object Object]"
             >
               <svg
                 version="1.1"
@@ -265,6 +266,7 @@ Object {
               <li>
                 <a
                   href="/"
+                  state="[object Object]"
                 >
                   Home
                 </a>
@@ -272,6 +274,7 @@ Object {
               <li>
                 <a
                   href="/projects"
+                  state="[object Object]"
                 >
                   Projects
                 </a>
@@ -279,6 +282,7 @@ Object {
               <li>
                 <a
                   href="/about"
+                  state="[object Object]"
                 >
                   About Us
                 </a>
@@ -355,6 +359,7 @@ Object {
           <a
             class="logo"
             href="/"
+            state="[object Object]"
           >
             <svg
               version="1.1"
@@ -602,6 +607,7 @@ Object {
             <li>
               <a
                 href="/"
+                state="[object Object]"
               >
                 Home
               </a>
@@ -609,6 +615,7 @@ Object {
             <li>
               <a
                 href="/projects"
+                state="[object Object]"
               >
                 Projects
               </a>
@@ -616,6 +623,7 @@ Object {
             <li>
               <a
                 href="/about"
+                state="[object Object]"
               >
                 About Us
               </a>

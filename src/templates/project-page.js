@@ -14,6 +14,7 @@ class ProjectPage extends React.Component {
             featuredImage,
             url,
         } = this.props.data.contentfulProject
+        const { location } = this.props
 
         return (
             <div>
@@ -26,10 +27,10 @@ class ProjectPage extends React.Component {
                     <section id="one">
                         <div className="inner">
                             <Link
-                                to="/projects"
+                                to={location.state.from}
                                 className="button previous bottom-margin"
                             >
-                                Projects
+                                Back
                             </Link>
                             <header className="major">
                                 <h1>{title}</h1>
