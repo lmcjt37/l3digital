@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withPrefix } from 'gatsby'
 
 import Link from 'components/Link'
 
@@ -18,7 +19,7 @@ class IndexArticle extends React.Component {
                     <h3>{title}</h3>
                     <p>{description.childMarkdownRemark.excerpt}</p>
                 </header>
-                <Link to={slug} className="link primary" />
+                <Link to={withPrefix(slug)} className="link primary" />
             </article>
         )
     }
