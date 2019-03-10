@@ -39,7 +39,18 @@ class HomeIndex extends React.Component {
     }
 
     scrollToRefElement() {
-        this.elementRef.scrollIntoView({ block: 'start', behavior: 'smooth' })
+        this.elementRef.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+        })
+    }
+
+    scrollByScreenHeight() {
+        window.scrollBy({
+            top: window.innerHeight,
+            left: 0,
+            behavior: 'smooth',
+        })
     }
 
     render() {
@@ -68,6 +79,7 @@ class HomeIndex extends React.Component {
             ) : (
                 <BannerDesktop
                     scrollToElement={this.scrollToRefElement.bind(this)}
+                    scrollByScreenHeight={this.scrollByScreenHeight.bind(this)}
                 />
             )
         }

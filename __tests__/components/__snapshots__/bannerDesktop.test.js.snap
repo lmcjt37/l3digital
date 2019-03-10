@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major banner1"
+        class="major front-page banner1"
         id="banner"
       >
         <div
@@ -101,12 +101,22 @@ Object {
             </ul>
           </div>
         </div>
+        <div
+          class="scroll"
+        >
+          <a
+            href="javascript:;"
+          >
+            <span />
+            Scroll
+          </a>
+        </div>
       </section>
     </div>
   </body>,
   "container": <div>
     <section
-      class="major banner1"
+      class="major front-page banner1"
       id="banner"
     >
       <div
@@ -200,6 +210,16 @@ Object {
             </li>
           </ul>
         </div>
+      </div>
+      <div
+        class="scroll"
+      >
+        <a
+          href="javascript:;"
+        >
+          <span />
+          Scroll
+        </a>
       </div>
     </section>
   </div>,
