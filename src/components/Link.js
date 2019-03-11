@@ -8,11 +8,6 @@ const Link = ({ children, to, from, ...other }) => {
     // will start with exactly one slash, and that anything else is external.
     const internal = /^\/(?!\/)/.test(to)
 
-    // Check @from has a value so that Now doesn't break
-    if (from === undefined) {
-        from = ''
-    }
-
     // Use Gatsby Link for internal links, and <a> for others
     if (internal) {
         return (
