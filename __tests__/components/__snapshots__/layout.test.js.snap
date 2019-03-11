@@ -43,7 +43,7 @@ Object {
           </header>
           <div>
             <div
-              style="transition: opacity 500ms ease-in-out; opacity: 1;"
+              style="transition: transform 1125ms ease, opacity 750ms ease; transform: scale(1) translateZ(0); opacity: 1;"
             />
           </div>
           <section
@@ -380,7 +380,7 @@ Object {
         </header>
         <div>
           <div
-            style="transition: opacity 500ms ease-in-out; opacity: 1;"
+            style="transition: transform 1125ms ease, opacity 750ms ease; transform: scale(1) translateZ(0); opacity: 1;"
           />
         </div>
         <section
