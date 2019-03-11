@@ -14,7 +14,16 @@ class ProjectPage extends React.Component {
             featuredImage,
             url,
         } = this.props.data.contentfulProject
+
+        // Workaround for HTML builds where
+        // location.state is null
         const { location } = this.props
+        var from = '/projects'
+        var buttonTitle = 'Projects'
+        if (location.state && location.state.from) {
+            from = location.state.from
+            buttonTitle = 'Back'
+        }
 
         return (
             <div>
@@ -27,10 +36,10 @@ class ProjectPage extends React.Component {
                     <section id="one">
                         <div className="inner">
                             <Link
-                                to={location.state.from}
+                                to={from}
                                 className="button previous bottom-margin"
                             >
-                                Back
+                                {buttonTitle}
                             </Link>
                             <header className="major">
                                 <h1>{title}</h1>
