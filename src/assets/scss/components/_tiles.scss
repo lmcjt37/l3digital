@@ -40,7 +40,7 @@
         width: 40%;
 
         .child {
-            @include vendor('transition', 'transform 1.5s ease');
+            @include vendor('transition', 'transform 0.5s ease');
             height: 100%;
             width: 100%;
             position: absolute;
@@ -58,16 +58,31 @@
         header {
             position: relative;
             z-index: 3;
+            &.major {
+                > :first-child {
+                    &:after {
+                        @include vendor('transition', 'width 0.5s ease');
+                        width: 0;
+                    }
+                }
+            }
         }
 
         h3 {
             font-size: 1.75em;
+            margin-top: 10vh;
+            @include vendor('transition', ('margin-top 0.25s ease'));
 
             a {
                 &:hover {
                     color: inherit !important;
                 }
             }
+        }
+
+        p {
+            opacity: 0;
+            @include vendor('transition', ('opacity 0.25s ease'));
         }
 
         .link.primary {
@@ -109,6 +124,26 @@
             &:before {
                 opacity: 0;
             }
+            header {
+                &.major {
+                    > :first-child {
+                        &:after {
+                            @include vendor('transition', 'width 0.5s ease');
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            h3 {
+                margin-top: 0;
+                @include vendor('transition', ('margin-top 0.25s ease'));
+            }
+
+            p {
+                opacity: 1;
+                @include vendor('transition', ('opacity 0.25s ease'));
+            }
+
             .child {
                 @include vendor('transform', 'scale(1.1)');
             }
