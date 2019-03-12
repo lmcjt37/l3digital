@@ -7,9 +7,10 @@ import Link from 'components/Link'
 class ProjectSection extends React.Component {
     render() {
         const { slug, title, description, featuredImage } = this.props
+        const from = '/projects'
         return (
             <section>
-                <Link to={withPrefix(slug)} className="image">
+                <Link to={withPrefix(slug)} from={from} className="image">
                     <img
                         src={featuredImage.fluid.src}
                         alt={featuredImage.description}
@@ -27,7 +28,11 @@ class ProjectSection extends React.Component {
                         />
                         <ul className="actions">
                             <li>
-                                <Link to={withPrefix(slug)} className="button">
+                                <Link
+                                    to={withPrefix(slug)}
+                                    from={from}
+                                    className="button"
+                                >
                                     Learn more
                                 </Link>
                             </li>
