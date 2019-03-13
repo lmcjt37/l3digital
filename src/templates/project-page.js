@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Link from 'components/Link'
@@ -11,7 +10,6 @@ class ProjectPage extends React.Component {
         const {
             title,
             description,
-            shortDescription,
             featuredImage,
             url,
         } = this.props.data.contentfulProject

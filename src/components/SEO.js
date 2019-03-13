@@ -83,7 +83,10 @@ SEO.defaultProps = {
     keywords: [`gatsby`, `application`, `react`],
 }
 
-SEO.propTypes = {
+Container.propTypes = {
+    data: PropTypes.shape({
+        site: PropTypes.object,
+    }),
     description: PropTypes.string,
     lang: PropTypes.string,
     meta: PropTypes.array,
