@@ -42,7 +42,7 @@ const getClasses = args => {
 }
 
 const Mountains = props => (
-    <section id="Mountains" className="major">
+    <section className="mountains major">
         <div className="divider-container">
             <div
                 className={`divider-shape ${getClasses(props)}`}
@@ -75,7 +75,7 @@ const Mountains = props => (
 )
 
 const Fans = props => (
-    <section id="Fans" className="major">
+    <section className="fans major">
         <div className="divider-container">
             <div
                 className={`divider-shape ${getClasses(props)}`}
@@ -113,7 +113,7 @@ const Fans = props => (
 )
 
 const Asymmetric = props => (
-    <section id="Asymmetric" className="major">
+    <section className="asymmetric major">
         <div className="divider-container">
             <div
                 className={`divider-shape ${getClasses(props)}`}
@@ -136,7 +136,7 @@ const Asymmetric = props => (
 
 const Pyramids = props => {
     return (
-        <section id="Pyramids" className="major">
+        <section className="pyramids major">
             <div className="divider-container">
                 <div
                     className={`divider-shape ${getClasses(props)}`}
@@ -162,7 +162,7 @@ const Pyramids = props => {
 
 const Drops = props => {
     return (
-        <section id="Drops" className="major">
+        <section className="drops major">
             <div className="divider-container">
                 <div
                     className={`divider-shape ${getClasses(props)}`}

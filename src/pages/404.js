@@ -1,7 +1,7 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 
 import { Drops as Divider } from 'components/Divider'
+import SEO from 'components/SEO'
 
 class errorPage extends React.Component {
     constructor(props) {
@@ -29,10 +29,7 @@ class errorPage extends React.Component {
     render() {
         return (
             <div id="main">
-                <Helmet>
-                    <title>404 - Something Went Wrong</title>
-                    <meta name="description" content="404 Page" />
-                </Helmet>
+                <SEO title="404" />
 
                 <Divider top flipY color="accent2" />
                 <section id="one">
