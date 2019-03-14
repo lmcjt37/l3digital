@@ -84,9 +84,7 @@ class HomeIndex extends React.Component {
         return (
             <div id="main">
                 <SEO title="Home" />
-
                 {getBanner()}
-
                 <section id="information" className="splits">
                     {this.props.data.allContentfulInformation.edges.map(
                         (edge, id) => (
