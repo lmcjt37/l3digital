@@ -6,8 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major"
-        id="Asymmetric"
+        class="asymmetric major"
       >
         <div
           class="divider-container"
@@ -33,8 +32,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="major"
-      id="Asymmetric"
+      class="asymmetric major"
     >
       <div
         class="divider-container"
@@ -109,8 +107,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major"
-        id="Drops"
+        class="drops major"
       >
         <div
           class="divider-container"
@@ -136,8 +133,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="major"
-      id="Drops"
+      class="drops major"
     >
       <div
         class="divider-container"
@@ -212,8 +208,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major"
-        id="Fans"
+        class="fans major"
       >
         <div
           class="divider-container"
@@ -255,8 +250,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="major"
-      id="Fans"
+      class="fans major"
     >
       <div
         class="divider-container"
@@ -347,8 +341,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major"
-        id="Mountains"
+        class="mountains major"
       >
         <div
           class="divider-container"
@@ -385,8 +378,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="major"
-      id="Mountains"
+      class="mountains major"
     >
       <div
         class="divider-container"
@@ -472,8 +464,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major"
-        id="Pyramids"
+        class="pyramids major"
       >
         <div
           class="divider-container"
@@ -499,8 +490,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="major"
-      id="Pyramids"
+      class="pyramids major"
     >
       <div
         class="divider-container"

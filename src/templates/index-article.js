@@ -19,7 +19,12 @@ class IndexArticle extends React.Component {
                     <h3>{title}</h3>
                     <p>{description.childMarkdownRemark.excerpt}</p>
                 </header>
-                <Link to={withPrefix(slug)} from="/" className="link primary" />
+                <Link
+                    to={withPrefix(slug)}
+                    from="/"
+                    aria-label={slug}
+                    className="link primary"
+                />
             </article>
         )
     }
