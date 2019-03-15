@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function Container({ data, description, lang, meta, keywords, title }) {
+const Container = ({ data, description, lang, meta, keywords, title }) => {
     const { site } = data
     const metaDescription = description || site.siteMetadata.description
     return (
