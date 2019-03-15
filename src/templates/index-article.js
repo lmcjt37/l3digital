@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withPrefix } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 import Link from 'components/Link'
 
@@ -9,11 +10,16 @@ class IndexArticle extends React.Component {
         const { slug, title, description, featuredImage } = this.props
         return (
             <article>
-                <span
+                {/* <span
                     style={{
                         backgroundImage: `url(${featuredImage.fluid.src})`,
                     }}
                     className="child"
+                /> */}
+                <BackgroundImage
+                    Tag="span"
+                    className="child"
+                    fluid={featuredImage.fluid}
                 />
                 <header className="major">
                     <h3>{title}</h3>
