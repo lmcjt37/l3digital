@@ -1,9 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import { Asymmetric as Divider } from 'components/Divider'
+import SEO from 'components/SEO'
 import ProjectSection from 'templates/project-section'
 import UtilsHelper from 'helpers/utils'
 
@@ -14,10 +14,7 @@ class Projects extends React.Component {
     render() {
         return (
             <div id="main">
-                <Helmet>
-                    <title>Projects</title>
-                    <meta name="description" content="Projects Page" />
-                </Helmet>
+                <SEO title="Projects" />
 
                 <section
                     id="banner"
@@ -86,6 +83,7 @@ export const projectsPageQuery = graphql`
                         fluid(maxWidth: 600) {
                             src
                         }
+                        description
                     }
                 }
             }

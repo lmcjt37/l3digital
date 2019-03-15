@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Link from 'components/Link'
 import BannerDesktop from 'components/BannerDesktop'
 import BannerMobile from 'components/BannerMobile'
 import { Pyramids as Divider } from 'components/Divider'
+import SEO from 'components/SEO'
 import Article from 'templates/index-article'
 import InformationSection from 'templates/information-section'
 import UtilsHelper from 'helpers/utils'
@@ -54,9 +54,6 @@ class HomeIndex extends React.Component {
     }
 
     render() {
-        const siteTitle = this.props.data.site.siteMetadata.title
-        const siteDescription = this.props.data.site.siteMetadata.description
-
         let getPlaceholder = () => {
             if (this.props.data.allContentfulProject.edges % 2 !== 0) {
                 return (
@@ -86,13 +83,8 @@ class HomeIndex extends React.Component {
 
         return (
             <div id="main">
-                <Helmet>
-                    <title>{siteTitle}</title>
-                    <meta name="description" content={siteDescription} />
-                </Helmet>
-
+                <SEO title="Home" />
                 {getBanner()}
-
                 <section id="information" className="splits">
                     {this.props.data.allContentfulInformation.edges.map(
                         (edge, id) => (
@@ -202,6 +194,7 @@ export const pageQuery = graphql`
                         file {
                             url
                         }
+                        description
                     }
                 }
             }

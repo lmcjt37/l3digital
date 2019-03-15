@@ -193,6 +193,7 @@ Object {
               >
                 <li>
                   <a
+                    aria-label="Twitter"
                     class="icon alt fa-twitter"
                     href="https://twitter.com/l3digital_uk"
                     rel="noopener noreferrer"
@@ -207,6 +208,7 @@ Object {
                 </li>
                 <li>
                   <a
+                    aria-label="Github"
                     class="icon alt fa-github"
                     href="https://github.com/l3digitaluk"
                     rel="noopener noreferrer"
@@ -221,6 +223,7 @@ Object {
                 </li>
                 <li>
                   <a
+                    aria-label="LinkedIn"
                     class="icon alt fa-linkedin"
                     href="https://www.linkedin.com/in/l3-digital-uk/"
                     rel="noopener noreferrer"
@@ -243,12 +246,7 @@ Object {
                    L3 Digital
                 </li>
                 <li>
-                  Design: 
-                  <a
-                    href="https://html5up.net"
-                  >
-                    HTML5 UP
-                  </a>
+                  All Rights Reserved
                 </li>
               </ul>
             </div>
@@ -293,6 +291,7 @@ Object {
             >
               <li>
                 <a
+                  aria-label="Twitter"
                   class="icon alt fa-twitter"
                   href="https://twitter.com/l3digital_uk"
                   rel="noopener noreferrer"
@@ -307,6 +306,7 @@ Object {
               </li>
               <li>
                 <a
+                  aria-label="Github"
                   class="icon alt fa-github"
                   href="https://github.com/l3digitaluk"
                   rel="noopener noreferrer"
@@ -321,6 +321,7 @@ Object {
               </li>
               <li>
                 <a
+                  aria-label="LinkedIn"
                   class="icon alt fa-linkedin"
                   href="https://www.linkedin.com/in/l3-digital-uk/"
                   rel="noopener noreferrer"
@@ -534,6 +535,7 @@ Object {
             >
               <li>
                 <a
+                  aria-label="Twitter"
                   class="icon alt fa-twitter"
                   href="https://twitter.com/l3digital_uk"
                   rel="noopener noreferrer"
@@ -548,6 +550,7 @@ Object {
               </li>
               <li>
                 <a
+                  aria-label="Github"
                   class="icon alt fa-github"
                   href="https://github.com/l3digitaluk"
                   rel="noopener noreferrer"
@@ -562,6 +565,7 @@ Object {
               </li>
               <li>
                 <a
+                  aria-label="LinkedIn"
                   class="icon alt fa-linkedin"
                   href="https://www.linkedin.com/in/l3-digital-uk/"
                   rel="noopener noreferrer"
@@ -584,12 +588,7 @@ Object {
                  L3 Digital
               </li>
               <li>
-                Design: 
-                <a
-                  href="https://html5up.net"
-                >
-                  HTML5 UP
-                </a>
+                All Rights Reserved
               </li>
             </ul>
           </div>
@@ -634,6 +633,7 @@ Object {
           >
             <li>
               <a
+                aria-label="Twitter"
                 class="icon alt fa-twitter"
                 href="https://twitter.com/l3digital_uk"
                 rel="noopener noreferrer"
@@ -648,6 +648,7 @@ Object {
             </li>
             <li>
               <a
+                aria-label="Github"
                 class="icon alt fa-github"
                 href="https://github.com/l3digitaluk"
                 rel="noopener noreferrer"
@@ -662,6 +663,7 @@ Object {
             </li>
             <li>
               <a
+                aria-label="LinkedIn"
                 class="icon alt fa-linkedin"
                 href="https://www.linkedin.com/in/l3-digital-uk/"
                 rel="noopener noreferrer"

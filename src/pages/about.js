@@ -1,9 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import { Pyramids as Divider } from 'components/Divider'
+import SEO from 'components/SEO'
 import ProfileSection from 'templates/profile-section'
 import UtilsHelper from 'helpers/utils'
 
@@ -14,10 +14,7 @@ class About extends React.Component {
     render() {
         return (
             <div id="main">
-                <Helmet>
-                    <title>About</title>
-                    <meta name="description" content="About Us Page" />
-                </Helmet>
+                <SEO title="About" />
 
                 <section
                     id="banner"
@@ -95,6 +92,7 @@ export const aboutPageQuery = graphql`
                         fluid(maxWidth: 600) {
                             ...GatsbyContentfulFluid
                         }
+                        description
                     }
                 }
             }

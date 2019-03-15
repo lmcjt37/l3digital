@@ -10,6 +10,7 @@ const Social = () => (
                 rel="noopener noreferrer"
                 href="https://twitter.com/l3digital_uk"
                 className="icon alt fa-twitter"
+                aria-label="Twitter"
             >
                 <span className="label">Twitter</span>
             </Link>
@@ -20,6 +21,7 @@ const Social = () => (
                 rel="noopener noreferrer"
                 href="https://github.com/l3digitaluk"
                 className="icon alt fa-github"
+                aria-label="Github"
             >
                 <span className="label">GitHub</span>
             </Link>
@@ -30,6 +32,7 @@ const Social = () => (
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/l3-digital-uk/"
                 className="icon alt fa-linkedin"
+                aria-label="LinkedIn"
             >
                 <span className="label">LinkedIn</span>
             </Link>

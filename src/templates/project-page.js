@@ -1,16 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Link from 'components/Link'
+import SEO from 'components/SEO'
 
 class ProjectPage extends React.Component {
     render() {
         const {
             title,
             description,
-            shortDescription,
             featuredImage,
             url,
         } = this.props.data.contentfulProject
@@ -28,11 +27,7 @@ class ProjectPage extends React.Component {
         return (
             <div>
                 <div id="main" className="alt">
-                    <Helmet>
-                        <title>{title}</title>
-                        <meta name="description" content={shortDescription} />
-                    </Helmet>
-
+                    <SEO title={title} />
                     <section id="one">
                         <div className="inner">
                             <Link
