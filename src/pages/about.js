@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 import { Pyramids as Divider } from 'components/Divider'
 import SEO from 'components/SEO'
+import Banner from 'components/Banner'
 import ProfileSection from 'templates/profile-section'
-import UtilsHelper from 'helpers/utils'
 
 class About extends React.Component {
     constructor(props) {
@@ -15,11 +15,7 @@ class About extends React.Component {
         return (
             <div id="main">
                 <SEO title="About" />
-
-                <section
-                    id="banner"
-                    className={`style2 ${UtilsHelper.getBannerClass()}`}
-                >
+                <Banner classes="style2">
                     <div className="inner">
                         <header className="major">
                             <h1>Meet the team</h1>
@@ -32,8 +28,7 @@ class About extends React.Component {
                             </p>
                         </div>
                     </div>
-                </section>
-
+                </Banner>
                 <Divider top flipY color="bg" />
                 <section id="one">
                     <div className="inner">

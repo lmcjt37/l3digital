@@ -2,18 +2,18 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import UtilsHelper from 'helpers/utils'
-import BackgroundImage from 'gatsby-background-image'
+import Image from 'gatsby-image'
 
 const Container = ({ children, data, classes }) => {
+    const bannerName = UtilsHelper.getBannerClass()
     return (
-        <BackgroundImage
-            Tag="section"
-            classId="banner"
-            className={classes}
-            fluid={data[UtilsHelper.getBannerName()].childImageSharp.fluid}
-        >
+        <section id="banner" className={classes}>
+            <Image
+                fluid={data[bannerName].childImageSharp.fluid}
+                alt="Banner image"
+            />
             {children}
-        </BackgroundImage>
+        </section>
     )
 }
 
