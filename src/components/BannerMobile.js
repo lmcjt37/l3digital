@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Banner from 'components/Banner'
+import UtilsHelper from 'helpers/utils'
 
 const BannerMobile = props => (
-    <Banner classes="major">
+    <section id="banner" className={`major ${UtilsHelper.getBannerClass()}`}>
         <div className="inner">
             <header className="major">
                 <h1>We Are L3 Digital</h1>
@@ -27,7 +27,7 @@ const BannerMobile = props => (
                 </ul>
             </div>
         </div>
-    </Banner>
+    </section>
 )
 
 BannerMobile.propTypes = {

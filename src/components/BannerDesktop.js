@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Banner from 'components/Banner'
+import UtilsHelper from 'helpers/utils'
 
 class BannerDesktop extends React.Component {
     constructor(props) {
@@ -21,7 +21,10 @@ class BannerDesktop extends React.Component {
 
     render() {
         return (
-            <Banner classes="major front-page">
+            <section
+                id="banner"
+                className={`major front-page ${UtilsHelper.getBannerClass()}`}
+            >
                 <div className="inner">
                     <header className="major">
                         <svg
@@ -113,7 +116,7 @@ class BannerDesktop extends React.Component {
                         Scroll
                     </a>
                 </div>
-            </Banner>
+            </section>
         )
     }
 }

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 import { Asymmetric as Divider } from 'components/Divider'
 import SEO from 'components/SEO'
-import Banner from 'components/Banner'
 import ProjectSection from 'templates/project-section'
+import UtilsHelper from 'helpers/utils'
 
 class Projects extends React.Component {
     constructor(props) {
@@ -15,7 +15,11 @@ class Projects extends React.Component {
         return (
             <div id="main">
                 <SEO title="Projects" />
-                <Banner classes="style2">
+
+                <section
+                    id="banner"
+                    className={`style2 ${UtilsHelper.getBannerClass()}`}
+                >
                     <div className="inner">
                         <header className="major">
                             <h1>Projects</h1>
@@ -28,7 +32,8 @@ class Projects extends React.Component {
                             </p>
                         </div>
                     </div>
-                </Banner>
+                </section>
+
                 <Divider top flipY color="bg" />
                 <section id="one">
                     <div className="inner">

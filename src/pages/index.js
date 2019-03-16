@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import BackgroundImage from 'gatsby-background-image'
+import Image from 'gatsby-image'
 
 import Link from 'components/Link'
 import BannerDesktop from 'components/BannerDesktop'
@@ -58,10 +58,13 @@ class HomeIndex extends React.Component {
         let getPlaceholder = () => {
             if (this.props.data.allContentfulProject.edges % 2 !== 0) {
                 return (
-                    <BackgroundImage
-                        Tag="article"
-                        fluid={this.props.data.contentfulAsset.fluid}
-                    />
+                    <article>
+                        <Image
+                            Tag="span"
+                            className="child"
+                            fluid={this.props.data.contentfulAsset.fluid}
+                        />
+                    </article>
                 )
             }
         }
