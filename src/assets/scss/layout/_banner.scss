@@ -39,6 +39,10 @@
         z-index: 1;
     }
 
+    > .gatsby-image-wrapper {
+        position: unset !important;
+    }
+
     h1 {
         font-size: 3.25em;
     }
