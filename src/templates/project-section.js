@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withPrefix } from 'gatsby'
+import Image from 'gatsby-image'
 
 import Link from 'components/Link'
 
@@ -11,8 +12,8 @@ class ProjectSection extends React.Component {
         return (
             <section>
                 <Link to={withPrefix(slug)} from={from} className="image">
-                    <img
-                        src={featuredImage.fluid.src}
+                    <Image
+                        fluid={featuredImage.fluid}
                         alt={featuredImage.description}
                     />
                 </Link>

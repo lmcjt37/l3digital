@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import UtilsHelper from 'helpers/utils'
 
-class Banner extends React.Component {
+class BannerDesktop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -121,9 +121,9 @@ class Banner extends React.Component {
     }
 }
 
-Banner.propTypes = {
+BannerDesktop.propTypes = {
     scrollToElement: PropTypes.func,
     scrollByScreenHeight: PropTypes.func,
 }
 
-export default Banner
+export default BannerDesktop

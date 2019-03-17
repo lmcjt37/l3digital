@@ -90,7 +90,7 @@ export const aboutPageQuery = graphql`
                     }
                     profile {
                         fluid(maxWidth: 600) {
-                            src
+                            ...GatsbyContentfulFluid
                         }
                         description
                     }

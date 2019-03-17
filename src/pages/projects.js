@@ -81,7 +81,7 @@ export const projectsPageQuery = graphql`
                     }
                     featuredImage {
                         fluid(maxWidth: 600) {
-                            src
+                            ...GatsbyContentfulFluid
                         }
                         description
                     }

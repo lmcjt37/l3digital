@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Image from 'gatsby-image'
 
 class ProfileSection extends React.Component {
     render() {
@@ -7,7 +8,7 @@ class ProfileSection extends React.Component {
         return (
             <section>
                 <span className="image">
-                    <img src={profile.fluid.src} alt={profile.description} />
+                    <Image fluid={profile.fluid} alt={profile.description} />
                 </span>
                 <div className="content">
                     <div className="inner">
