@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import Image from 'gatsby-image'
 
 import Link from 'components/Link'
 import SEO from 'components/SEO'
@@ -40,8 +41,8 @@ class ProjectPage extends React.Component {
                                 <h1>{title}</h1>
                             </header>
                             <span className="image left">
-                                <img
-                                    src={featuredImage.fluid.src}
+                                <Image
+                                    fluid={featuredImage.fluid}
                                     alt={featuredImage.description}
                                 />
                             </span>
@@ -94,7 +95,7 @@ export const projectPageQuery = graphql`
             shortDescription
             featuredImage {
                 fluid(maxWidth: 600) {
-                    src
+                    ...GatsbyContentfulFluid
                 }
                 description
             }

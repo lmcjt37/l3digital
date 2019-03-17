@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import UtilsHelper from 'helpers/utils'
+import Banner from 'components/Banner'
 
-class Banner extends React.Component {
+class BannerDesktop extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -21,10 +21,7 @@ class Banner extends React.Component {
 
     render() {
         return (
-            <section
-                id="banner"
-                className={`major front-page ${UtilsHelper.getBannerClass()}`}
-            >
+            <Banner classes="major front-page">
                 <div className="inner">
                     <header className="major">
                         <svg
@@ -116,14 +113,14 @@ class Banner extends React.Component {
                         Scroll
                     </a>
                 </div>
-            </section>
+            </Banner>
         )
     }
 }
 
-Banner.propTypes = {
+BannerDesktop.propTypes = {
     scrollToElement: PropTypes.func,
     scrollByScreenHeight: PropTypes.func,
 }
 
-export default Banner
+export default BannerDesktop

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import Image from 'gatsby-image'
 
 import Link from 'components/Link'
 import BannerDesktop from 'components/BannerDesktop'
@@ -57,13 +58,13 @@ class HomeIndex extends React.Component {
         let getPlaceholder = () => {
             if (this.props.data.allContentfulProject.edges % 2 !== 0) {
                 return (
-                    <article
-                        style={{
-                            backgroundImage: `url(${
-                                this.props.data.contentfulAsset.fluid.src
-                            })`,
-                        }}
-                    />
+                    <article>
+                        <Image
+                            Tag="span"
+                            className="child"
+                            fluid={this.props.data.contentfulAsset.fluid}
+                        />
+                    </article>
                 )
             }
         }
@@ -164,7 +165,7 @@ export const pageQuery = graphql`
                     }
                     featuredImage {
                         fluid(maxWidth: 600) {
-                            src
+                            ...GatsbyContentfulFluid
                         }
                     }
                 }
@@ -172,7 +173,7 @@ export const pageQuery = graphql`
         }
         contentfulAsset(contentful_id: { eq: "2wi9qlZZiXi47zk3UVkALL" }) {
             fluid(maxWidth: 600) {
-                src
+                ...GatsbyContentfulFluid
             }
         }
         contentfulCompany(contentful_id: { eq: "27CTUp0dfpHdukUkA75P4j" }) {

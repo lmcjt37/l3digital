@@ -6,8 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <section
-        class="major front-page banner1"
-        id="banner"
+        class="major front-page"
       >
         <div
           class="inner"
@@ -116,8 +115,7 @@ Object {
   </body>,
   "container": <div>
     <section
-      class="major front-page banner1"
-      id="banner"
+      class="major front-page"
     >
       <div
         class="inner"

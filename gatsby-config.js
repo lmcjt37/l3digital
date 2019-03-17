@@ -14,20 +14,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-                plugins: [
-                    {
-                        resolve: `gatsby-remark-images-contentful`,
-                        options: {
-                            maxWidth: 600,
-                        },
-                    },
-                    'gatsby-remark-copy-linked-files',
-                ],
-            },
-        },
-        {
             resolve: `gatsby-source-contentful`,
             options: {
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -46,5 +32,6 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-remark`,
     ],
 }
