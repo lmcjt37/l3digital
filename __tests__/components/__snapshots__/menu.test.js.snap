@@ -16,6 +16,8 @@ Object {
           >
             <li>
               <a
+                activeclassname="active-effect"
+                class="link-effect"
                 href="/"
                 state="[object Object]"
               >
@@ -24,6 +26,8 @@ Object {
             </li>
             <li>
               <a
+                activeclassname="active-effect"
+                class="link-effect"
                 href="/projects"
                 state="[object Object]"
               >
@@ -32,6 +36,8 @@ Object {
             </li>
             <li>
               <a
+                activeclassname="active-effect"
+                class="link-effect"
                 href="/about"
                 state="[object Object]"
               >
@@ -110,6 +116,8 @@ Object {
         >
           <li>
             <a
+              activeclassname="active-effect"
+              class="link-effect"
               href="/"
               state="[object Object]"
             >
@@ -118,6 +126,8 @@ Object {
           </li>
           <li>
             <a
+              activeclassname="active-effect"
+              class="link-effect"
               href="/projects"
               state="[object Object]"
             >
@@ -126,6 +136,8 @@ Object {
           </li>
           <li>
             <a
+              activeclassname="active-effect"
+              class="link-effect"
               href="/about"
               state="[object Object]"
             >
