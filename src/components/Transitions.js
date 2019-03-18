@@ -26,6 +26,9 @@ const getTransitionStyles = {
         transform: `scale(0.95) translateZ(0)`,
         opacity: 0,
     },
+    exited: {
+        opacity: 0,
+    },
 }
 
 class Transition extends React.PureComponent {
