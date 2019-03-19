@@ -19,6 +19,7 @@ Object {
                 activeclassname="active-effect"
                 class="link-effect"
                 href="/"
+                partiallyactive="false"
                 state="[object Object]"
               >
                 Home
@@ -29,6 +30,7 @@ Object {
                 activeclassname="active-effect"
                 class="link-effect"
                 href="/projects"
+                partiallyactive="true"
                 state="[object Object]"
               >
                 Projects
@@ -39,6 +41,7 @@ Object {
                 activeclassname="active-effect"
                 class="link-effect"
                 href="/about"
+                partiallyactive="false"
                 state="[object Object]"
               >
                 About Us
@@ -119,6 +122,7 @@ Object {
               activeclassname="active-effect"
               class="link-effect"
               href="/"
+              partiallyactive="false"
               state="[object Object]"
             >
               Home
@@ -129,6 +133,7 @@ Object {
               activeclassname="active-effect"
               class="link-effect"
               href="/projects"
+              partiallyactive="true"
               state="[object Object]"
             >
               Projects
@@ -139,6 +144,7 @@ Object {
               activeclassname="active-effect"
               class="link-effect"
               href="/about"
+              partiallyactive="false"
               state="[object Object]"
             >
               About Us

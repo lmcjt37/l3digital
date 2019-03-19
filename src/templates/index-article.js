@@ -21,7 +21,7 @@ class IndexArticle extends React.Component {
                     <p>{description.childMarkdownRemark.excerpt}</p>
                 </header>
                 <Link
-                    to={withPrefix(slug)}
+                    to={withPrefix(`projects/${slug}`)}
                     from="/"
                     aria-label={slug}
                     className="link primary"
