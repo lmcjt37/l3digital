@@ -1,7 +1,7 @@
 import { StaticQuery } from 'gatsby'
 
 import Contact from 'components/Contact'
-import contactMock from '__mocks__/contact.mock'
+import contactMock from '__mocks__/components/contact.mock'
 
 beforeEach(() => {
     StaticQuery.mockImplementationOnce(({ render }) => render(contactMock))

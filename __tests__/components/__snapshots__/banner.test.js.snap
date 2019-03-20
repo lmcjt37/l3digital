@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner tests check it renders correctly with snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        id="banner"
+      >
+        <div
+          class=" gatsby-image-wrapper"
+          style="position: relative; overflow: hidden;"
+        >
+          <div
+            style="width: 100%; padding-bottom: 100%;"
+          />
+          <img
+            alt=""
+            src="base64"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition: opacity 0.5s; transition-delay: 0.25s;"
+          />
+          <img
+            alt=""
+            src="tracedSVG"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition: opacity 0.5s; transition-delay: 0.25s;"
+          />
+          <picture>
+            <source
+              sizes="sizes"
+              srcset="srcSetWebp"
+              type="image/webp"
+            />
+            <source
+              sizes="sizes"
+              srcset="srcSet"
+            />
+            <img
+              alt="Banner image"
+              src="src"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 0.5s;"
+            />
+          </picture>
+          <noscript>
+            &lt;picture&gt;&lt;source type='image/webp' srcSet="srcSetWebp" sizes="sizes" /&gt;&lt;source srcSet="srcSet" sizes="sizes" /&gt;&lt;img src="src" alt="Banner image" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          </noscript>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      id="banner"
+    >
+      <div
+        class=" gatsby-image-wrapper"
+        style="position: relative; overflow: hidden;"
+      >
+        <div
+          style="width: 100%; padding-bottom: 100%;"
+        />
+        <img
+          alt=""
+          src="base64"
+          style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition: opacity 0.5s; transition-delay: 0.25s;"
+        />
+        <img
+          alt=""
+          src="tracedSVG"
+          style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition: opacity 0.5s; transition-delay: 0.25s;"
+        />
+        <picture>
+          <source
+            sizes="sizes"
+            srcset="srcSetWebp"
+            type="image/webp"
+          />
+          <source
+            sizes="sizes"
+            srcset="srcSet"
+          />
+          <img
+            alt="Banner image"
+            src="src"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 0.5s;"
+          />
+        </picture>
+        <noscript>
+          &lt;picture&gt;&lt;source type='image/webp' srcSet="srcSetWebp" sizes="sizes" /&gt;&lt;source srcSet="srcSet" sizes="sizes" /&gt;&lt;img src="src" alt="Banner image" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+        </noscript>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
