@@ -111,10 +111,12 @@ Object {
                       />
                     </li>
                     <li>
-                      <input
+                      <button
+                        class="effect"
                         type="reset"
-                        value="Clear"
-                      />
+                      >
+                        Clear
+                      </button>
                     </li>
                   </ul>
                 </form>
@@ -459,10 +461,12 @@ Object {
                     />
                   </li>
                   <li>
-                    <input
+                    <button
+                      class="effect"
                       type="reset"
-                      value="Clear"
-                    />
+                    >
+                      Clear
+                    </button>
                   </li>
                 </ul>
               </form>

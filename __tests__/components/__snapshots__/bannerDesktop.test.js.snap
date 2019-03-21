@@ -91,7 +91,7 @@ Object {
             >
               <li>
                 <a
-                  class="button next"
+                  class="button next-effect effect"
                   href="javascript:;"
                 >
                   Learn more
@@ -200,7 +200,7 @@ Object {
           >
             <li>
               <a
-                class="button next"
+                class="button next-effect effect"
                 href="javascript:;"
               >
                 Learn more
