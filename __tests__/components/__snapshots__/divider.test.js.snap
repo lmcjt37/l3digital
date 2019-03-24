@@ -16,6 +16,7 @@ Object {
             data-negative="false"
           >
             <svg
+              class="divider-shape "
               preserveAspectRatio="none"
               viewBox="0 0 1000 100"
               xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +43,7 @@ Object {
           data-negative="false"
         >
           <svg
+            class="divider-shape "
             preserveAspectRatio="none"
             viewBox="0 0 1000 100"
             xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +119,7 @@ Object {
             data-negative="false"
           >
             <svg
+              class="divider-shape "
               preserveAspectRatio="xMidYMax slice"
               viewBox="0 0 283.5 27.8"
               xmlns="http://www.w3.org/2000/svg"
@@ -143,6 +146,7 @@ Object {
           data-negative="false"
         >
           <svg
+            class="divider-shape "
             preserveAspectRatio="xMidYMax slice"
             viewBox="0 0 283.5 27.8"
             xmlns="http://www.w3.org/2000/svg"
@@ -218,6 +222,7 @@ Object {
             data-negative="false"
           >
             <svg
+              class="divider-shape "
               preserveAspectRatio="none"
               viewBox="0 0 283.5 19.6"
               xmlns="http://www.w3.org/2000/svg"
@@ -260,6 +265,7 @@ Object {
           data-negative="false"
         >
           <svg
+            class="divider-shape "
             preserveAspectRatio="none"
             viewBox="0 0 283.5 19.6"
             xmlns="http://www.w3.org/2000/svg"
@@ -351,6 +357,7 @@ Object {
             data-negative="false"
           >
             <svg
+              class="divider-shape "
               preserveAspectRatio="none"
               viewBox="0 0 1000 100"
               xmlns="http://www.w3.org/2000/svg"
@@ -388,6 +395,7 @@ Object {
           data-negative="false"
         >
           <svg
+            class="divider-shape "
             preserveAspectRatio="none"
             viewBox="0 0 1000 100"
             xmlns="http://www.w3.org/2000/svg"
@@ -474,6 +482,7 @@ Object {
             data-negative="false"
           >
             <svg
+              class="divider-shape "
               preserveAspectRatio="none"
               viewBox="0 0 1000 100"
               xmlns="http://www.w3.org/2000/svg"
@@ -500,6 +509,7 @@ Object {
           data-negative="false"
         >
           <svg
+            class="divider-shape "
             preserveAspectRatio="none"
             viewBox="0 0 1000 100"
             xmlns="http://www.w3.org/2000/svg"
