@@ -22,10 +22,6 @@
         display: block;
         width: calc(100% + 1.3px);
         position: relative;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
     }
 }
 
@@ -38,24 +34,15 @@
 }
 
 .divider-shape-flip-x {
-    -webkit-transform: rotateX(180deg);
-    -ms-transform: rotateX(180deg);
-    transform: rotateX(180deg);
+    @include vendor('transform', 'rotateX(180deg)');
 }
 
 .divider-shape-flip-y {
-    -webkit-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    @include vendor('transform', 'rotateY(180deg)');
 }
 
 .divider-shape-fill {
     fill: #fff;
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
 
     &.divider-bg {
         fill: _palette(bg);
