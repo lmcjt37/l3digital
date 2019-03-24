@@ -11,7 +11,11 @@ class ProjectSection extends React.Component {
         const from = '/projects'
         return (
             <section>
-                <Link to={withPrefix(slug)} from={from} className="image">
+                <Link
+                    to={withPrefix(`projects/${slug}`)}
+                    from={from}
+                    className="image"
+                >
                     <Image
                         fluid={featuredImage.fluid}
                         alt={featuredImage.description}
@@ -30,7 +34,7 @@ class ProjectSection extends React.Component {
                         <ul className="actions">
                             <li>
                                 <Link
-                                    to={withPrefix(slug)}
+                                    to={withPrefix(`projects/${slug}`)}
                                     from={from}
                                     className="button"
                                 >
