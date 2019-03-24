@@ -30,12 +30,26 @@ class BannerDesktop extends React.Component {
                             xmlns="http://www.w3.org/2000/svg"
                             version="1.1"
                         >
+                            <clipPath id="rect1">
+                                <rect x="0" y="26" width="100%" height="1" />
+                            </clipPath>
+                            <clipPath id="text1">
+                                <text
+                                    textAnchor="start"
+                                    x="0"
+                                    y="15"
+                                    className="text"
+                                >
+                                    We Are L3 Digital
+                                </text>
+                            </clipPath>
+
                             <rect
                                 x="0"
                                 y="26"
                                 width="100%"
                                 height="1"
-                                className="text-stroke"
+                                className="base-stroke"
                                 clipPath="url(#rect1)"
                             />
                             <rect
@@ -43,14 +57,14 @@ class BannerDesktop extends React.Component {
                                 y="26"
                                 width="100%"
                                 height="1"
-                                className="text-stroke rect-stroke-2"
+                                className="base-stroke rect-stroke"
                                 clipPath="url(#rect1)"
                             />
                             <text
                                 textAnchor="start"
                                 x="0"
                                 y="15"
-                                className="text text-stroke"
+                                className="text base-stroke"
                                 clipPath="url(#text1)"
                             >
                                 We Are L3 Digital
@@ -59,31 +73,11 @@ class BannerDesktop extends React.Component {
                                 textAnchor="start"
                                 x="0"
                                 y="15"
-                                className="text text-stroke text-stroke-2"
+                                className="text base-stroke text-stroke"
                                 clipPath="url(#text1)"
                             >
                                 We Are L3 Digital
                             </text>
-                            <defs>
-                                <clipPath id="rect1">
-                                    <rect
-                                        x="0"
-                                        y="26"
-                                        width="100%"
-                                        height="1"
-                                    />
-                                </clipPath>
-                                <clipPath id="text1">
-                                    <text
-                                        textAnchor="start"
-                                        x="0"
-                                        y="15"
-                                        className="text"
-                                    >
-                                        We Are L3 Digital
-                                    </text>
-                                </clipPath>
-                            </defs>
                         </svg>
                     </header>
                     <div className="content">
