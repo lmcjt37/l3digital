@@ -68,6 +68,7 @@ Object {
     <div>
       <a
         href="/something-internal"
+        partiallyactive="false"
         state="[object Object]"
       />
     </div>
@@ -75,6 +76,7 @@ Object {
   "container": <div>
     <a
       href="/something-internal"
+      partiallyactive="false"
       state="[object Object]"
     />
   </div>,

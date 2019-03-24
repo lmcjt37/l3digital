@@ -24,6 +24,7 @@ const Menu = props => (
                         activeClassName="active-effect"
                         onClick={props.onToggleMenu}
                         to="/projects"
+                        partiallyActive={true}
                     >
                         Projects
                     </Link>
