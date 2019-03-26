@@ -9,12 +9,14 @@ assignees: ''
 
 ## Summary
 
-Brief explanation of the feature.
+Brief explanation of the feature/fix.
 
-### Basic example
+Mention the ticket it resolves - e.g. #123 (auto select should appear for the associated ticket)
 
-If the proposal involves a new or changed API, include a basic code example. Omit this section if it's not applicable.
+### Example
 
-### Motivation
+Screenshot or gif of the feature if applicable.
+
+### Reason
 
 Why are we doing this? What use cases does it support? What is the expected outcome?
