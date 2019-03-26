@@ -5,42 +5,42 @@
 ///
 
 svg.intro {
-  position: absolute;
-  transform: translate(0%, -40%);
+    position: absolute;
+    @include vendor('transform', 'translate(0%, -40%)');
 
-  .text {
-    display: none;
-  }
-  &.go {
     .text {
-      font-family: _font(family);
-      text-transform: uppercase;
-      display: block;
-			letter-spacing: 0;
+        display: none;
     }
-    .text-stroke {
-      fill: none;
-      stroke: _palette(accent2);
-      stroke-width: 2.8px;
-      stroke-dashoffset: -900;
-      stroke-dasharray: 900;
-      stroke-linecap: butt;
-      stroke-linejoin: round;
-      animation: dash 2.5s ease-in-out forwards;
+    &.go {
+        .text {
+            font-family: _font(family);
+            text-transform: uppercase;
+            display: block;
+            letter-spacing: 0;
+        }
+        .base-stroke {
+            fill: none;
+            stroke: _palette(accent2);
+            stroke-width: 2.8px;
+            stroke-dashoffset: 1000;
+            stroke-dasharray: 1000;
+            stroke-linecap: butt;
+            stroke-linejoin: round;
+            @include vendor('animation', 'dash 4s ease-in-out forwards');
+        }
+        .text-stroke {
+            stroke: _palette(fg-bold);
+            @include vendor('animation-delay', '1.7s');
+        }
+        .rect-stroke {
+            stroke: _palette(fg-bold);
+            @include vendor('animation-delay', '2.1s');
+        }
     }
-		.text-stroke-2 {
-			stroke: _palette(fg-bold);
-			animation-delay: 1.2s;
-		}
-		.rect-stroke-2 {
-			stroke: _palette(fg-bold);
-			animation-delay: 1.6s;
-		}
-  }
 }
 
 @keyframes dash {
-  100% {
-    stroke-dashoffset: 0;
-  }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
