@@ -95,7 +95,7 @@ class BannerDesktop extends React.Component {
                             <li>
                                 <a
                                     href="javascript:;"
-                                    className="button next"
+                                    className="button next-effect effect"
                                     onClick={this.props.scrollToElement}
                                 >
                                     Learn more
