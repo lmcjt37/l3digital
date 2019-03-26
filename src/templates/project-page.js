@@ -33,7 +33,7 @@ class ProjectPage extends React.Component {
                         <div className="inner">
                             <Link
                                 to={from}
-                                className="button previous bottom-margin"
+                                className="button previous-effect effect bottom-margin"
                             >
                                 {buttonTitle}
                             </Link>

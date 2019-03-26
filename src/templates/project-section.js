@@ -36,7 +36,7 @@ class ProjectSection extends React.Component {
                                 <Link
                                     to={withPrefix(`projects/${slug}`)}
                                     from={from}
-                                    className="button"
+                                    className="button effect"
                                 >
                                     Learn more
                                 </Link>

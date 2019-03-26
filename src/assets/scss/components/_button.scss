@@ -122,7 +122,6 @@ button,
         }
     }
 
-    // Credit: Luke Taylor
     &.previous {
         padding-left: 4.5em;
         position: relative;
@@ -171,7 +170,94 @@ button,
             padding-left: 5em;
         }
     }
-    // End credit
+
+    &.next-effect {
+        padding-right: 4.5em;
+        position: relative;
+
+        &:after {
+            @include vendor(
+                'transition',
+                'background #{_duration(transition)} ease-in-out'
+            );
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: 36px 24px;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            right: 1.5em;
+            top: 0;
+            vertical-align: middle;
+            width: 36px;
+        }
+
+        &:after {
+            background-image: svg-url(
+                '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="24px" viewBox="0 0 36 24" zoomAndPan="disable"><style>line { stroke: #{_palette(fg)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="34" y2="12" /><line x1="25" y1="4" x2="34" y2="12.5" /><line x1="25" y1="20" x2="34" y2="11.5" /></svg>'
+            );
+            z-index: 1;
+        }
+
+        &:hover,
+        &:active {
+            color: _palette(bg) !important;
+            &:after {
+                background-image: svg-url(
+                    '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="24px" viewBox="0 0 36 24" zoomAndPan="disable"><style>line { stroke: #{_palette(bg)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="34" y2="12" /><line x1="25" y1="4" x2="34" y2="12.5" /><line x1="25" y1="20" x2="34" y2="11.5" /></svg>'
+                );
+            }
+        }
+
+        @include breakpoint(large) {
+            padding-right: 5em;
+        }
+    }
+
+    &.previous-effect {
+        padding-left: 4.5em;
+        position: relative;
+
+        &:after {
+            @include vendor(
+                'transition',
+                'background #{_duration(transition)} ease-in-out'
+            );
+            background-position: center left;
+            background-repeat: no-repeat;
+            background-size: 36px 24px;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            left: 1.5em;
+            top: 0;
+            vertical-align: middle;
+            width: 36px;
+        }
+
+        &:after {
+            background-image: svg-url(
+                '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="24px" viewBox="0 0 36 24" zoomAndPan="disable"><style>line { stroke: #{_palette(fg)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="34" y2="12" /><line x1="0" y1="12.5" x2="9" y2="4" /><line x1="0" y1="11.5" x2="9" y2="20" /></svg>'
+            );
+            z-index: 1;
+        }
+
+        &:hover,
+        &:active {
+            color: _palette(bg) !important;
+            &:after {
+                background-image: svg-url(
+                    '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="24px" viewBox="0 0 36 24" zoomAndPan="disable"><style>line { stroke: #{_palette(bg)}; stroke-width: 2px; }</style><line x1="0" y1="12" x2="34" y2="12" /><line x1="0" y1="12.5" x2="9" y2="4" /><line x1="0" y1="11.5" x2="9" y2="20" /></svg>'
+                );
+            }
+        }
+
+        @include breakpoint(large) {
+            padding-left: 5em;
+        }
+    }
 
     &.special {
         background-color: _palette(fg-bold);
@@ -198,6 +284,49 @@ button,
 
     &.bottom-margin {
         margin-bottom: _size(element-margin);
+    }
+}
+
+.effect {
+    color: inherit;
+    background: inherit;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin: -15px 0 0 1px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: _palette(highlight);
+        @include vendor('transform-origin', '100% 50%');
+        @include vendor('transform', 'scale3d(1, 2, 1)');
+        @include vendor(
+            'transition-timing-function',
+            'cubic-bezier(0.7,0,0.9,1)'
+        );
+        @include vendor(
+            'transition',
+            (
+                'transform #{_duration(transition)} ease-in-out',
+                'opacity #{_duration(transition)} ease-in-out'
+            )
+        );
+    }
+
+    &:hover {
+        color: _palette(bg) !important;
+        &:before {
+            @include vendor('transform', 'scale3d(9, 9, 1)');
+        }
     }
 }
 

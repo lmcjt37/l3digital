@@ -30,7 +30,9 @@ const Container = ({ data }) => {
                                 />
                             </li>
                             <li>
-                                <input type="reset" value="Clear" />
+                                <button type="reset" className="effect">
+                                    Clear
+                                </button>
                             </li>
                         </ul>
                     </form>
