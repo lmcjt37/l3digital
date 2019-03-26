@@ -49,15 +49,6 @@ const Container = ({ data }) => {
                     </section>
                     <section>
                         <div className="contact-method">
-                            <span className="icon alt fa-phone" />
-                            <h3>Phone</h3>
-                            <a href={'tel:' + companyData.telephone1}>
-                                {companyData.telephone1}
-                            </a>
-                        </div>
-                    </section>
-                    <section>
-                        <div className="contact-method">
                             <span className="icon alt fa-home" />
                             <h3>Address</h3>
                             <span>
