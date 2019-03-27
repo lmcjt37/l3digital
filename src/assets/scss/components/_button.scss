@@ -326,7 +326,7 @@ button,
         // color: _palette(bg) !important;
         // color: _palette(bg);
         &:before {
-            @include vendor('transform', 'scale3d(9, 9, 1)');
+            @include vendor('transform', 'scale3d(10, 10, 1)');
         }
     }
 }
