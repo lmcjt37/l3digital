@@ -147,23 +147,6 @@ Object {
                     class="contact-method"
                   >
                     <span
-                      class="icon alt fa-phone"
-                    />
-                    <h3>
-                      Phone
-                    </h3>
-                    <a
-                      href="tel:0845 111 3333"
-                    >
-                      0845 111 3333
-                    </a>
-                  </div>
-                </section>
-                <section>
-                  <div
-                    class="contact-method"
-                  >
-                    <span
                       class="icon alt fa-home"
                     />
                     <h3>
@@ -493,23 +476,6 @@ Object {
                     href="mailto:hello@l3digital.co.uk"
                   >
                     hello@l3digital.co.uk
-                  </a>
-                </div>
-              </section>
-              <section>
-                <div
-                  class="contact-method"
-                >
-                  <span
-                    class="icon alt fa-phone"
-                  />
-                  <h3>
-                    Phone
-                  </h3>
-                  <a
-                    href="tel:0845 111 3333"
-                  >
-                    0845 111 3333
                   </a>
                 </div>
               </section>
