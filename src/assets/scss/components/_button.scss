@@ -15,9 +15,9 @@ button,
     @include vendor(
         'transition',
         (
-            'background-color #{_duration(transition)} ease-in-out',
+            'color #{_duration(transition)} ease-in-out',
             'box-shadow #{_duration(transition)} ease-in-out',
-            'color #{_duration(transition)} ease-in-out'
+            'background-color #{_duration(transition)} ease-in-out'
         )
     );
     background-color: transparent;
@@ -41,7 +41,7 @@ button,
     &:hover,
     &:active {
         box-shadow: inset 0 0 0 2px _palette(highlight);
-        color: _palette(highlight);
+        color: _palette(bg);
     }
 
     &:active {
@@ -288,8 +288,8 @@ button,
 }
 
 .effect {
-    color: inherit;
-    background: inherit;
+    // color: inherit;
+    // background: inherit;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -323,7 +323,8 @@ button,
     }
 
     &:hover {
-        color: _palette(bg) !important;
+        // color: _palette(bg) !important;
+        // color: _palette(bg);
         &:before {
             @include vendor('transform', 'scale3d(9, 9, 1)');
         }
