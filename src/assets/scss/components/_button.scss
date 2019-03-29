@@ -260,6 +260,8 @@ button,
     }
 
     &.effect {
+        background: transparent;
+        box-shadow: inset 0 0 0 2px _palette(fg-bold);
         color: _palette(fg-bold);
         overflow: hidden;
         position: relative;
@@ -279,7 +281,7 @@ button,
             border-radius: 50%;
             background: _palette(highlight);
             @include vendor('transform-origin', '100% 50%');
-            @include vendor('transform', 'scale3d(1, 2, 1)');
+            @include vendor('transform', 'scale3d(1, 2, -1)');
             @include vendor(
                 'transition-timing-function',
                 'cubic-bezier(0.7,0,0.9,1)'
@@ -295,8 +297,9 @@ button,
 
         &:hover {
             color: _palette(bg) !important;
+            box-shadow: inset 0 0 0 2px _palette(highlight);
             &:before {
-                @include vendor('transform', 'scale3d(10, 10, 1)');
+                @include vendor('transform', 'scale3d(10, 10, -1)');
             }
         }
     }
