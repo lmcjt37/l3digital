@@ -52,7 +52,8 @@
         "react-animate-on-scroll": "^2.1.5",
         "react-dom": "^16.8.1",
         "react-helmet": "^5.2.0",
-        "react-transition-group": "^2.6.0"
+        "react-transition-group": "^2.6.0",
+        "smoothscroll-polyfill": "^0.4.4"
     },
     "devDependencies": {
         "babel-eslint": "^10.0.1",

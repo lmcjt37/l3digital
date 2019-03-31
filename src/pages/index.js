@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Image from 'gatsby-image'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import Link from 'components/Link'
 import BannerDesktop from 'components/BannerDesktop'
@@ -35,6 +36,7 @@ class HomeIndex extends React.Component {
     }
 
     componentDidMount() {
+        smoothscroll.polyfill()
         window.addEventListener('resize', this.handleResizeChange.bind(this))
     }
 
