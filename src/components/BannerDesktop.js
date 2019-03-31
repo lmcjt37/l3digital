@@ -90,7 +90,7 @@ class BannerDesktop extends React.Component {
                                 <a
                                     href="javascript:;"
                                     className="button next-effect effect"
-                                    onClick={this.props.scrollToElement}
+                                    onClick={this.props.scrollToWhoWeAreElement}
                                 >
                                     Learn more
                                 </a>
@@ -101,7 +101,7 @@ class BannerDesktop extends React.Component {
                 <div className="scroll">
                     <a
                         href="javascript:;"
-                        onClick={this.props.scrollByScreenHeight}
+                        onClick={this.props.scrollToFirstSectionElement}
                     >
                         <span />
                         Scroll
@@ -113,8 +113,8 @@ class BannerDesktop extends React.Component {
 }
 
 BannerDesktop.propTypes = {
-    scrollToElement: PropTypes.func,
-    scrollByScreenHeight: PropTypes.func,
+    scrollToWhoWeAreElement: PropTypes.func,
+    scrollToFirstSectionElement: PropTypes.func,
 }
 
 export default BannerDesktop

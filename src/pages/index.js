@@ -19,8 +19,11 @@ class HomeIndex extends React.Component {
         // only used for screen size. May need to be updated as
         // requirements change.
         this.state = UtilsHelper.getScreenSize()
-        this.setScrollRef = element => {
-            this.elementRef = element
+        this.setWhoWeAreScrollRef = element => {
+            this.whoWeAreScrollRef = element
+        }
+        this.setFirstSectionScrollRef = element => {
+            this.firstSectionScrollRef = element
         }
     }
 
@@ -39,17 +42,16 @@ class HomeIndex extends React.Component {
         window.removeEventListener('resize', this.handleResizeChange.bind(this))
     }
 
-    scrollToRefElement() {
-        this.elementRef.scrollIntoView({
+    scrollToWhoWeAreElement() {
+        this.whoWeAreScrollRef.scrollIntoView({
             block: 'start',
             behavior: 'smooth',
         })
     }
 
-    scrollByScreenHeight() {
-        window.scrollBy({
-            top: window.innerHeight,
-            left: 0,
+    scrollToFirstSectionElement() {
+        this.firstSectionScrollRef.scrollIntoView({
+            block: 'start',
             behavior: 'smooth',
         })
     }
@@ -72,12 +74,18 @@ class HomeIndex extends React.Component {
         let getBanner = () => {
             return this.state.isHandheld ? (
                 <BannerMobile
-                    scrollToElement={this.scrollToRefElement.bind(this)}
+                    scrollToWhoWeAreElement={this.scrollToWhoWeAreElement.bind(
+                        this
+                    )}
                 />
             ) : (
                 <BannerDesktop
-                    scrollToElement={this.scrollToRefElement.bind(this)}
-                    scrollByScreenHeight={this.scrollByScreenHeight.bind(this)}
+                    scrollToWhoWeAreElement={this.scrollToWhoWeAreElement.bind(
+                        this
+                    )}
+                    scrollToFirstSectionElement={this.scrollToFirstSectionElement.bind(
+                        this
+                    )}
                 />
             )
         }
@@ -86,7 +94,11 @@ class HomeIndex extends React.Component {
             <div id="main">
                 <SEO title="Home" />
                 {getBanner()}
-                <section id="information" className="splits">
+                <section
+                    id="information"
+                    className="splits"
+                    ref={this.setFirstSectionScrollRef}
+                >
                     {this.props.data.allContentfulInformation.edges.map(
                         (edge, id) => (
                             <InformationSection {...edge.node} key={id} />
@@ -94,7 +106,7 @@ class HomeIndex extends React.Component {
                     )}
                 </section>
                 <Divider top flipY color="bg" />
-                <section id="who-are-we" ref={this.setScrollRef}>
+                <section id="who-are-we" ref={this.setWhoWeAreScrollRef}>
                     <div className="inner">
                         <header className="major">
                             <h2>Who are we</h2>

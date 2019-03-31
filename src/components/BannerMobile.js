@@ -19,7 +19,7 @@ const BannerMobile = props => (
                         <a
                             href="javascript:;"
                             className="button next"
-                            onClick={props.scrollToElement}
+                            onClick={props.scrollToWhoWeAreElement}
                         >
                             Learn more
                         </a>
@@ -31,7 +31,7 @@ const BannerMobile = props => (
 )
 
 BannerMobile.propTypes = {
-    scrollToElement: PropTypes.func,
+    scrollToWhoWeAreElement: PropTypes.func,
 }
 
 export default BannerMobile
