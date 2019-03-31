@@ -12,9 +12,39 @@
 
     > section {
         background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            background-color: desaturate(lighten(_palette(bg-alt), 4), 2);
+            content: '';
+            height: 100%;
+            left: -25%;
+            position: absolute;
+            top: 0;
+            width: 150%;
+            @include vendor('transform', 'rotate(3deg)');
+        }
+
+        &:first-child {
+            &:before {
+                height: 110%;
+                top: -10%;
+            }
+        }
+
+        &:last-child {
+            &:before {
+                height: 110%;
+            }
+        }
 
         &:nth-child(2n) {
             background-color: desaturate(lighten(_palette(bg-alt), 4), 2);
+
+            &:before {
+                background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+            }
 
             > div {
                 @include vendor('flex-direction', 'row-reverse');
