@@ -23,6 +23,14 @@
         width: calc(100% + 1.3px);
         position: relative;
     }
+
+    @include breakpoint(medium) {
+        svg {
+            width: calc(120% + 1.3px);
+            left: -10%;
+            min-height: 100px;
+        }
+    }
 }
 
 .divider-shape-top {
