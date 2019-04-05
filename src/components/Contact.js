@@ -9,9 +9,7 @@ const Container = ({ data }) => {
     return (
         <section id="contact">
             <div className="inner">
-                <section>
-                    <Form />
-                </section>
+                <Form />
                 <section className="split">
                     <section>
                         <div className="contact-method">
