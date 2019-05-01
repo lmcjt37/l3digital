@@ -5,7 +5,6 @@ class Form extends React.Component {
         super(props)
         this.state = {
             displayErrors: false,
-            displaySuccess: false,
             name: '',
             email: '',
             message: '',
@@ -13,51 +12,63 @@ class Form extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmission = this.handleSubmission.bind(this)
     }
 
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value })
     }
 
+    handleSubmission = (event, type) => {
+        let target = event.target.querySelector('.special')
+        target.value = `${type}`
+        target.classList.add(type)
+
+        setTimeout(() => {
+            target.classList.remove(type)
+            target.value = 'Send Message'
+        }, 4000)
+    }
+
     handleSubmit = event => {
         event.preventDefault()
+        event.persist() // https://fb.me/react-event-pooling
 
         if (!event.target.checkValidity()) {
             this.setState({
-                displaySuccess: false,
                 displayErrors: true,
             })
             return
         }
 
-        let data = {
-            name: this.state.name,
-            message: this.state.message,
-            _replyto: this.state.email,
-            _gotcha: this.state._gotcha,
-        }
-
-        const EMAIL = 'hello@l3digital.co.uk'
-        const FORMSPREE_POST_URL = `https://formspree.io/${EMAIL}`
-
-        fetch(FORMSPREE_POST_URL, {
+        fetch('/api/mailer', {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST',
-            body: JSON.stringify(data),
+            body: JSON.stringify({
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message,
+                _gotcha: this.state._gotcha,
+            }),
         })
-            .then(() => {
+            .then(response => {
                 this.setState({
-                    displaySuccess: true,
                     displayErrors: false,
                 })
-                event.target.reset()
-                // TODO:: setup success DOM element
+
+                if (response.status === 200) {
+                    this.handleSubmission(event, 'success')
+                    event.target.reset()
+                } else {
+                    this.handleSubmission(event, 'error')
+                }
             })
             .catch(() => {
                 this.setState({
-                    displaySuccess: false,
                     displayErrors: true,
                 })
+
+                this.handleSubmission(event, 'error')
             })
     }
 
