@@ -38,7 +38,7 @@ app.post('*', (req, res) => {
         html: `<p>${message}</p>`,
     }
 
-    transporter.sendMail(options, (error, response) => {
+    transporter.sendMail(options, error => {
         if (error) {
             res.status(500).send(error)
         } else {
