@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "l3-digital",
-    "alias": "l3digital.co.uk",
+    "alias": ["l3digital.co.uk", "www.l3digital.co.uk"],
     "builds": [
         {
             "src": "package.json",
@@ -14,5 +14,12 @@
             "CONTENTFUL_SPACE_ID": "@contentful_space_id",
             "CONTENTFUL_API_KEY": "@contentful_accesstoken"
         }
-    }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "status": 301,
+            "headers": { "Location": "https://l3digital.co.uk/$1" }
+        }
+    ]
 }
