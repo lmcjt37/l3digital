@@ -14,12 +14,5 @@
             "CONTENTFUL_SPACE_ID": "@contentful_space_id",
             "CONTENTFUL_API_KEY": "@contentful_accesstoken"
         }
-    },
-    "routes": [
-        {
-            "src": "/(.*)",
-            "status": 301,
-            "headers": { "Location": "https://l3digital.co.uk/$1" }
-        }
-    ]
+    }
 }
