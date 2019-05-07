@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form tests check it renders correctly with snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section>
+        <form
+          class=""
+          novalidate=""
+        >
+          <div
+            class="field half first"
+          >
+            <label
+              for="name"
+            >
+              Name
+            </label>
+            <input
+              id="name"
+              name="name"
+              required=""
+              type="text"
+            />
+          </div>
+          <div
+            class="field half"
+          >
+            <label
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              name="email"
+              required=""
+              type="email"
+            />
+          </div>
+          <div
+            class="field"
+          >
+            <label
+              for="message"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required=""
+              rows="6"
+            />
+          </div>
+          <input
+            id="honeypot"
+            name="_gotcha"
+            type="hidden"
+          />
+          <ul
+            class="actions"
+          >
+            <li>
+              <input
+                class="special"
+                type="submit"
+                value="Send Message"
+              />
+            </li>
+            <li>
+              <button
+                class="effect"
+                type="reset"
+              >
+                Clear
+              </button>
+            </li>
+          </ul>
+        </form>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section>
+      <form
+        class=""
+        novalidate=""
+      >
+        <div
+          class="field half first"
+        >
+          <label
+            for="name"
+          >
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            required=""
+            type="text"
+          />
+        </div>
+        <div
+          class="field half"
+        >
+          <label
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            required=""
+            type="email"
+          />
+        </div>
+        <div
+          class="field"
+        >
+          <label
+            for="message"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            required=""
+            rows="6"
+          />
+        </div>
+        <input
+          id="honeypot"
+          name="_gotcha"
+          type="hidden"
+        />
+        <ul
+          class="actions"
+        >
+          <li>
+            <input
+              class="special"
+              type="submit"
+              value="Send Message"
+            />
+          </li>
+          <li>
+            <button
+              class="effect"
+              type="reset"
+            >
+              Clear
+            </button>
+          </li>
+        </ul>
+      </form>
+    </section>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

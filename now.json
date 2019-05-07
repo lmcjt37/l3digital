@@ -7,6 +7,10 @@
             "src": "package.json",
             "use": "@now/static-build",
             "config": { "distDir": "public" }
+        },
+        {
+            "src": "api/mailer/index.js",
+            "use": "@now/node"
         }
     ],
     "build": {
@@ -14,5 +18,9 @@
             "CONTENTFUL_SPACE_ID": "@contentful_space_id",
             "CONTENTFUL_API_KEY": "@contentful_accesstoken"
         }
+    },
+    "env": {
+        "SENDER_EMAIL": "@sender_email",
+        "SENDER_PASSWORD": "@sender_password"
     }
 }
