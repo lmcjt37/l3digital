@@ -308,6 +308,30 @@ button,
         background-color: _palette(fg-bold);
         box-shadow: none;
         color: _palette(bg);
+        outline: none;
+        overflow: visible;
+        @include vendor(
+            'transition',
+            'all #{_duration(transition)} ease-in-out'
+        );
+
+        &.success {
+            background: _palette(accent6);
+
+            &:hover,
+            &:active {
+                background-color: _palette(accent6);
+            }
+        }
+
+        &.error {
+            background: _palette(accent3);
+
+            &:hover,
+            &:active {
+                background-color: _palette(accent3);
+            }
+        }
 
         &:hover,
         &:active {
