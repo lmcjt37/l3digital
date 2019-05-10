@@ -1,7 +1,7 @@
 {
     "name": "l3-digital",
     "description": "Website and deployment for l3 digital",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "private": true,
     "homepage": "https://github.com/lmcjt37/l3digital#readme",
     "license": "MIT",
@@ -34,8 +34,10 @@
         }
     ],
     "dependencies": {
+        "body-parser": "^1.18.3",
         "eslint-plugin-graphql": "^3.0.3",
-        "gatsby": "^2.3.4",
+        "express": "^4.16.4",
+        "gatsby": "^2.3.36",
         "gatsby-image": "^2.0.29",
         "gatsby-plugin-google-analytics": "^2.0.13",
         "gatsby-plugin-layout": "^1.0.12",
@@ -48,9 +50,10 @@
         "gatsby-transformer-sharp": "^2.1.13",
         "lodash": "^4.17.4",
         "node-sass": "^4.11.0",
-        "react": "^16.8.1",
+        "react": "^16.8.6",
+        "nodemailer": "^6.0.0",
         "react-animate-on-scroll": "^2.1.5",
-        "react-dom": "^16.8.1",
+        "react-dom": "^16.8.6",
         "react-helmet": "^5.2.0",
         "react-transition-group": "^2.6.0",
         "smoothscroll-polyfill": "^0.4.4"
@@ -79,6 +82,7 @@
         "clearcache": "rm -rf .cache/ public",
         "heroku-postbuild": "gatsby build",
         "now-build": "gatsby build",
+        "now-build::staging": "now --target staging",
         "now-build::production": "now --target production",
         "now-dev": "gatsby develop -p $PORT"
     },

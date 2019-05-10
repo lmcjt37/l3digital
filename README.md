@@ -30,9 +30,25 @@ Running `npm run build` will build the static site and assets found in `/public`
 
 ## Testing
 
--   TODO
--   [ ] Agree testing framework(s)
--   [ ] Agree structure and workflow
+Testing is carried out via Jest. You can run the test suites by using `npm test`. This will run all tests and snapshots.
+
+If you have made component changes, more than likely this will affect the snapshots and you will need to run `npm test -- -u` in order to update the failing snapshots (be sure that the new snapshots reflect the changes correctly).
+
+## Zeit Now
+
+[Zeit Now](https://zeit.co/now) is used to deploy and alias builds of the application.
+
+Staging builds are created for non-Master branches. Production builds are created from Master.
+
+### Deployment for Staging
+
+You can run a Staging build yourself with `npm run now-build::staging`, this will initialise, build and deploy the static files to a staging domain. It also now, creates a lambda to handle the contact form.
+
+### Debugging
+
+Whilst running deployment you may incur issues with the build. The CLI will inform you of this and tell you how to check the logs for more information.
+
+But you can simply grab the target domain and run `now logs https://l3-digital-44t7pkt0h.now.sh .`. This is an example as each domain is unique, so make sure to update the URL in this command.
 
 ## GraphQL
 
@@ -68,3 +84,4 @@ The CI is more strict when it comes to checking prop-types during the linting st
 
 -   Static asset issue - Use `npm run clearcache` which will remove all stale data and fix the issue.
 -   GraphQL issues - New content and assets can take time to propogate out. If it's an issue in local development then try restarting your development server.
+-   Zeit Now sometimes fails to deploy during merge checks, and the logs provide no further useful information. This seems to be related to some form of server-side caching. If re-deployment continues to fail, then try deploying manually via CLI with `npm run now-build::production`. If it continues to fail, then try simplifying your changes to identify the breaking change.

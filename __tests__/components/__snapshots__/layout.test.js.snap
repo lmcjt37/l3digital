@@ -56,8 +56,8 @@ Object {
             >
               <section>
                 <form
-                  action="#"
-                  method="post"
+                  class=""
+                  novalidate=""
                 >
                   <div
                     class="field half first"
@@ -70,6 +70,7 @@ Object {
                     <input
                       id="name"
                       name="name"
+                      required=""
                       type="text"
                     />
                   </div>
@@ -84,7 +85,8 @@ Object {
                     <input
                       id="email"
                       name="email"
-                      type="text"
+                      required=""
+                      type="email"
                     />
                   </div>
                   <div
@@ -98,9 +100,15 @@ Object {
                     <textarea
                       id="message"
                       name="message"
+                      required=""
                       rows="6"
                     />
                   </div>
+                  <input
+                    id="honeypot"
+                    name="_gotcha"
+                    type="hidden"
+                  />
                   <ul
                     class="actions"
                   >
@@ -393,8 +401,8 @@ Object {
           >
             <section>
               <form
-                action="#"
-                method="post"
+                class=""
+                novalidate=""
               >
                 <div
                   class="field half first"
@@ -407,6 +415,7 @@ Object {
                   <input
                     id="name"
                     name="name"
+                    required=""
                     type="text"
                   />
                 </div>
@@ -421,7 +430,8 @@ Object {
                   <input
                     id="email"
                     name="email"
-                    type="text"
+                    required=""
+                    type="email"
                   />
                 </div>
                 <div
@@ -435,9 +445,15 @@ Object {
                   <textarea
                     id="message"
                     name="message"
+                    required=""
                     rows="6"
                   />
                 </div>
+                <input
+                  id="honeypot"
+                  name="_gotcha"
+                  type="hidden"
+                />
                 <ul
                   class="actions"
                 >
