@@ -83,7 +83,8 @@
         "heroku-postbuild": "gatsby build",
         "now-build": "gatsby build",
         "now-build::staging": "now --target staging",
-        "now-build::production": "now --target production"
+        "now-build::production": "now --target production",
+        "now-dev": "gatsby develop -p $PORT"
     },
     "lint-staged": {
         "*.{js,json,css,scss,md}": [

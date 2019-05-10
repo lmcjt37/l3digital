@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "l3-digital",
-    "alias": "l3digital.co.uk",
+    "alias": ["l3digital.co.uk", "www.l3digital.co.uk"],
     "builds": [
         {
             "src": "package.json",
