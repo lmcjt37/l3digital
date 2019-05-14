@@ -13,6 +13,10 @@
             "use": "@now/node"
         }
     ],
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "status": 404, "dest": "/404" }
+    ],
     "build": {
         "env": {
             "CONTENTFUL_SPACE_ID": "@contentful_space_id",
