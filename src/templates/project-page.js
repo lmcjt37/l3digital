@@ -8,8 +8,6 @@ import SEO from 'components/SEO'
 
 class ProjectPage extends React.Component {
     render() {
-        console.log(this.props)
-
         const {
             title,
             description,
