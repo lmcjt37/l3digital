@@ -61,7 +61,7 @@ class ProjectPage extends React.Component {
                                         rel="noopener noreferrer"
                                         className="button special"
                                     >
-                                        Visit
+                                        Visit website
                                     </Link>
                                 </li>
                             </ul>
