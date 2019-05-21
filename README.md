@@ -18,6 +18,26 @@ Static website for L3 Digital, built using GatsbyJS, React, GraphQL, and supplie
 -   Start local development server - `npm run dev`
 -   This will serve up a dev server with hot reload locally at [http://localhost:8000/](http://localhost:8000/)
 
+## Environment files
+
+In order to build locally you will need the following files and variables defined in the root of the project. Gatsby makes use of dotenv for building locally, as well as Zeit Now during a local server build using `now dev`.
+
+```
+.env
+    - SENDER_EMAIL
+    - SENDER_PASSWORD
+.env.build
+    - CONTENTFUL_SPACE_ID
+    - CONTENTFUL_API_KEY
+.env.development
+    - SENDER_EMAIL
+    - SENDER_PASSWORD
+    - CONTENTFUL_SPACE_ID
+    - CONTENTFUL_API_KEY
+```
+
+These files _SHOULD NOT_ be committed to the staging/production builds or repo. The variables are stored on the server for build configuration.
+
 ### For Mobile development
 
 Simply run `npm run dev::mobile`. You can then access the development server via http://{HOSTNAME}:8000 on any mobile device. This URL will also be printed in the terminal for reference.
@@ -85,3 +105,4 @@ The CI is more strict when it comes to checking prop-types during the linting st
 -   Static asset issue - Use `npm run clearcache` which will remove all stale data and fix the issue.
 -   GraphQL issues - New content and assets can take time to propogate out. If it's an issue in local development then try restarting your development server.
 -   Zeit Now sometimes fails to deploy during merge checks, and the logs provide no further useful information. This seems to be related to some form of server-side caching. If re-deployment continues to fail, then try deploying manually via CLI with `npm run now-build::production`. If it continues to fail, then try simplifying your changes to identify the breaking change.
+-   If you are having trouble build the project due to missing environment variables, make sure that you have the relavant dotenv files in the root of the project. As mentioned in [Environment files](#environment-files)
